@@ -116,6 +116,7 @@ td { padding: 11px 12px; vertical-align: middle; }
 .price-cell .date { font-size: 10px; color: var(--text-muted); }
 .entry-cell .target { font-size: 12px; font-weight: 600; color: var(--green); }
 .entry-cell .note { font-size: 10px; color: var(--text-muted); }
+.entry-cell .bear-floor-line { font-size: 10px; color: #f87171; margin-top: 3px; opacity: 0.85; }
 .expand-icon { color: var(--text-muted); font-size: 10px; transition: transform 0.2s; display: inline-block; }
 .row-expanded .expand-icon { transform: rotate(90deg); }
 
@@ -1512,6 +1513,7 @@ function renderTable(filter) {
       <td>
         <div class="entry-cell">
           <div class="target">${stock.entryTarget}</div>
+          ${(() => { const t3 = getT3BearFloor(stock.ticker, stock.entryTarget); return t3 ? `<div class="bear-floor-line">🐻 $${t3.toLocaleString()}</div>` : ''; })()}
         </div>
       </td>
       <td>
