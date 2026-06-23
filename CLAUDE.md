@@ -186,6 +186,16 @@ function parseT1Floor(entryTarget) { ... }
 
 **When INVESTMENT_PARAMS changes** (new stock, bear_discount revision, etc.), update BOTH `investment_parameters.json` AND the `INVESTMENT_PARAMS` constant in `stock_dashboard.html`. They must stay in sync.
 
+### Bear Floor in Entry Target Column (added June 23, 2026)
+
+The entry target cell shows a third line: `🐻 $XXX` — the T3 Bear Floor — for all stocks that have a `bear_discount` in `INVESTMENT_PARAMS`. ETFs and FRVO (no bear_discount) show nothing. Always visible regardless of regime mode.
+
+```javascript
+// In renderTable(), entry target cell:
+${(() => { const t3 = getT3BearFloor(stock.ticker, stock.entryTarget); return t3 ? `<div class="bear-floor-line">🐻 $${t3.toLocaleString()}</div>` : ''; })()}
+// CSS: .entry-cell .bear-floor-line { font-size:10px; color:#f87171; margin-top:3px; opacity:0.85; }
+```
+
 ### Default Sort Order (added June 23, 2026)
 
 When no column sort is active, the table defaults to: **BUY ZONE → WATCH → OVERVALUED**.
@@ -262,11 +272,13 @@ All tasks are configured in the Claude app. Task IDs are exact — use these whe
 
 | Task ID | Schedule | Purpose |
 |---|---|---|
-| `premarket-price-check` | 7:01 AM CT, Mon–Fri | Fetch pre-market prices, update dashboard, save briefing |
-| `market-close-price-check` | 3:39 PM CT, Mon–Fri | Fetch closing prices, update dashboard, save briefing |
+| `premarket-price-check` | 7:01 AM CT, Mon–Fri | Fetch pre-market prices, update dashboard, save briefing, auto-push GitHub |
+| `market-close-price-check` | 3:39 PM CT, Mon–Fri | Fetch closing prices, update dashboard, save briefing, auto-push GitHub |
 | `weekly-portfolio-review` | 10:05 AM CT, Saturday | Macro scores + event-driven re-analysis (~30–45 min) |
 | `quarterly-full-refresh` | 10 AM CT, 1st Sat of Jan/Apr/Jul/Oct | Full 12-step re-analysis all 35 stocks |
 | `macro-reassessment` | Manual only | Full macro reassessment when triggered by briefings |
+
+**GitHub auto-push** (added June 23, 2026): Both price-check tasks now automatically call `github_push.py` at the end of each run (PART 6). No manual Terminal push needed after briefings.
 
 **One-time macro reaction tasks** are created ad hoc when major data releases are scheduled (CPI, PCE, GDP, FOMC, etc.). These fire 30 min after the release time and are automatically disabled after running.
 
@@ -279,6 +291,14 @@ from append_briefing import save_briefing
 save_briefing(briefing_dict, content_md)
 # Saves to: dashboard Briefings tab + /Users/pvegamacbookair/Claude Cowork/Briefings/YYYY-MM-DD-[type].md
 ```
+
+**⚠️ MANDATORY AFTER EVERY BRIEFING:** After calling `save_briefing`, always call `mcp__cowork__present_files` with the saved .md file path so Patricia gets a downloadable card in chat. Example:
+```python
+# After save_briefing completes:
+filepath = "/Users/pvegamacbookair/Claude Cowork/Briefings/YYYY-MM-DD-market-close.md"
+# Then present_files(filepath) in the response
+```
+This applies to ALL briefing types: pre-market, market-close, weekly review, and ad-hoc.
 
 ---
 
@@ -302,13 +322,13 @@ save_briefing(briefing_dict, content_md)
 
 ---
 
-## 8. Current Status Snapshot (as of June 23, 2026)
+## 8. Current Status Snapshot (as of June 23, 2026 — market close)
 
 | Status | Tickers |
 |---|---|
-| BUY ZONE | FRVO, HPQ, MSFT, NVDA, PLAB, VOO |
-| WATCH | AMD, AMZN, AVDE, AVGO, BRK-B, CEG, EWL, EWY, FENI, GOOGL, HESM, HON, IAU, LLY, MU, NEE, NVO, SCHF, TSM, XLU |
-| OVERVALUED | CRUS, HPE, LEU, MRVL, REMX, SOXQ, TXN, WDC |
+| BUY ZONE | FRVO, FSLR, HPQ, MSFT, NVDA, PLAB |
+| WATCH | AMZN, AVDE, BRK-B, CEG, EWL, EWY, FENI, GOOGL, HESM, HON, IAU, LLY, MU, NEE, NVO, SCHF, VOO, XLU |
+| OVERVALUED | AMD, AVGO, CRUS, HPE, LEU, MRVL, REMX, SOXQ, TXN, TSM, WDC |
 
 *Status changes whenever prices are updated — check dashboard for current state.*
 
@@ -331,6 +351,11 @@ These are mistakes that have actually occurred — read carefully.
 - **Briefings folder is `Briefings/`** (capital B, lowercase rest). macOS is case-insensitive so both work in Finder, but the Linux bash sandbox is case-sensitive. Always write `Briefings/` exactly.
 - **Never use `batch-aftermarket-quote`** — requires Premium FMP plan. Use individual `aftermarket-quote` calls looping through tickers one at a time.
 - **Dashboard has two price field formats**: some entries use `priceResearch:"$X"` (no space after colon) and others use `priceResearch: "$X"` (space). The regex pattern handles both.
+
+### GitHub Push
+- **`github_push.py` must use `--force` and token-in-URL**: Plain `git push origin main` fails when remote has diverged. Always use `git push --force https://PVega007:{token}@github.com/PVega007/stock-dashboard.git main`. The updated script handles this automatically.
+- **Stale lock files**: If git crashes mid-run, `.git/index.lock` or `.git/HEAD.lock` may be left behind. The updated `github_push.py` auto-removes them on each run.
+- **Sandbox cannot push to GitHub**: The Linux bash sandbox has network restrictions blocking outbound git. The `github_push.py` script must be called via `subprocess` from the scheduled task (which runs on the Mac) — never run it directly from the bash tool.
 
 ### Bear Framework / Dashboard JS
 - **`INVESTMENT_PARAMS` JS constant must be kept in sync with `investment_parameters.json`**: The browser cannot read files from disk. When the JSON file is updated (new stock, revised bear_discount, etc.), the embedded `INVESTMENT_PARAMS` constant in `stock_dashboard.html` must also be updated manually.
@@ -361,6 +386,12 @@ These are mistakes that have actually occurred — read carefully.
 | Bear Market regime toggle + T3 Bear Floor alerts added | June 23, 2026 |
 | 🚨 BEAR FLOOR row badge + row highlight added to main table | June 23, 2026 |
 | MU status corrected: BUY ZONE → WATCH ($1,211.38 > T1 ceiling $1,100) | June 23, 2026 |
+| Bear floor line added to Entry Target column (always visible) | June 23, 2026 |
+| Default sort order added: BUY ZONE → WATCH → OVERVALUED; bear alerts float to top | June 23, 2026 |
+| github_push.py updated: --force, token-in-URL, auto lock cleanup | June 23, 2026 |
+| Scheduled tasks updated: auto GitHub push + downloadable briefing card after every run | June 23, 2026 |
+| Market close briefing run: global AI selloff, MU -13.2%, 3 status changes | June 23, 2026 |
+| Status changes (close): MU→WATCH, LEU→OVERVALUED, VOO→WATCH | June 23, 2026 |
 | Next quarterly full refresh | First Saturday of July 2026 |
 | Upcoming: PCE + GDP Final | June 25, 2026 |
 | Upcoming: JOLTS | June 30, 2026 |
