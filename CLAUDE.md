@@ -186,6 +186,12 @@ function parseT1Floor(entryTarget) { ... }
 
 **When INVESTMENT_PARAMS changes** (new stock, bear_discount revision, etc.), update BOTH `investment_parameters.json` AND the `INVESTMENT_PARAMS` constant in `stock_dashboard.html`. They must stay in sync.
 
+### Default Sort Order (added June 23, 2026)
+
+When no column sort is active, the table defaults to: **BUY ZONE → WATCH → OVERVALUED**.
+
+In Bear mode, stocks below their T3 Bear Floor float to the very top (above all BUY ZONE stocks), then the rest follow in status order. Any user-applied column sort or filter overrides this default.
+
 ---
 
 ## 5. Entry Target Methodology (v3 — Hybrid, updated June 23, 2026)
