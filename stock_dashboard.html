@@ -1452,6 +1452,21 @@ function renderTable(filter) {
       if (vb === -Infinity) return -1;
       return sortState.dir === 'asc' ? va - vb : vb - va;
     });
+  } else {
+    // Default sort: BUY ZONE → WATCH → OVERVALUED
+    // In Bear mode: stocks below T3 Bear Floor float to the very top
+    shown.sort((a, b) => {
+      if (activeRegime === 'BEAR_MARKET') {
+        const aPrice = parseFloat(a.priceResearch.replace(/[^0-9.]/g, ''));
+        const bPrice = parseFloat(b.priceResearch.replace(/[^0-9.]/g, ''));
+        const aT3 = getT3BearFloor(a.ticker, a.entryTarget);
+        const bT3 = getT3BearFloor(b.ticker, b.entryTarget);
+        const aBear = (aT3 && aPrice < aT3) ? 1 : 0;
+        const bBear = (bT3 && bPrice < bT3) ? 1 : 0;
+        if (aBear !== bBear) return bBear - aBear; // bear alerts first
+      }
+      return (STATUS_ORDER[a.status] ?? 99) - (STATUS_ORDER[b.status] ?? 99);
+    });
   }
   shown.forEach(stock => {
     const s = stock.scores;
