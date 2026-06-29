@@ -1822,7 +1822,7 @@ function buildDetailHtml(stock) {
       ${stepHtml(10, 'Entry Point Framework', st.entry)}
     </div>
 
-    ${verdictBoxHtml(stock.status, st.verdict)}
+    ${verdictBoxHtml(stock.status, st.verdict || st.s11 || '')}
   </div>`;
 }
 
