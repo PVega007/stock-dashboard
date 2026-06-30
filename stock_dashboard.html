@@ -897,6 +897,56 @@ verdict:"OVERVALUED — at $670, VOO is above T2 ceiling $640. VOO is the founda
 //  Format: { date, displayDate, headline, bullets[], sections:{macro,movers,statusChanges,actionItems} }
 // ──────────────────────────────────────────────
 const BRIEFINGS = [
+  {
+    date: "2026-06-30",
+    displayDate: "June 30, 2026",
+    type: "PRE-MARKET",
+    runTime: "7:00 AM CT · Auto",
+    alert: "🟡 MONITOR CLOSELY — Gold -4.4% on Fed hawkish repricing; yen at 40-year low raises intervention risk; JOLTS at 10 AM ET",
+    headline: "Quarter-end at record highs; gold selloff on hawkish Fed; FSLR +4.2%; NVDA/MSFT HIGH CONVICTION ECL",
+    bullets: [
+      "S&P 500 futures +0.2% — Dow closed at record high (>52,000) Monday; quarter-end rebalancing in play",
+      "Gold (IAU) -4.4% pre-market: worst quarter in 13 years as hawkish Fed dollar repricing overwhelms haven demand",
+      "JOLTS (Apr 2026) at 10 AM ET — MEDIUM importance; softening openings = less Fed pressure",
+      "Yen at weakest vs USD since 1986 — BoJ/MOF intervention risk; watch international ETFs",
+      "WTI oil ~$70.67 (-24% Q2): US-Iran Doha talks resuming, suppressing energy complex"
+    ],
+    macro: "S&P 500 futures +0.2%; Dow at record >52,000. Yen 40-year low vs USD. WTI ~$70.67, worst Q in years. JOLTS 10 AM ET. AI regulatory uncertainty (White House crackdown) benefiting Chinese model makers per CNBC.",
+    geopolitical: "US-Iran Doha talks resuming — WTI declining. Yen intervention risk rattling markets. White House AI crackdown could help Chinese AI labs (CNBC, June 30).",
+    earnings: "None from watchlist today.",
+    movers: [
+      {ticker: "FSLR", change: "+4.2%", status: "WATCH", note: "No clear catalyst — likely quarter-end rebalancing. T1 zone approaching ceiling $252. ECL HIGH CONVICTION 🟢."},
+      {ticker: "IAU", change: "-4.4%", status: "WATCH", note: "Gold worst quarter in 13 years. Hawkish Fed repricing + strong USD + U.S.-Iran ceasefire. Still in T2 zone. (MarketWatch, June 30 ✓)"},
+      {ticker: "NEE", change: "+1.5%", status: "WATCH", note: "Modest gain; no specific catalyst. Utilities responding to shifting rates/energy complex."},
+      {ticker: "WDC", change: "-2.0%", status: "OVERVALUED", note: "Giving back gains. Targets stale (pre-SanDisk spin) — July 5 refresh pending."},
+      {ticker: "FRVO", change: "-1.9%", status: "BUY ZONE", note: "Thin volume 1,764 shares. Below T1 floor $34. Pre-revenue; minimum tranche only."}
+    ],
+    statusChanges: [],
+    dataFlags: [
+      "HESM: bid/ask spread 27% ($28.69/$37.66), vol=7 — stored price $38.30 retained",
+      "EWL, AVDE, FENI, SCHF: zero pre-market volume — expected for intl ETFs",
+      "FRVO: thin volume 1,764 shares — auto-updated (divergence <10%)",
+      "LEU: thin volume 2,486 shares — auto-updated (spread acceptable)"
+    ],
+    stableStocks: ["NVDA","MSFT","MRVL","AVGO","GOOGL","HPQ","MU","TSM","LLY","NVO","BRK-B","BP","SHEL","CEG","EWY","VOO","XLU","REMX","SOXQ"],
+    actionItems: [
+      "Monitor JOLTS at 10 AM ET — downside surprise = less Fed hawkishness",
+      "Watch yen for intervention signal — could cause risk-off spike in international ETFs",
+      "FSLR approaching T1 ceiling $252 — watch intraday; ECL HIGH CONVICTION 🟢",
+      "NVDA: 3/4 ECL signals HIGH CONVICTION 🟢 — continue building position on dips",
+      "MSFT: 4/4 ECL signals HIGH CONVICTION 🟢 — maximum conviction entry"
+    ],
+    sources: [
+      "TheStreet — S&P 500 futures +0.2%, Dow record close — June 30, 2026 ✓",
+      "Barron's — Yen slump intervention talk — June 30, 2026 ✓",
+      "MarketWatch — Gold worst quarter in 13 years — June 30, 2026 ✓",
+      "CNBC — White House AI crackdown — June 30, 2026 ✓",
+      "WSJ — Gold hawkish dollar repricing — June 29, 2026 ✓",
+      "fxdailyreport.com — WTI $70.67 — June 30, 2026 ✓",
+      "FMP MCP connector — aftermarket-quote — June 30, 2026 ✓",
+      "FMP technicalIndicators — RSI/SMA/EMA — June 29, 2026 ✓"
+    ]
+  },
     {
       date: "2026-06-29",
       displayDate: "June 29, 2026",
