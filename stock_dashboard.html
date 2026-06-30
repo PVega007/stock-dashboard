@@ -897,6 +897,62 @@ verdict:"OVERVALUED — at $670, VOO is above T2 ceiling $640. VOO is the founda
 //  Format: { date, displayDate, headline, bullets[], sections:{macro,movers,statusChanges,actionItems} }
 // ──────────────────────────────────────────────
 const BRIEFINGS = [
+{
+      date: "2026-06-30",
+      displayDate: "June 30, 2026",
+      type: "MACRO-REACTION",
+      runTime: "9:30 AM CT · Auto — Post-JOLTS + H1 Wrap",
+      alert: "⚠️ 3 status changes: HESM+LLY OVERVALUED→WATCH | REMX WATCH→OVERVALUED | JOLTS 7.594M beats 7.3M consensus — hawkish signal. MRVL +10.6%.",
+      headline: "JOLTS May 2026: 7.594M vs 7.3M est (BEAT) — hawkish for Fed. 3 status changes. Semis rip to close H1: MRVL +10.6%, SOXQ +3.3%.",
+      bullets: [
+        "JOLTS May 2026: 7.594M actual vs 7.3M consensus — ABOVE estimates. Quits 3.1M (unchanged). Strong labor reinforces Fed's higher-for-longer stance. (BLS / FXStreet, June 30 ✓)",
+        "Fed July hold: 79.5% | hike: 19.4%. Chair Warsh hawkish hold anchors market. No cut signal through 2026. (CME FedWatch, June 30 ✓)",
+        "H1 2026 close: S&P Q1 -4.3% (Iran shock), Q2 strong recovery. Semis SOXQ +99% YTD — AI infrastructure supercycle dominant theme. NVDA +14.1% YTD.",
+        "3 status changes: HESM OVERVALUED→WATCH ($37.63<$38 T2); LLY OVERVALUED→WATCH ($1,197.88<$1,199 T2, very marginal); REMX WATCH→OVERVALUED ($88.80>$88 T2).",
+        "⚠️ FRVO: Aftermarket data unreliable (53% bid/ask spread: bid $22.68 / ask $39.12). Stored price $31.85 maintained. Flag for manual review."
+      ],
+      macro: "JOLTS May 2026 came in at 7.594M, well above the 7.3M consensus estimate (prior revised to 7.6M). Quits unchanged at 3.1M; layoffs unchanged at 1.7M — the labor market shows no signs of deterioration. This is a hawkish print: strong job openings give the Fed no urgency to cut. Fed held rates at June 17 meeting (hawkish hold). July meeting implied: 79.5% hold, 19.4% hike. Strong JOLTS reinforces Chair Warsh's higher-for-longer messaging and dims rate-cut hopes through 2026. Quarter-end rebalancing flows likely amplified semiconductor/AI gains today as managers repositioned for H2. H1 2026 summary: S&P 500 Q1 -4.3% (Iran geopolitical shock), followed by strong Q2 recovery driven by AI infrastructure demand. Bottom-up S&P target 8,918 vs current ~7,357 — meaningful upside if earnings deliver. Semis (SOXQ) +99% YTD led by HBM/AI chip supercycle. (Sources: BLS.gov, FXStreet June 30 ✓, CME FedWatch June 30 ✓, FactSet H1 data ✓)",
+      geopolitical: "Iran tensions that drove Q1 -4.3% S&P decline appear to be de-escalating per Q2 rally. U.S.-Iran ceasefire narrative cited as contributing to gold's worst quarter in 13 years (IAU -4.4% pre-market today). Continued monitoring required for H2 tail risk.",
+      earnings: "No earnings scheduled today. Next major catalyst: June CPI release July 14 — will heavily influence Fed August meeting odds.",
+      movers: [
+        {ticker:"MRVL", change:"+10.6%", status:"OVERVALUED", note:"AI infrastructure boom drives massive single-day gain. ⚠️ Wide aftermarket spread (4.15%, bid $297.64/ask $310.27) — confirm at next open. Above T2 ceiling $138 by a wide margin."},
+        {ticker:"TSM", change:"+3.6%", status:"OVERVALUED", note:"AI chip demand tailwind, H1 quarter-end semi rally. $470.73. Above T2 ceiling $359."},
+        {ticker:"SOXQ", change:"+3.3%", status:"OVERVALUED", note:"Semiconductor ETF closes H1 +99% YTD. $111.76. Above T2 ceiling $101."},
+        {ticker:"WDC", change:"+3.1%", status:"OVERVALUED", note:"AI storage rally continues. $656.01. Targets still stale (pre-SanDisk spin) — July 5 quarterly refresh pending."},
+        {ticker:"EWY", change:"+1.9%", status:"WATCH", note:"Korean semi/AI chip rally. $201.14. T2 zone $172–$228."},
+        {ticker:"REMX", change:"+1.9%", status:"OVERVALUED", note:"STATUS CHANGE: WATCH→OVERVALUED. $88.80 crossed above T2 ceiling $88. Wait for pullback to $61–$88 entry zone."},
+        {ticker:"LLY", change:"-2.9%", status:"WATCH", note:"STATUS CHANGE: OVERVALUED→WATCH. $1,197.88 just below T2 ceiling $1,199 — very marginal. GLP-1 catalysts intact. Do not add in T2 zone."},
+        {ticker:"HESM", change:"-1.7%", status:"WATCH", note:"STATUS CHANGE: OVERVALUED→WATCH. $37.63 pulled back below T2 ceiling $38. Wait for T1 entry zone $28–$32."},
+        {ticker:"HPQ", change:"-1.5%", status:"WATCH", note:"PC demand softness. $22.39. T1 zone $21–$24."},
+        {ticker:"NVO", change:"-1.4%", status:"WATCH", note:"GLP-1 sector rotation on LLY pullback. $47.98. T2 zone $39–$76."}
+      ],
+      statusChanges: [
+        {ticker:"HESM", from:"OVERVALUED", to:"WATCH", preMarket:"$37.63", note:"Price pulled back below T2 ceiling $38. T2 zone $33–$38. Wait for T1 entry $28–$32."},
+        {ticker:"LLY", from:"OVERVALUED", to:"WATCH", preMarket:"$1,197.88", note:"Marginal — $1.12 below T2 ceiling $1,199. GLP-1 catalysts intact. T2 zone $926–$1,199. Do not add."},
+        {ticker:"REMX", from:"WATCH", to:"OVERVALUED", preMarket:"$88.80", note:"Crossed above T2 ceiling $88. Wait for pullback to $61–$88 entry zone."}
+      ],
+      dataFlags: [
+        {ticker:"FRVO", note:"Aftermarket quote unreliable: bid $22.68 / ask $39.12 (53% spread). Stored price $31.85 maintained. Flag for manual review — confirm vs stored price divergence threshold."}
+      ],
+      stableStocks: ["NVDA (+1.1%, BUY ZONE)", "MSFT (+0.9%, BUY ZONE)", "AVGO (+0.9%, OV)", "GOOGL (-0.5%, WATCH)", "MU (+1.2%, WATCH)", "BP (-0.3%, WATCH)", "SHEL (+0.7%, WATCH)", "CEG (-1.2%, WATCH)", "NEE (-0.9%, WATCH)", "VOO (+0.6%, OV)", "IAU (+0.7%, WATCH)", "BRK-B (flat, WATCH)", "XLU (-0.6%, WATCH)"],
+      actionItems: [
+        "LLY: Monitor closely — $1,197.88 is $1.12 below T2 ceiling. Any bounce re-triggers OVERVALUED. Do not add in T2 zone.",
+        "HESM: Now WATCH — watch for pullback to T1 entry zone $28–$32 for a potential position.",
+        "REMX: Now OVERVALUED. Wait for pullback to $61–$88 entry zone.",
+        "FRVO: Manual review required — aftermarket quote unreliable (53% spread). Verify vs stored $31.85.",
+        "MRVL: +10.6% today — confirm at tomorrow's open (wide aftermarket spread). Well above T2 ceiling $138.",
+        "H2 2026 watch: June CPI (July 14) will define Fed August odds. Key risk: hike vs hold.",
+        "WDC entry target recalculation: still pending for July 5 quarterly refresh (HDD-only post-SanDisk spin)."
+      ],
+      sources: [
+        "BLS.gov JOLTS May 2026 — https://www.bls.gov/news.release/jolts.htm — Date: June 30, 2026 ✓",
+        "FXStreet JOLTS Breaking News — https://www.fxstreet.com/news/us-jolts-job-openings-expected-to-show-strong-labor-demand-endorsing-fed-rate-hike-bets-202606300900 — Date: June 30, 2026 ✓",
+        "CME FedWatch / Kalshi Fed July odds — https://kalshi.com/markets/kxfeddecision/fed-meeting/kxfeddecision-26jul — Date: June 30, 2026 ✓",
+        "CNBC Fed June Decision — https://www.cnbc.com/2026/06/17/fed-interest-rate-decision-june-2026.html — Date: June 17, 2026 ✓",
+        "FactSet S&P 500 Q1 2026 Earnings / S&P performance — Date: June 30, 2026 ✓",
+        "FMP MCP connector — Individual aftermarket-quote calls for all 30 tickers — Date: June 30, 2026 ✓"
+      ]
+    },
     {
       date: "2026-06-30",
       displayDate: "June 30, 2026",
