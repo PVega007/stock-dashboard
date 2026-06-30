@@ -897,6 +897,55 @@ verdict:"OVERVALUED — at $670, VOO is above T2 ceiling $640. VOO is the founda
 //  Format: { date, displayDate, headline, bullets[], sections:{macro,movers,statusChanges,actionItems} }
 // ──────────────────────────────────────────────
 const BRIEFINGS = [
+    {
+      date: "2026-06-30",
+      displayDate: "June 30, 2026",
+      type: "PRE-MARKET",
+      runTime: "8:30 AM CT · Manual (scheduled task missed)",
+      alert: "🟢 Quarter-end session — no major triggers. FSLR +4.19%, IAU -4.38% (gold risk-on selloff), NEE +1.77%. No status changes.",
+      headline: "Quarter-end quiet: FSLR +4.19% (T1 zone), IAU -4.38% (gold selloff on risk-on). JOLTS at 10 AM ET. Yen at 1986 lows.",
+      bullets: [
+        "No status changes — all 30 stocks hold prior status (BUY ZONE: NVDA, MSFT, FRVO)",
+        "FSLR +4.19% moving up in T1 watch zone $207–$252 — no catalyst confirmed, verify at open",
+        "IAU -4.38% gold selloff on quarter-end risk-on rotation — WATCH T2 zone, no action needed",
+        "JOLTS at 10 AM ET today — watch rate expectations; yen at 1986 lows, intervention risk for intl ETFs",
+        "ECL unavailable this run: FMP indicators endpoint returns full history. Carrying June 29 signals: NVDA 3/4 🟢, MSFT 4/4 🟢"
+      ],
+      macro: "Quarter-end June 30. JOLTS at 10:00 AM ET (9 AM CT) — consensus ~7.8M openings. June Jobs Report due Friday Jul 3. Hawkish Fed unlikely to shift on soft data (Seeking Alpha, June 30 ✓). Wells Fargo summer rally thesis post quarter-end rebalancing. Yen at weakest vs dollar since 1986 — BOJ intervention risk (Barron's, June 30 ✓).",
+      geopolitical: "US-Iran ceasefire holding but tested; Doha talks this week (Seeking Alpha, June 30 ✓). White House AI crackdown giving China time to close gap on US labs (CNBC, June 30 ✓). Trump 100% digital tariff threat — headwind for GOOGL/MSFT international revenue (247WallSt, June 30 ✓).",
+      earnings: "None from portfolio holdings today. Memory shortage structural through 2028 — tailwind for MU, WDC (247WallSt, June 29 ✓).",
+      movers: [
+        {ticker:"FSLR", change:"+4.19%", status:"WATCH", note:"T1 zone $207–$252. No confirmed catalyst. Class action overhang (deadline Aug 24). Verify at open before adding."},
+        {ticker:"NEE",  change:"+1.77%", status:"WATCH", note:"Utilities rebounding — rate-cut narrative building ahead of JOLTS. T2 zone $75–$98."},
+        {ticker:"IAU",  change:"-4.38%", status:"WATCH", note:"Gold selling on risk-on quarter-end positioning. Tight spread 0.07% — reliable. T2 zone $69–$88, no action needed."},
+        {ticker:"WDC",  change:"-1.66%", status:"OVERVALUED", note:"Normal pullback after yesterday's +10.87% surge. Still deeply OVERVALUED."},
+        {ticker:"FRVO", change:"-1.87%", status:"BUY ZONE", note:"Thin liquidity — within normal range (<10% threshold). BUY ZONE below $34 T1 floor."}
+      ],
+      statusChanges: [],
+      dataFlags: [
+        "HESM: bid $28.69 / ask $37.66 (spread 24.5%), vol 7 — stored price $38.30 kept",
+        "EWL / AVDE / FENI / SCHF: international ETFs, zero pre-market volume — stored prices kept per policy",
+        "ECL unavailable: FMP technicalIndicators returns full history regardless of date filters — CLAUDE.md update needed"
+      ],
+      stableStocks: ["MRVL","AVGO","GOOGL","MU","TSM","LLY","NVO","BRK-B","EWY","BP","SHEL","CEG","VOO","XLU","REMX","SOXQ","LEU","HPQ","NVDA","MSFT"],
+      actionItems: [
+        "JOLTS at 10 AM ET — monitor for rate-expectations impact on tech/utilities",
+        "NVDA/MSFT: ECL carried HIGH CONVICTION from June 29 — verify RSI/SMA at open before deploying capital",
+        "FSLR: +4.19% move — verify catalyst at open; minimum tranche only until litigation and ECL confirmed",
+        "IAU -4.38%: watching T1 zone $61–$68; current $75.56 still in T2 — no action yet",
+        "Quarter-end rebalancing: elevated intraday volatility expected through close",
+        "GitHub push: run python3 github_push.py in Terminal",
+        "Update CLAUDE.md: document FMP technicalIndicators endpoint limitation"
+      ],
+      sources: [
+        "Barron's — Yen Slump Intervention Talk — June 30, 2026 ✓",
+        "CNBC — White House AI Crackdown / China Gap — June 30, 2026 ✓",
+        "MarketWatch — Wells Fargo Summer Rally — June 30, 2026 ✓",
+        "Seeking Alpha — Hawkish Fed / Iran Ceasefire — June 30, 2026 ✓",
+        "247WallSt — Jensen Huang AI Supercomputer / Trump Digital Tariffs / Memory Shortage — June 29–30, 2026 ✓",
+        "FMP MCP — aftermarket-quote — June 30, 2026 ✓"
+      ]
+    },
   {
     date: "2026-06-30",
     displayDate: "June 30, 2026",
