@@ -898,6 +898,51 @@ verdict:"OVERVALUED — at $670, VOO is above T2 ceiling $640. VOO is the founda
 // ──────────────────────────────────────────────
 const BRIEFINGS = [
     {
+      date: "2026-07-03",
+      displayDate: "July 3, 2026",
+      type: "PRE-MARKET",
+      runTime: "7:00 AM CT · Auto",
+      alert: "🏛️ MARKETS CLOSED — Independence Day observed. NYSE/NASDAQ closed Friday July 3. Trading resumes Monday July 6.",
+      headline: "Holiday closure — June jobs miss (57K) drove Dow record + chip selloff Thursday; Asian markets broadly green; OPEC+ meets Sunday",
+      bullets: [
+        "NYSE/NASDAQ CLOSED today (July 3) — observed Independence Day. No price updates. All 30 stored prices are as of July 2 close.",
+        "June jobs report (BLS, July 2): only +57K payrolls vs ~150K expected — Dow hit record 52,865 (+1.1%) but chip/AI stocks tumbled in rotation.",
+        "Asian markets positive Friday: KOSPI +4.65% 🔥, Nikkei +1.36%, Hang Seng +1.57%, CSI 300 +1.15% — bullish signal for EWY Monday.",
+        "OPEC+ meets Sunday on August output. WTI $69.01 — war premium unwinding on Doha diplomatic progress. Hormuz disruptions ongoing.",
+        "ECL deferred (no trading today). NVDA and MSFT remain in BUY ZONE; re-evaluate at Monday 7 AM briefing."
+      ],
+      macro: "S&P futures ~flat | NASDAQ slightly lower | Asia: KOSPI +4.65%, Nikkei +1.36%, Hang Seng +1.57%, CSI 300 +1.15% | Europe: Stoxx 600 +0.5% | WTI: $69.01/bbl | 10-yr: ~4.5% | June Jobs: +57K (miss vs ~150K est) — Fed July hike now unlikely",
+      geopolitical: "OPEC+ meets Sunday (August output). Strait of Hormuz disruption ongoing; Doha talks positive (Reuters, July 3 ✓). Oman/Iran maritime security talks (CNBC, July 3 ✓). US extreme heat wave pushing wholesale power prices higher — tailwind for CEG/NEE/XLU. Trump blasted 'hostile' Fed; Warsh independence concerns linger.",
+      earnings: "None today (market closed). Q2 2026 earnings season begins mid-July.",
+      movers: [
+        { ticker: "EWY", change: "+0.4% (AH)", status: "WATCH", note: "KOSPI +4.65% Friday — bullish for Monday EWY open (CNBC, July 3 ✓)" },
+        { ticker: "LEU", change: "+6.0% (AH — flagged)", status: "OVERVALUED", note: "⚠️ AH midpoint $171.93 vs stored $162.13; spread 5.6% wide — unreliable, stored price retained. Manual review Monday." },
+        { ticker: "FRVO", change: "+1.6% (AH)", status: "BUY ZONE", note: "AH midpoint $28.23 vs stored $27.79; within 10% FRVO threshold. Stored price retained (holiday)." }
+      ],
+      statusChanges: [],
+      dataFlags: [
+        "Markets CLOSED July 3 — all 30 prices kept at July 2 close. No dashboard updates.",
+        "Intl ETFs (EWL, AVDE, FENI): extreme AH spreads 13–16% — stored prices retained.",
+        "LEU: AH spread 5.6%, midpoint +6.0% vs stored — flagged, retained. Monitor Monday.",
+        "HESM: AH spread 7.2% — retained. REMX: AH spread 5.2% — retained."
+      ],
+      stableStocks: ["NVDA","MRVL","AVGO","MSFT","GOOGL","HPQ","MU","WDC","FSLR","TSM","LLY","NVO","BRK-B","HESM","BP","SHEL","CEG","NEE","EWY","EWL","AVDE","FENI","SCHF","VOO","XLU","IAU","SOXQ"],
+      actionItems: [
+        "Run Monday pre-market check: ECL for NVDA and MSFT; confirm LEU with clean quote.",
+        "Watch OPEC+ Sunday decision — impacts BP, SHEL, oil macro.",
+        "SpaceX joins Nasdaq-100 July 7 — potential rebalancing flows into SOXQ."
+      ],
+      sources: [
+        "BLS Employment Situation — bls.gov — July 2, 2026 ✓",
+        "WSJ 'Chip Stocks Tumble Again' — wsj.com — July 2, 2026 ✓",
+        "Invezz 'Dow hits record high' — invezz.com — July 2, 2026 ✓",
+        "CNBC 'Global stock markets mixed as South Korea jumps' — cnbc.com — July 3, 2026 ✓",
+        "Reuters 'Chinese independent refiners snap up discounted Mideast oil' — reuters.com — July 3, 2026 ✓",
+        "CNBC 'Oman walks diplomatic tightrope over Strait of Hormuz' — cnbc.com — July 3, 2026 ✓",
+        "fxdailyreport.com 'WTI Crude Oil Price Analysis July 3, 2026' — July 3, 2026 ✓"
+      ]
+    },
+    {
       date: "2026-07-02",
       displayDate: "July 2, 2026",
       type: "MARKET-CLOSE",
