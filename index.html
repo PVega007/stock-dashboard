@@ -898,6 +898,65 @@ verdict:"OVERVALUED — at $670, VOO is above T2 ceiling $640. VOO is the founda
 // ──────────────────────────────────────────────
 const BRIEFINGS = [
     {
+      date: "2026-07-08",
+      displayDate: "July 8, 2026",
+      type: "PRE-MARKET",
+      runTime: "7:00 AM CT · Auto",
+      alert: "🔴 REASSESS NOW — US-Iran ceasefire declared over, overnight strikes, oil +6%",
+      headline: "Trump declares US-Iran memorandum \"over\" after overnight strikes on 80+ Iranian targets; Iran claims reprisal hits on US bases in Bahrain/Kuwait; oil +6%, Nasdaq futures -1.3%",
+      bullets: [
+        "Major geopolitical escalation: US struck 80+ Iranian targets overnight; Iran's IRGC claims reprisal strikes on US bases in Bahrain and Kuwait. WTI +6.2% to $74.79, Brent +6.1% to $78.66.",
+        "Memory-sector selloff continues (Samsung earnings read-through): MU -3.81%, WDC -3.39%, MRVL -2.84%, SOXQ -1.90% pre-market.",
+        "EWY -4.47% tracking Monday's 4.91% Kospi rout. No dashboard status changes today — all 26 successfully-updated tickers held their prior BUY ZONE/WATCH/OVERVALUED status.",
+        "FRVO flagged for manual review: pre-market divergence -15.7% vs stored price exceeds the 10% low-liquidity threshold; not auto-updated.",
+        "DeepSeek reportedly developing its own AI inference chip (reduces Nvidia/Huawei reliance) — structural AI/semi read-through beyond dashboard tickers."
+      ],
+      macro: "Dow futures -1% (~-600pts), S&P futures -0.8%, Nasdaq 100 futures -1.3% (CNBC/TheStreet/Yahoo, Jul 8). 10-yr Treasury yield surged toward 4.58% on inflation/energy fears. FOMC minutes due today; IMF July World Economic Outlook Update published this morning. No CPI/PCE/GDP-tier release today per MACRO_CALENDAR (next: CPI Jul 14, FOMC Jul 29).",
+      geopolitical: "Trump declared US-Iran memorandum 'over' at NATO summit in Ankara after US struck 80+ Iranian targets overnight in response to Strait of Hormuz shipping attacks; Iran's IRGC claims reprisal strikes on US bases in Bahrain and Kuwait. ~Several hundred ships/~6,000 seafarers reportedly stranded in the Persian Gulf per IMO. NATO's Rutte called the strikes 'absolutely necessary.' (CNN/CBS News, Jul 8, corroborated multiple sources)",
+      earnings: "FMP earnings-calendar response exceeded processing limits this run; no dashboard-ticker earnings surfaced via news/analyst scans for today — treat as unconfirmed rather than definitive 'None.'",
+      movers: [
+        { ticker: "EWY", change: "-4.47%", status: "WATCH", note: "Tracking Monday's 4.91% Kospi rout — Samsung earnings reaction, tech-led selloff" },
+        { ticker: "MU", change: "-3.81%", status: "WATCH", note: "Memory-sector pullback continues post-Samsung earnings; fundamentals (Q3 beat, HBM booked through 2027) unchanged" },
+        { ticker: "WDC", change: "-3.39%", status: "OVERVALUED", note: "Same memory-sector read-through as MU" },
+        { ticker: "REMX", change: "-3.00%", status: "WATCH", note: "Rare-earth ETF, broad materials risk-off" },
+        { ticker: "MRVL", change: "-2.84%", status: "OVERVALUED", note: "Semiconductor-sector weakness; Intel/AMD named as broader tape decliners" },
+        { ticker: "NVO", change: "-2.36%", status: "WATCH", note: "No company-specific news identified; broad risk-off" },
+        { ticker: "SOXQ", change: "-1.90%", status: "WATCH", note: "Semiconductor ETF, sector-wide pullback" },
+        { ticker: "LEU", change: "-1.87%", status: "OVERVALUED", note: "No company-specific news identified" },
+        { ticker: "SCHF", change: "-1.56%", status: "WATCH", note: "International developed-markets ETF, broad risk-off" },
+        { ticker: "AVDE", change: "-1.33%", status: "WATCH", note: "International developed-markets ETF, broad risk-off" },
+        { ticker: "MSFT", change: "-1.29%", status: "BUY ZONE", note: "Broad risk-off; price 21% below T1 floor $488, deep entry territory" },
+        { ticker: "GOOGL", change: "-1.25%", status: "WATCH", note: "Broad risk-off" },
+        { ticker: "NVDA", change: "-1.24%", status: "BUY ZONE", note: "Broad risk-off; price 28% below T1 floor $271, deep entry territory" },
+        { ticker: "FSLR", change: "+1.24%", status: "WATCH", note: "One of few gainers; no company-specific driver identified" },
+        { ticker: "IAU", change: "-1.20%", status: "WATCH", note: "Gold ETF pulled back despite risk-off; dollar strength likely offsetting" },
+        { ticker: "BP", change: "+1.04%", status: "OVERVALUED", note: "Modest lift from oil surge; move muted vs +6% WTI/Brent, possible quote timing lag" }
+      ],
+      statusChanges: [],
+      dataFlags: [
+        "FRVO: pre-market midpoint $23.95 vs stored $28.39 (-15.7%) exceeds 10% manual-review threshold for this low-liquidity, recently-IPO'd ticker. Not auto-updated; flagged for manual review. Ticker's own daily-close history already shows a $23.80 close on Jul 7, suggesting the stored price was stale even before today.",
+        "EWL: bid/ask spread 11.8% with zero pre-market volume — unreliable, kept at stored price $63.41 (zero volume expected for this international ETF).",
+        "FENI: bid/ask spread 10.9% with volume 27 (<500) — unreliable, kept at stored price $40.14.",
+        "HESM: bid/ask spread 4.1% with volume 12 (<500) — unreliable, kept at stored price $39.15."
+      ],
+      stableStocks: ["TSM","AVGO","HPQ","CEG","VOO","BRK-B","XLU","LLY","NEE","SHEL"],
+      actionItems: [
+        "🔴 Trigger conditions met (major geopolitical escalation, oil +6%, Nasdaq futures -1.3%) — macro-reassessment recommended; flagged for Patricia to authorize rather than auto-triggered from this pre-market check.",
+        "Monitor Strait of Hormuz shipping disruption risk (oil, BP, SHEL) and semiconductor-sector follow-through (MU, WDC, MRVL, SOXQ) as Iran-driven risk-off compounds the ongoing memory-sector selloff.",
+        "FRVO price divergence needs manual review before any dashboard update."
+      ],
+      sources: [
+        "Yahoo Finance — https://finance.yahoo.com/markets/stocks/live/stock-market-today-wednedsay-july-8-230111117.html — Date: verified ✓",
+        "TheStreet — https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-july-8-2026 — Date: verified ✓",
+        "CNN — https://www.cnn.com/2026/07/08/world/live-news/iran-war-nato-summit-ukraine-trump — Date: verified ✓",
+        "CBS News — https://www.cbsnews.com/live-updates/us-iran-war-trump-says-ceasefire-over/ — Date: verified ✓",
+        "24/7 Wall St — https://247wallst.com/investing/2026/07/07/micron-sandisk-and-western-digital-sink-7-as-samsung-earnings-spark-a-memory-selloff/ — Date: verified ✓",
+        "Japan Times — https://www.japantimes.co.jp/business/2026/07/08/tech/china-deepseek-ai-chip/ — Date: verified ✓",
+        "CNBC — https://www.cnbc.com/2026/07/08/apple-commits-30-billion-to-broadcom-for-us-chipmaking-push.html — Date: verified ✓",
+        "IMF — https://www.imf.org/en/publications/weo/issues/2026/07/08/world-economic-outlook-update-july-2026 — Date: verified ✓"
+      ]
+    },
+    {
       date: "2026-07-04",
       displayDate: "July 4, 2026",
       type: "QUARTERLY-REFRESH",
