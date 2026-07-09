@@ -898,6 +898,57 @@ verdict:"OVERVALUED — at $670, VOO is above T2 ceiling $640. VOO is the founda
 // ──────────────────────────────────────────────
 const BRIEFINGS = [
     {
+      date: "2026-07-09",
+      displayDate: "July 9, 2026",
+      type: "MACRO-REASSESSMENT",
+      runTime: "Ad hoc · Triggered by 🔴 REASSESS NOW (Jul 8 market-close)",
+      alert: "🔄 No macro score changes — AI/semi rally (China H200 easing, Micron $3B investment, SK Hynix listing hype) reads as confirmatory momentum, not a regime shift; Iran conflict escalated further but markets decoupled from the headlines",
+      headline: "AI/semiconductor complex rallies on China's partial NVDA H200 easing, Micron's $3B US supply-chain investment, and SK Hynix's imminent Nasdaq debut — even as US-Iran strikes intensify; no dashboard score changes",
+      bullets: [
+        "China will allow Alibaba, ByteDance, and DeepSeek to buy a capped (<200K units), training-only quantity of NVDA H200 chips — a real, multi-source-corroborated (Bloomberg, Japan Times, TrendForce, Jul 8-9 ✓) partial unlock of a China revenue stream Q2 FY27 guidance assumed at zero.",
+        "Micron announced up to $3B in US semiconductor supply-chain investment (GlobalWafers Sherman, TX 300mm wafer facility, 10-year supply deal) — de-risks input supply, not a new demand signal (MarketWatch/StockTitan, Jul 9 ✓).",
+        "SK Hynix's ~$29B Nasdaq debut is confirmed for tomorrow, July 10 — drawing fresh capital/attention to the whole memory complex and lifting MU/WDC/SOXQ by association.",
+        "US struck ~90 Iranian targets overnight (up from ~80 Tuesday night); Iran retaliated with strikes on US-allied bases. Markets decoupled from the escalation — WTI fell today on hopes of resolution, Nasdaq +1.30%, S&P +0.81%.",
+        "⚠️ Found and fixed a pre-existing JavaScript syntax error in the dashboard (an unescaped quote inside BP's macroContext narrative, introduced in the July 8 update) that had broken the entire STOCKS array — the live dashboard's JS has likely been non-functional since July 8 until this fix."
+      ],
+      macro: "Fed/rates: unchanged from yesterday's hawkish FOMC minutes (Chair Warsh withheld his own dot; 2026 inflation outlook raised to 3.6% headline / 3.3% core). No new information today. Nasdaq +1.30% to 26,206.89, S&P 500 +0.81% to 7,543.64, Dow +0.27% (139pts) to 52,487.41 (Yahoo Finance/TheStreet, Jul 9 ✓).",
+      geopolitical: "US intensified strikes on Iran's Strait of Hormuz coast — CENTCOM's overnight action followed Tuesday's ~80-target strike, with a further round Wednesday-into-Thursday targeting Iran's ability to threaten shipping; Iran's IRGC struck US-allied bases in Kuwait and Bahrain in retaliation. Iran's chief negotiator says the Strait reopens only under 'Iranian arrangements' — Tehran retains leverage; talks between Washington and Tehran (mediated by Pakistan/Oman) have stalled. Despite the escalation, WTI fell today on hopes the conflict might resolve — a notable disconnect between headline severity and market pricing (Washington Post/CBS News/Al Jazeera, Jul 9 ✓).",
+      earnings: "",
+      aiSemiLandscape: "China's partial NVDA H200 easing (Alibaba/ByteDance/DeepSeek approved, capped below 200K units, training-only, inference still directed to Huawei/domestic chips) is the most fundamentally significant AI/semi development today — a genuine crack in a previously-zero revenue assumption, though limited in scope (Bloomberg/Japan Times/TrendForce, Jul 8-9 ✓). Micron's $3B domestic supply-chain investment and SK Hynix's Friday Nasdaq listing are reinforcing sentiment across the memory complex without changing the underlying HBM-supercycle thesis. Broadcom continues to be discussed on the OpenAI Jalapeno custom chip (unveiled June 24 — not new today).",
+      movers: [
+        { ticker: "WDC", change: "+5.04%", status: "OVERVALUED", note: "Memory-complex rally continuation + Micron read-through + Zacks HAMR roadmap piece; already well above T2 ceiling $288" },
+        { ticker: "MRVL", change: "+4.99%", status: "OVERVALUED", note: "247WallSt: 'climbs 7% on AI chip recovery' (intraday high before settling); broad semi rebound; above T2 ceiling $138" },
+        { ticker: "MU", change: "+4.51%", status: "WATCH", note: "$3B US supply-chain investment (GlobalWafers deal) + continued reversal of Samsung-driven selloff; in T1 zone $880–$1,100" },
+        { ticker: "LEU", change: "+4.26%", status: "OVERVALUED", note: "No company-specific driver identified; broad risk-on tape; above T2 ceiling $151" },
+        { ticker: "SOXQ", change: "+3.05%", status: "WATCH", note: "Semiconductor ETF tracking the broad AI/semi rally; in T2 zone $79–$101" },
+        { ticker: "AVGO", change: "+3.20%", status: "OVERVALUED", note: "Extending Wednesday's Apple-deal rally; continuing OpenAI Jalapeno coverage; above T2 ceiling $331" },
+        { ticker: "CEG", change: "+2.54%", status: "WATCH", note: "No company-specific catalyst identified; in T2 zone $240–$309" }
+      ],
+      statusChanges: [],
+      dataFlags: [
+        "FRVO: current price $27.35 vs stored dashboard baseline $28.39 (-3.66%) — within threshold, no manual-review flag this run (per macro-reassessment protocol, stored value used as FRVO/LEU baseline rather than yesterday's raw FMP close).",
+        "No macro score changes made — all moves this run reflect confirmatory/momentum developments (China H200 partial easing, MU capex, SK Hynix listing hype) layered onto already-elevated scores (NVDA already at ceiling 5/5; MU, AVGO, WDC held at 4; SOXQ held at 3), not a fundamental regime shift.",
+        "Pre-existing JS syntax bug found and fixed: BP's macroContext narrative (added Jul 8) contained an unescaped straight double-quote around the word 'over' inside a double-quoted string field, which terminated the STOCKS array early and would break the entire dashboard's JavaScript in a browser. Verified via node --check both before (failed) and after (passed) the fix. Recommend a syntax lint pass (node --check on the extracted STOCKS/BRIEFINGS snippets) be added to the standard QC audit going forward to catch this class of error before it reaches GitHub Pages."
+      ],
+      stableStocks: ["NVDA","MSFT","GOOGL","HPQ","FSLR","TSM","LLY","NVO","BRK-B","FRVO","HESM","BP","SHEL","NEE","EWY","EWL","AVDE","FENI","SCHF","VOO","XLU","IAU","REMX"],
+      actionItems: [
+        "Watch SK Hynix's Nasdaq debut tomorrow (Jul 10) for capital-rotation effects on MU/WDC — retail sentiment (Benzinga, Jul 9) suggests some rotation out of MU and into SK Hynix as a 'purer' HBM play.",
+        "Iran/Strait of Hormuz remains an unresolved tail risk despite today's muted market reaction — US strikes continuing, Iran retaliating on regional bases, talks stalled. Continue monitoring BP/SHEL and broader risk sentiment.",
+        "Recommend adding a JS syntax check (node --check) to the standard post-edit QC routine for all future dashboard edits, given today's discovery that a July 8 edit had broken the live dashboard's JavaScript undetected for roughly a day."
+      ],
+      sources: [
+        "The Motley Fool — https://www.fool.com/coverage/stock-market-today/2026/07/09/stock-market-today-july-9-ai-chip-technology-stocks-rally-overcoming-ceasefire-worries/ — Date: verified ✓",
+        "Yahoo Finance — https://finance.yahoo.com/markets/live/stock-market-today-thursday-july-9-us-strikes-iran-223149196.html — Date: verified ✓",
+        "Bloomberg — https://www.bloomberg.com/news/articles/2026-07-08/china-to-let-ai-firms-buy-nvidia-h200-chips-information-says — Date: verified ✓",
+        "Japan Times — https://www.japantimes.co.jp/business/2026/07/09/tech/china-ai-firms-nvidia-h200s/ — Date: verified ✓",
+        "TrendForce — https://www.trendforce.com/news/2026/07/09/news-china-reportedly-to-allow-nvidia-h200-imports-but-approvals-may-be-capped-below-200k-chips-less-than-half-requested/ — Date: verified ✓",
+        "MarketWatch — https://www.marketwatch.com/story/microns-stock-surges-on-multibillion-dollar-u-s-manufacturing-push-b1e63834 — Date: verified ✓",
+        "247 Wall St — https://247wallst.com/investing/2026/07/09/marvell-technology-climbs-7-on-the-ai-chip-recovery-is-it-overvalued-next-to-broadcom-and-nvidia/ — Date: verified ✓",
+        "Washington Post — https://www.washingtonpost.com/world/2026/07/09/us-intensifies-strikes-irans-coast-along-strait-hormuz/ — Date: verified ✓",
+        "CBS News — https://www.cbsnews.com/live-updates/us-iran-war-trump-says-ceasefire-over/ — Date: verified ✓"
+      ]
+    },
+    {
       date: "2026-07-08",
       displayDate: "July 8, 2026",
       type: "MARKET-CLOSE",
