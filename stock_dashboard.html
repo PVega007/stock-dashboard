@@ -900,6 +900,70 @@ const BRIEFINGS = [
     {
       date: "2026-07-08",
       displayDate: "July 8, 2026",
+      type: "MARKET-CLOSE",
+      runTime: "4:00 PM CT · Auto",
+      alert: "🔴 REASSESS NOW — WDC +7.05%, AVGO +5.38%, MU +5.12% (3 holdings >5%); WTI oil +5% on Iran escalation; hawkish FOMC minutes (new Fed Chair Warsh withheld his own dot, 2026 inflation outlook raised to 3.6%)",
+      headline: "Nasdaq +0.20% but Dow -1.09% as markets digest US strikes on Iran and hawkish FOMC minutes; chip/storage names rip higher on Apple-Broadcom $30B deal and Micron read-through; no dashboard status changes",
+      bullets: [
+        "Broadcom +5.38% on new $30B multiyear Apple custom-chip deal (15B+ US-made chips, Fort Collins CO expansion, extends partnership through 2031) — read-through lifted WDC +7.05%, MU +5.12%, SOXQ +4.22%, MRVL +3.38%, NVDA +4.93% despite the broader risk-off tape (Bloomberg/CNBC/Investopedia, Jul 8 ✓).",
+        "FOMC minutes (June 16-17 meeting) released 2pm ET — new Chair Kevin Warsh withheld his own rate projection; committee split with participants divided between holding and hiking; 2026 inflation outlook raised to 3.6% headline / 3.3% core — reduces near-term rate-cut odds (CNBC, Jul 8 ✓).",
+        "WTI crude +5% to ~$74.35 as Trump declared the US-Iran memorandum 'over' following overnight strikes on 80+ Iranian targets; Iran signals defiance on Strait of Hormuz control, though Trump's following-day comments suggested no immediate further escalation (CNN/CBS News, Jul 7-8 ✓).",
+        "No dashboard status changes today — all 29 successfully-priced tickers held their prior BUY ZONE/WATCH/OVERVALUED status.",
+        "FRVO flagged for manual review again: close $23.57 vs stored $28.39 (-16.98%) exceeds the 10% low-liquidity threshold for the second check running today — not auto-updated.",
+        "ECL degraded this run: FMP technicalIndicators output exceeded context/file-access limits (known Starter-plan issue); only the SMA50 signal could be approximated via quote data's priceAvg50 field. RSI/EMA9/MACD unavailable — treat conviction scores as directional only."
+      ],
+      macro: "S&P 500 -0.28%, NASDAQ +0.20%, Dow -1.09% (Yahoo Finance/TheStreet, Jul 8 ✓). VIX 16.13 — muted relative to the geopolitical/macro headlines. WTI $74.35 (+5%, CNN/fxdailyreport, Jul 8 ✓). FOMC June minutes released 2pm ET: Warsh withheld his own dot; participants split on 2026 path (mix of hold/hike, one dissent for a cut); 2026 inflation outlook raised to 3.6% headline / 3.3% core — hawkish tilt (CNBC, Jul 8 ✓). IMF July World Economic Outlook Update also published this morning. Next MACRO_CALENDAR items: CPI Jul 14, FOMC Jul 29.",
+      geopolitical: "Trump declared the US-Iran memorandum 'over' at the NATO summit in Ankara after US forces struck 80+ Iranian targets overnight in response to Strait of Hormuz tanker attacks; sanctions on Iranian oil reimposed. Iran's IRGC claims reprisal strikes on US bases in Bahrain/Kuwait; Iran signals it will not cede Strait of Hormuz traffic-management authority. Trump's following-day remarks suggested the exchange of fire would not necessarily lead to sustained long-term action — a partial de-escalation signal, though the situation remains fluid (CNN/CBS News/Al Jazeera, Jul 7-8 ✓).",
+      earnings: "No dashboard-ticker earnings surfaced in FMP's earnings-calendar for Jul 8-13 (results dominated by small/OTC names). MSFT next reports Jul 29; TSM Jul 16.",
+      aiSemiLandscape: "DeepSeek (China) reportedly developing its own AI inference chip to reduce Nvidia/Huawei reliance — continuing coverage from yesterday's scan (Japan Times/US News, Jul 7-8 ✓), not new breaking news. Separately, a new China AI-chip startup (Dongfang Suanxin, led by Wei Shaojun) emerged from stealth betting on 3D-stacking to bypass US export controls (SCMP) — structural read-through for NVDA/MRVL/AVGO/TSM/MU competitive landscape, no direct dashboard-ticker impact identified today.",
+      movers: [
+        { ticker: "WDC", change: "+7.05%", status: "OVERVALUED", note: "$514.08→$550.30 | Apple-Broadcom deal spillover into storage/memory complex + continued Micron-driven memory optimism; already well above T2 ceiling $288 — wait for pullback to $199–$249 entry zone" },
+        { ticker: "EWY", change: "+5.50%", status: "WATCH", note: "$173.19→$182.71 | Korea ETF rebound reversing Monday's Kospi rout; in the T2 zone $172–$228, fairly valued to optimistic" },
+        { ticker: "AVGO", change: "+5.38%", status: "OVERVALUED", note: "$368.85→$388.69 | New $30B Apple custom-chip deal through 2031; above T2 ceiling $331 — wait for pullback to $242–$331 entry zone" },
+        { ticker: "MU", change: "+5.12%", status: "WATCH", note: "$902.60→$948.80 | Rebound continues post Q3 blowout (HBM booked through 2027); in the T1 zone $880–$1,100 — approaching entry, consider a smaller tranche" },
+        { ticker: "NVDA", change: "+4.93%", status: "BUY ZONE", note: "$194.49→$204.08 | BofA reiterated Buy, called valuation a 'juicy discount'; price remains 25% below T1 floor $271 — deep in BUY ZONE, maximum margin of safety" },
+        { ticker: "HPQ", change: "+4.30%", status: "WATCH", note: "$22.80→$23.78 | No company-specific driver identified; in the T1 zone $21–$24 — approaching low-end fair value" },
+        { ticker: "SOXQ", change: "+4.22%", status: "WATCH", note: "$94.94→$98.95 | Semiconductor ETF, sector-wide lift from Apple-Broadcom deal; in the T2 zone $79–$101, fairly valued to optimistic" },
+        { ticker: "MRVL", change: "+3.38%", status: "OVERVALUED", note: "$224.14→$231.71 | Zacks bull piece ('next trillion dollar AI stock'); above T2 ceiling $138 — wait for pullback to $101–$138 entry zone" },
+        { ticker: "CEG", change: "+2.91%", status: "WATCH", note: "$237.60→$244.52 | No company-specific catalyst identified; in the T2 zone $240–$309, fairly valued to optimistic — hold" },
+        { ticker: "FSLR", change: "-2.71%", status: "WATCH", note: "$230.54→$224.30 | Ongoing securities class action reminder (Faruqi & Faruqi, Aug 24 lead-plaintiff deadline) — known governance overhang; in the T1 zone $207–$252 — approaching entry" },
+        { ticker: "LEU", change: "+2.41%", status: "OVERVALUED", note: "$162.55→$166.47 | No company-specific driver identified; above T2 ceiling $151 — wait for pullback to $61–$151 entry zone" },
+        { ticker: "BRK-B", change: "-2.07%", status: "WATCH", note: "$505.23→$494.79 | Broad risk-off tape; in the T2 zone $480–$620, fairly valued — hold" }
+      ],
+      statusChanges: [],
+      dataFlags: [
+        "FRVO: close $23.57 vs stored $28.39 (-16.98%) exceeds the 10% manual-review threshold for this low-liquidity, recently-IPO'd ticker — not auto-updated, kept at $28.39 / July 7, 2026. Same flag as this morning's pre-market check; divergence persists through the close.",
+        "ECL (Execution Confirmation Layer) degraded this run: FMP technicalIndicators output (~160K chars) exceeded context and file-access limits in this session — the known Starter-plan issue documented in CLAUDE.md. Substituted priceAvg50 from the quote endpoint as a directional-only proxy for the SMA50 signal; RSI(14), EMA9, and MACD convergence were NOT fetched. Conviction scores below should be treated as partial/directional, not full 4-signal confirmations.",
+        "AI/semiconductor landscape scan surfaced only continuing coverage (DeepSeek chip story, first reported yesterday) plus one new structural item (Dongfang Suanxin stealth-mode emergence) — no dashboard-ticker-specific new developments today."
+      ],
+      stableStocks: ["MSFT","GOOGL","TSM","LLY","NVO","HESM","BP","SHEL","NEE","EWL","AVDE","FENI","SCHF","VOO","XLU","IAU","REMX"],
+      executionConfirmation: [
+        { ticker: "NVDA", status: "BUY ZONE", rsi: "n/a (unavailable)", sma50: "$209.60 — price below ✅", ema9: "n/a (unavailable)", macd: "n/a (unavailable)", signals: "1/1 available signal ✅ (partial data — RSI/EMA9/MACD not fetched this run)" },
+        { ticker: "MSFT", status: "BUY ZONE", rsi: "n/a (unavailable)", sma50: "$406.13 — price below ✅", ema9: "n/a (unavailable)", macd: "n/a (unavailable)", signals: "1/1 available signal ✅ (partial data)" },
+        { ticker: "HPQ", status: "WATCH (T1 zone)", rsi: "n/a (unavailable)", sma50: "$23.02 — price above ❌", ema9: "n/a (unavailable)", macd: "n/a (unavailable)", signals: "0/1 available signal ❌ (partial data)" },
+        { ticker: "MU", status: "WATCH (T1 zone)", rsi: "n/a (unavailable)", sma50: "$871.16 — price above ❌", ema9: "n/a (unavailable)", macd: "n/a (unavailable)", signals: "0/1 available signal ❌ (partial data)" },
+        { ticker: "FSLR", status: "WATCH (T1 zone)", rsi: "n/a (unavailable)", sma50: "$246.52 — price below ✅", ema9: "n/a (unavailable)", macd: "n/a (unavailable)", signals: "1/1 available signal ✅ (partial data)" }
+      ],
+      actionItems: [
+        "🔴 Trigger conditions met (3 holdings >5%, oil +5%, hawkish FOMC minutes) — macro-reassessment recommended; flagged here for Patricia to authorize rather than auto-triggered from this market-close check.",
+        "FRVO price divergence needs manual review — flagged at both pre-market and market-close today; consider checking FRVO's own recent daily closes directly given the recurring gap vs the stored dashboard price.",
+        "Re-run ECL with full technicalIndicators access (RSI/EMA9/MACD still missing for NVDA, MSFT, HPQ, MU, FSLR) when the file-size/context issue allows — see dataFlags.",
+        "Monitor Iran/Strait of Hormuz follow-through into tomorrow given Trump's mixed signals (MOU 'over' but no confirmed further escalation)."
+      ],
+      sources: [
+        "Yahoo Finance — https://finance.yahoo.com/markets/stocks/live/stock-market-today-wednedsay-july-8-230111117.html — Date: verified ✓",
+        "TheStreet — https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-july-8-2026 — Date: verified ✓",
+        "CNBC — https://www.cnbc.com/2026/07/08/with-minutes-due-feds-family-fight-over-interest-rates-could-drag-on.html — Date: verified ✓",
+        "CNN — https://www.cnn.com/2026/07/07/world/live-news/nato-summit-trump — Date: verified ✓",
+        "CBS News — https://www.cbsnews.com/live-updates/iran-us-war-strait-of-hormuz-trump-nato/ — Date: verified ✓",
+        "Bloomberg — https://www.bloomberg.com/news/articles/2026-07-08/apple-aapl-chip-deal-with-broadcom-avgo-expected-to-exceed-30-billion — Date: verified ✓",
+        "CNN Business — https://www.cnn.com/2026/07/08/business/apple-broadcom-chips — Date: verified ✓",
+        "Japan Times — https://www.japantimes.co.jp/business/2026/07/08/tech/china-deepseek-ai-chip/ — Date: verified ✓ (continuing coverage)"
+      ]
+    },
+    {
+      date: "2026-07-08",
+      displayDate: "July 8, 2026",
       type: "PRE-MARKET",
       runTime: "7:00 AM CT · Auto",
       alert: "🔴 REASSESS NOW — US-Iran ceasefire declared over, overnight strikes, oil +6%",
