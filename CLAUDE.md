@@ -573,6 +573,66 @@ else:
 
 **June 28, 2026:** 12 stocks had verdict/status mismatches corrected (FSLR, PLAB, AVGO, TXN, TSM, LEU, LLY, BRK-B, GOOGL, AMZN, VOO, REMX). All 35 stocks now pass the audit.
 
+**Stale narrative field rule (found July 11, 2026 — deeper than verdict/status):** The verdict/status check above only catches a mismatched opening keyword. It does NOT catch a subtler problem: a stock's `valuation`, `entry`, `bullCase`, `bearCase`, `financial`, and `summary` fields can each independently go stale after a stock re-rates hard, even while `verdict` itself opens with the correct status keyword and passes the audit above.
+
+**What happened to MU:** Micron ran up roughly 10x over the course of 2026 (HBM supercycle). `priceResearch`, `entryTarget`, `status`, and `verdict` were all kept current through that run. But five other fields — `summary`, `financial`, `valuation`, `entry`, `bullCase`, `bearCase` — were never rewritten and still referenced a pre-rally price/EPS scale from when MU traded in the $75–150 range: `valuation` modeled a "trough" at $450–675 using a 15x multiple on $30–45 EPS, `entry` said "entry may be justified at $75–85," `bullCase` capped upside at "$150+," `bearCase` floored the stock at "$60–80." Every one of these numbers was 5–10x below the then-current `entryTarget` grid ($880–$1,100–$1,260) and `verdict` text, an internal contradiction fully visible to Patricia (and to Claude for Excel, which caught it independently on July 11, 2026 while reviewing the GitHub export for a separate project) in the detail panel. Root cause: these fields get written once during a full 12-step re-analysis and then are only touched again during another full re-analysis (quarterly refresh) or an ad hoc reason to open that specific stock's block — unlike `priceResearch`/`status`/`verdict`, nothing in the daily/weekly pipeline ever rewrites them, so a stock that re-rates fast between quarterly refreshes can carry stale scenario pricing in these fields indefinitely.
+
+**Fix applied (July 11, 2026):** Rewrote all five MU fields to reference the current v3 grid ($880 T1 floor / $1,100 T1 ceiling / $1,260 T2 ceiling) and the $528 Bear Floor instead of the stale ad hoc 15x-multiple trough math, while preserving the legitimate analytical point (through-cycle EPS risk, 2022–2023 precedent) each field was making.
+
+**Stale-narrative scan** (heuristic — flags $ ranges or "$X+" figures inside `valuation`/`entry`/`bullCase`/`bearCase`/`summary` that are less than half the stock's Bear Floor, or half its T1 floor if no bear_discount is set; expect some false positives on legitimate forward-EPS or per-unit figures like NVDA's "$50-100B TAM" or CEG's "$70-80/MWh" — eyeball each hit before editing):
+
+```python
+import re, json
+
+with open('/Users/pvegamacbookair/Claude Cowork/stock_dashboard.html', 'r', encoding='utf-8') as f:
+    html = f.read()
+with open('/Users/pvegamacbookair/Claude Cowork/investment_parameters.json', 'r', encoding='utf-8') as f:
+    params = json.load(f)['holdings']
+
+stocks_start = html.find('const STOCKS = [')
+stocks_end = html.find('const FRAMEWORK_STEPS')
+stocks_html = html[stocks_start:stocks_end]
+entry_starts = [m.start() for m in re.finditer(r'\{\s*ticker\s*:\s*["\']', stocks_html)]
+entry_starts.append(len(stocks_html))
+
+def parse_money(s): return float(s.replace('$','').replace(',',''))
+range_pat = re.compile(r'\$([\d,]+(?:\.\d+)?)\s*[–—-]\s*\$?([\d,]+(?:\.\d+)?)')
+single_pat = re.compile(r'\$([\d,]+(?:\.\d+)?)\+')
+
+seen, flags = set(), []
+for i, start in enumerate(entry_starts[:-1]):
+    end = entry_starts[i+1]
+    entry = stocks_html[start:end]
+    ticker_m = re.search(r'ticker\s*:\s*["\'](\w[\w-]*)["\']', entry)
+    if not ticker_m or 'sector' not in entry[:200]: continue
+    ticker = ticker_m.group(1)
+    et_m = re.search(r'entryTarget:\s*["\']([^"\']+)', entry)
+    if not et_m or ticker in seen: continue
+    seen.add(ticker)
+    nums = re.findall(r'\$([\d,]+)', et_m.group(1))
+    if len(nums) < 3: continue
+    t1f = parse_money('$'+nums[0])
+    bear_discount = params.get(ticker, {}).get('bear_discount')
+    ref = round(t1f*(1-bear_discount)) if bear_discount else t1f
+    for field in ['valuation', 'entry', 'bullCase', 'bearCase', 'summary']:
+        fm = re.search(rf'{field}\s*:\s*["\']((?:[^"\\]|\\.)*)["\']', entry)
+        if not fm: continue
+        text = fm.group(1)
+        for m in range_pat.finditer(text):
+            lo, hi = parse_money('$'+m.group(1)), parse_money('$'+m.group(2))
+            if lo >= 10 and hi < ref*0.5:
+                flags.append((ticker, field, f"${lo:.0f}-${hi:.0f}"))
+        for m in single_pat.finditer(text):
+            v = parse_money('$'+m.group(1))
+            if v < ref*0.5:
+                flags.append((ticker, field, f"${v:.0f}+"))
+
+for t, field, val in flags:
+    print(f"{t} [{field}]: {val} — check against T1 floor/Bear Floor")
+```
+
+Run this at every quarterly refresh (in addition to, not instead of, the verdict/status check above) — any stock that re-rates 3x+ between quarterly refreshes is a candidate for this exact drift.
+
 ### Authoritative Sources Hierarchy
 
 Always prefer sources in this order. Briefings must cite source + date for every market-moving claim.
@@ -687,6 +747,7 @@ Patricia flagged that the day's briefings had missed relevant news despite a ful
 | Macro reassessment run (US-Iran ceasefire declared "over," oil spiked, AI/semi selloff deepened): no macro score changes (read as escalation of an already-flagged tail risk, not new fundamentals); 5 macroContext narratives updated (AVGO, MU, EWY, BP, SHEL) | July 8, 2026 |
 | `Position_Tracker.md` created — tracks Patricia's personal open tranches and exit targets, separate from the dashboard's general valuation framework; `premarket-price-check` and `market-close-price-check` updated with a lightweight PART 1C step that flags when a tracked ticker's price reaches or nears its exit target. First tracked position: AVGO tranche (entry $422.91) — GTC limit sell set at $410.75 | July 9, 2026 |
 | External data exports added (`export_stocks.js` → `stocks.json`/`stocks.csv`/`stocks_full.json`) for Claude for Excel to pull from the public GitHub repo — built for Patricia's short-term-lens Excel dashboard project; wired into `github_push.py` (auto-regenerates before every push) and both price-check scheduled tasks; `investment_parameters.json` and `CLAUDE.md` also now pushed publicly for the first time (were tracked/referenced but never actually staged). `Position_Tracker.md` explicitly excluded — contains account/tax detail not approved for public export. See § 4B. | July 11, 2026 |
+| SNDK added as 31st holding (see § 7); MU's `summary`/`financial`/`valuation`/`entry`/`bullCase`/`bearCase` fields found and fixed — carried pre-rally (~10x ago) price/EPS scenario numbers ($75–85 entry, $450–675 trough, $150+ bull, $60–80 bear) despite `entryTarget`/`status`/`verdict` all being current; caught by Claude for Excel independently while reviewing the GitHub export for the short-term dashboard project. New stale-narrative scan added to § "Dashboard Consistency / QC" — checks fields the verdict/status audit doesn't reach. | July 11, 2026 |
 
 ---
 
