@@ -1,8 +1,8 @@
 {
   "_meta": {
     "source": "stock_dashboard.html (via export_stocks.js, full narrative export)",
-    "exportedAt": "2026-07-11T17:04:59.330Z",
-    "count": 30,
+    "exportedAt": "2026-07-11T17:07:31.625Z",
+    "count": 31,
     "note": "Full per-stock content: summary, steps.macroContext/priceAction/business/financial/management/governance/valuation/catalysts, redFlags, verdict (or steps.s11 for steps-format stocks), scores, entryTarget, PE data. Methodology (entry-target formulas, bear-floor formula, ECL signal rules) lives in investment_parameters.json and CLAUDE.md, also in this repo. Position_Tracker.md (personal tranche/exit tracker) is intentionally NOT included here — it contains account-level and tax-strategy detail Patricia has not authorized for public export."
   },
   "stocks": [
@@ -313,6 +313,51 @@
       "pe_ttm": "35.7×",
       "pe_target": "14–18× EV/EBITDA",
       "pe_note": ""
+    },
+    {
+      "ticker": "SNDK",
+      "name": "SanDisk Corporation",
+      "sector": "NAND Flash Memory / Storage Solutions",
+      "priceResearch": "$1,915.92",
+      "priceDate": "July 11, 2026",
+      "entryTarget": "$308–$440 | $441–$476",
+      "marketCap": "$283.7B",
+      "analystTarget": "$1,684.06 cons. / $1,585 med.",
+      "status": "OVERVALUED",
+      "category": "Semiconductors",
+      "scores": {
+        "macro": 4,
+        "business": 3,
+        "financial": 3,
+        "management": 3,
+        "governance": 3,
+        "valuation": 1
+      },
+      "redFlags": [
+        "Trading ~4.0x above our provisional T2 ceiling ($476) and already above analyst consensus ($1,684)/median ($1,585) — even a bull-case EPS scenario (~$46/share, 50% of the Q3 FY26 blowout run-rate) only lifts T2 ceiling to ~$1,095, still ~75% below the current price",
+        "Only ~17 months of independent trading history since the Feb 2025 WDC spin-off — no demonstrated NAND down-cycle as a standalone entity, unlike MU's decades of cycle data behind its own mid-cycle EPS estimate",
+        "Extreme volatility: beta 4.74, 52-week range $40.10–$2,354.39 (~59x) — one of the most volatile names in the portfolio by a wide margin",
+        "TTM P/E 62.8x and EV/EBITDA ~52x are dominated by a single blowout quarter — diluted EPS went $0.75 → $5.15 → $23.03 over the last three quarters; NAND pricing spikes have historically reversed hard",
+        "FMP's analyst consensus EPS estimates are inaccessible on the current Starter plan for this ticker — entry targets rely on a judgment-call normalized EPS (~$20/share), not a clean consensus figure; revisit at the next quarterly refresh",
+        "Active sustainability debate in the market itself: 247wallst flagged a 'brutal mid-July correction' on storage-demand-peaked concerns (Jul 10), and reports that Millennium's Israel Englander trimmed SNDK in favor of another AI-memory name (Jul 10)"
+      ],
+      "summary": "SanDisk was spun off from Western Digital in February 2025 as the pure-play NAND flash business, and was inadvertently left off this dashboard when WDC was rebuilt HDD-only at the July 4 quarterly refresh — added back July 11, 2026 at Patricia's request. The stock has been one of the single best performers in the market over the past year, up from a $40.10 52-week low to $1,915.92 (nearly 48x), riding the same AI-driven memory supercycle lifting MU and SK Hynix. Q3 FY2026 was a blowout quarter (revenue $5.95B +96% sequential, diluted EPS $23.03 vs $5.15 the prior quarter), but that scale of quarter-over-quarter swing — and the near-total absence of a demonstrated down-cycle as an independent company — makes a confident 'normalized' valuation genuinely difficult right now. Using a deliberately conservative EPS input (~$20/share, one quarter back from the current blowout) and MU's own P/E framework widened for extra uncertainty, the resulting T1/T2 bands ($308–$440 | $441–$476) sit far below the current price — OVERVALUED by a wide margin under this approach, and still meaningfully overvalued even under a more bullish EPS assumption. Treat the precise dollar levels here as provisional; the qualitative conclusion (extended, not a buy at current levels) is more robust than the specific numbers.",
+      "steps": {
+        "macroContext": "NAND flash sits alongside DRAM/HBM as a core beneficiary of the AI infrastructure buildout — SSDs and high-capacity storage for AI training/inference datasets are seeing the same supply deficit dynamics as DRAM. SK Hynix's July 10 Nasdaq debut (raising $26.5B) explicitly flagged that the 'computer memory deficit will last past 2030' — a structural, multi-year tailwind, not a one-quarter blip. Samsung, SK Hynix/Kioxia, and SanDisk are the primary global NAND suppliers; all three have been re-rated sharply higher in 2026 on the same thesis. Macro score reflects a genuinely powerful structural tailwind, tempered by the fact that memory cycles have historically been the most brutal boom-bust pattern in semiconductors — the tailwind is real, but so is the eventual reversal risk.",
+        "priceAction": "Stock has moved from a 52-week low of $40.10 to a high of $2,354.39 — a ~59x range that reflects both the WDC spin-off's initial mispricing (SNDK traded in the $40s shortly after separation in early 2025, when the standalone NAND business posted a loss-making quarter) and the subsequent AI-memory re-rating. Currently $1,915.92, up 3.1% today and roughly 19% below the 52-week high, but still up massively over the past year. Beta of 4.74 is extreme — this stock moves far more violently than the broader market in either direction.",
+        "business": "SanDisk designs, manufactures, and supplies NAND flash storage solutions: solid-state drives (SSDs), embedded memory, removable memory cards, USB devices, and the underlying wafers/components. Revenue has accelerated sharply — $2.31B (Q1 FY26) → $3.03B (Q2 FY26) → $5.95B (Q3 FY26, +96% sequential) — as NAND pricing has spiked alongside the broader memory shortage. Same CEO (David Goeckeler) who ran WDC through the spin-off. ~12,000 employees, headquartered in Milpitas, CA.",
+        "financial": "TTM figures are dominated by the Q3 FY26 blowout: gross margin 56.0%, operating margin 40.9%, net margin 34.2% — extraordinary for a hardware company, but not representative of a full cycle. Balance sheet is genuinely strong and de-risked: current ratio 4.78, cash ratio 1.95, debt/equity just 0.013 (essentially no leverage), interest coverage 43.5x. TTM net income/share $30.45 (P/E 62.8x), but this blends a -$13.33 EPS quarter (Q3 FY25, spin-off related charges) and a +$23.03 EPS quarter (Q3 FY26, supercycle peak) — the two are roughly 30x apart, illustrating just how wide the earnings swing has been in the ~7 quarters since spin-off.",
+        "management": "CEO David Goeckeler led WDC through the SanDisk separation and now runs the standalone NAND business. Track record on the spin-off execution itself is solid (WDC's own dashboard entry shows the HDD side of the split also came out with a dramatically cleaner balance sheet). Limited standalone track record for SNDK specifically beyond the spin-off and this one supercycle — no test yet of how management navigates a NAND down-cycle as an independent company without WDC's HDD business as a stabilizer.",
+        "governance": "Standard newly-independent-company governance profile — no major red flags identified, but very limited track record as a standalone public entity (~17 months) to assess board/governance quality independently of the WDC-era structure it inherited.",
+        "valuation": "This is the crux of the SNDK story right now. TTM P/E (62.8x) and EV/EBITDA (~52x) are priced off a single exceptional quarter. Using a conservative normalized EPS (~$20/share, provisional) against MU's own 22–28x cyclical-memory P/E framework (widened MoS to 30% given SNDK's much higher volatility and lack of down-cycle history) produces T1 $308–$440 | T2 $441–$476 — implying the stock is trading roughly 4x above fair value under this approach. Even a more bullish EPS assumption (~$46/share, 50% of the current blowout quarter's run-rate) only lifts T2 ceiling to ~$1,095, still well below the $1,915.92 current price. Both scenarios land on the same qualitative conclusion — OVERVALUED — even though the precise multiple is genuinely uncertain given how little cycle history exists for this specific entity.",
+        "bullCase": "The memory supercycle narrative is real and corroborated by SK Hynix's own commentary about a multi-year structural deficit. SanDisk is one of only three global NAND suppliers at scale, with a dramatically cleaner balance sheet post-spin-off (near-zero debt) and margins that, even if they moderate from Q3 FY26's peak, could settle at a level well above SNDK's pre-spin/transitional-quarter run-rate. If the supercycle proves more durable than past memory cycles (a real possibility given the AI storage demand driver is structurally different from prior PC/mobile-driven cycles), today's price could look cheap in hindsight.",
+        "bearCase": "Memory cycles have a long history of boom-bust reversals, and SNDK's own quarterly history already shows how violently results can swing (a -$13.33 EPS quarter just five quarters ago). The stock is already priced above analyst consensus and median targets, beta of 4.74 signals the market itself is pricing enormous uncertainty, and at least one large investor (Millennium's Englander) has reportedly been trimming the position. A single disappointing quarter, a supply response from Samsung/Kioxia, or any sign the AI storage demand story is decelerating could trigger a sharp de-rating from these levels.",
+        "risks": "Extreme quarter-to-quarter earnings volatility with almost no demonstrated down-cycle as an independent company; beta 4.74 implies outsized drawdown risk in any broader market pullback; NAND pricing could reverse as suppliers (including SanDisk itself) respond to record margins with capacity additions; concentration risk in a single product category (pure NAND, versus MU's DRAM+NAND+HBM diversification); FMP's Starter-plan data gaps mean the entry targets here rely on a judgment call rather than clean consensus estimates.",
+        "verdict": "OVERVALUED — at $1,915.92, SNDK trades roughly 4x above our provisional T2 ceiling ($476), calculated using a deliberately conservative normalized EPS (~$20/share) given the stock's short independent trading history and extreme volatility (beta 4.74). Even a more bullish EPS assumption only closes part of the gap. The underlying memory-supercycle thesis is credible and well-corroborated by SK Hynix's own guidance, but the current price already reflects a great deal of optimism, and the stock's own 30x swing in quarterly EPS over the last five quarters is a reminder of how quickly NAND economics can reverse. Not a buy at current levels; revisit entry targets with real consensus EPS data at the next quarterly refresh, and watch for a substantial pullback (or confirmation the supercycle has more durable pricing power than historical NAND cycles) before reconsidering."
+      },
+      "pe_ttm": "62.8×",
+      "pe_target": "22–28× norm.",
+      "pe_note": "* TTM = single blowout quarter (Q3 FY26 EPS $23.03); target uses provisional ~$20 normalized EPS, not peak"
     },
     {
       "ticker": "HPQ",
