@@ -7,7 +7,7 @@ This file is read-first at the start of every session. It contains the authorita
 
 ## 1. What This Workspace Is
 
-An active portfolio analysis and monitoring system for Patricia's 30-stock watchlist, consisting of:
+An active portfolio analysis and monitoring system for Patricia's 31-stock watchlist, consisting of:
 - An interactive HTML dashboard (`stock_dashboard.html`) with live prices, entry targets, statuses, and full stock analyses
 - Automated scheduled tasks for pre-market briefings, market-close checks, and macro reactions
 - A persistent parameters file (`investment_parameters.json`) as the single source of truth for all valuation inputs
@@ -20,7 +20,7 @@ An active portfolio analysis and monitoring system for Patricia's 30-stock watch
 ```
 /Users/pvegamacbookair/Claude Cowork/       ← WORKSPACE ROOT
 ├── CLAUDE.md                                ← THIS FILE (read first) — now pushed to GitHub on every price check
-├── stock_dashboard.html                     ← Main dashboard (30 stocks)
+├── stock_dashboard.html                     ← Main dashboard (31 stocks)
 ├── investment_parameters.json               ← Valuation parameters (authoritative) — now pushed to GitHub too
 ├── Position_Tracker.md                      ← Patricia's personal tranche/exit tracker (added Jul 9, 2026) — NEVER pushed to GitHub (see §4B)
 ├── index.html                               ← GitHub Pages redirect
@@ -42,7 +42,7 @@ An active portfolio analysis and monitoring system for Patricia's 30-stock watch
 - The append_briefing.py path used in Python: `sys.path.insert(0, '/Users/pvegamacbookair/Claude Cowork/Briefings')`
 - In the bash sandbox, the workspace mounts at: `/sessions/<id>/mnt/Claude Cowork/`
 
-**`Position_Tracker.md` (added Jul 9, 2026):** A simple markdown file, separate from the dashboard, that tracks Patricia's actual open tranches for positions she's personally exiting or calibrating — entry price, share count, status (OPEN/CLOSED), exit target (e.g. a GTC limit price), and the technical/macro rationale behind that target. This is distinct from `stock_dashboard.html`'s `entryTarget`/`status` fields, which reflect the general valuation framework (T1/T2/Bear Floor) for all 30 holdings, not Patricia's specific cost basis or personal exit plans. Both `premarket-price-check` and `market-close-price-check` read this file (PART 1C — lightweight, no dashboard mutation) and flag in the briefing when a tracked ticker's price has reached or is within ~1% of its exit target. Update this file manually (or ask Claude to update it) whenever a tranche is opened, closed, or a target changes — it will silently go stale otherwise, the same way `MACRO_CALENDAR` did.
+**`Position_Tracker.md` (added Jul 9, 2026):** A simple markdown file, separate from the dashboard, that tracks Patricia's actual open tranches for positions she's personally exiting or calibrating — entry price, share count, status (OPEN/CLOSED), exit target (e.g. a GTC limit price), and the technical/macro rationale behind that target. This is distinct from `stock_dashboard.html`'s `entryTarget`/`status` fields, which reflect the general valuation framework (T1/T2/Bear Floor) for all 31 holdings, not Patricia's specific cost basis or personal exit plans. Both `premarket-price-check` and `market-close-price-check` read this file (PART 1C — lightweight, no dashboard mutation) and flag in the briefing when a tracked ticker's price has reached or is within ~1% of its exit target. Update this file manually (or ask Claude to update it) whenever a tranche is opened, closed, or a target changes — it will silently go stale otherwise, the same way `MACRO_CALENDAR` did.
 
 ---
 
@@ -212,7 +212,7 @@ In Bear mode, stocks below their T3 Bear Floor float to the very top (above all 
 
 ## 4B. External Data Exports — for Claude for Excel / other tools (added July 11, 2026)
 
-**Why this exists:** Patricia is building a short-term-lens investment dashboard in Excel (same 30-ticker watchlist, reframed around short-term signals — RSI/MACD/SMA, range trades like the NVDA/MSFT mini-tranche strategy) and wants Claude for Excel to be able to see this dashboard's data to assess what's reusable. Claude for Excel cannot browse the filesystem — per Anthropic's docs it "can only access the workbook you have open in Excel," plus Connectors and native Excel web-import formulas (WEBSERVICE/IMPORTDATA/IMPORTXML/etc.). Since `stock_dashboard.html` is already public on GitHub Pages (`PVega007/stock-dashboard`, confirmed public repo), the fix is exporting clean data to that same repo that Excel can fetch by URL — no GitHub connector/auth needed for read access since the repo is public.
+**Why this exists:** Patricia is building a short-term-lens investment dashboard in Excel (same watchlist, reframed around short-term signals — RSI/MACD/SMA, range trades like the NVDA/MSFT mini-tranche strategy) and wants Claude for Excel to be able to see this dashboard's data to assess what's reusable. Claude for Excel cannot browse the filesystem — per Anthropic's docs it "can only access the workbook you have open in Excel," plus Connectors and native Excel web-import formulas (WEBSERVICE/IMPORTDATA/IMPORTXML/etc.). Since `stock_dashboard.html` is already public on GitHub Pages (`PVega007/stock-dashboard`, confirmed public repo), the fix is exporting clean data to that same repo that Excel can fetch by URL — no GitHub connector/auth needed for read access since the repo is public.
 
 **Three export files, all auto-generated by `export_stocks.js` — never hand-edit them:**
 
@@ -224,7 +224,7 @@ In Bear mode, stocks below their T3 Bear Floor float to the very top (above all 
 
 **How they get generated and published:** `export_stocks.js` reads `stock_dashboard.html` directly (executes its own `const STOCKS = [...]` / `const PE_DATA = {...}` statements in a Node `vm` sandbox rather than regex-parsing them — regex broke on nested brackets/quotes in `redFlags` and note strings; see Lessons Learned below). `github_push.py` now calls `node export_stocks.js` before staging, then also pushes `investment_parameters.json` and `CLAUDE.md` (previously untracked/unpushed despite being referenced as public) alongside the usual `index.html`/`stock_dashboard.html`. This means **every scheduled `premarket-price-check` / `market-close-price-check` run refreshes and republishes all three export files automatically** — no separate step needed in those task prompts beyond the existing PART 6 GitHub push call.
 
-**⚠️ `Position_Tracker.md` is intentionally never included in any export or push.** It contains Patricia's personal account structure (which tranches sit in her IRA vs. her husband's IRA vs. taxable accounts), specific entry prices, and wash-sale tax strategy — meaningfully more sensitive than the general 30-stock valuation framework already public in the dashboard. If Patricia ever wants the *range-trade methodology* (not the personal account/tax specifics) available to Excel too, that would need a separate, explicitly-approved, redacted export — don't infer consent from this section.
+**⚠️ `Position_Tracker.md` is intentionally never included in any export or push.** It contains Patricia's personal account structure (which tranches sit in her IRA vs. her husband's IRA vs. taxable accounts), specific entry prices, and wash-sale tax strategy — meaningfully more sensitive than the general 31-stock valuation framework already public in the dashboard. If Patricia ever wants the *range-trade methodology* (not the personal account/tax specifics) available to Excel too, that would need a separate, explicitly-approved, redacted export — don't infer consent from this section.
 
 **Manual publish note:** Like all GitHub pushes, this only works from a real push context (Patricia's Mac, via the LaunchAgent or a manual `python3 github_push.py` in Terminal) — a sandboxed session's `github_push.py` call will fail on `github_token.txt` access exactly as documented in §9, and the export files just won't be picked up until the next successful push.
 
@@ -342,14 +342,14 @@ This applies to ALL briefing types: pre-market, market-close, weekly review, and
 
 ---
 
-## 7. The 30 Holdings
+## 7. The 31 Holdings
 
-**Current as of June 29, 2026.** Grouped by category (matches dashboard category filter):
+**Current as of July 11, 2026.** Grouped by category (matches dashboard category filter):
 
 | Category | Tickers |
 |---|---|
 | Tech/AI | NVDA, MRVL, AVGO, MSFT, GOOGL, HPQ |
-| Semiconductors | MU, WDC, FSLR, TSM, LEU |
+| Semiconductors | MU, WDC, SNDK, FSLR, TSM, LEU |
 | Healthcare | LLY, NVO |
 | Financials | BRK-B |
 | Energy | FRVO, HESM, BP, SHEL |
@@ -360,7 +360,8 @@ This applies to ALL briefing types: pre-market, market-close, weekly review, and
 **Removed June 23, 2026:** AMKR, AMAT, TER, CRWV, SWKS, NXPI, QCOM, CSCO, INTC, LITE  
 **Added June 23, 2026:** HESM, CEG, NEE, XLU, IAU, REMX, SOXQ  
 **Removed June 29, 2026:** HON (Aerospace spin-off — too much complexity post-HONA split), AMD, HPE, CRUS, TXN, AMZN, PLAB (portfolio simplification)  
-**Added June 29, 2026:** BP, SHEL (oil & gas majors — robust financials, high dividends, Energy sector diversification)
+**Added June 29, 2026:** BP, SHEL (oil & gas majors — robust financials, high dividends, Energy sector diversification)  
+**Added July 11, 2026:** SNDK (SanDisk — pure-play NAND flash spun off from WDC in Feb 2025; was missed when WDC was rebuilt HDD-only at the July 4 quarterly refresh, added back at Patricia's request while setting up the Claude for Excel short-term dashboard project. Uses a provisional normalized-P/E valuation — see Section 5 and § 9 Lessons Learned)
 
 ---
 
@@ -370,9 +371,9 @@ This applies to ALL briefing types: pre-market, market-close, weekly review, and
 |---|---|
 | BUY ZONE | FRVO, MSFT, NVDA |
 | WATCH | AVDE, BP, BRK-B, CEG, EWL, EWY, FENI, FSLR, GOOGL, HPQ, IAU, MU, NEE, NVO, SCHF, SHEL, XLU |
-| OVERVALUED | AVGO, HESM, LEU, LLY, MRVL, REMX, SOXQ, TSM, VOO, WDC |
+| OVERVALUED | AVGO, HESM, LEU, LLY, MRVL, REMX, SOXQ, TSM, VOO, WDC, SNDK (added Jul 11, 2026) |
 
-*Status changes whenever prices are updated — check dashboard for current state.*
+*Status changes whenever prices are updated — check dashboard for current state. This table is a point-in-time snapshot from June 29 and has not been reconciled against every subsequent price move — SNDK's entry is current as of its July 11 addition, but treat the rest of this table as illustrative rather than live.*
 
 ---
 
