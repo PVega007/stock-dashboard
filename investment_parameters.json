@@ -111,6 +111,17 @@
       "rationale": "NAND/HDD; more commodity than DRAM. Restructured \u2014 EV/EBITDA preferred",
       "bear_discount": 0.4
     },
+    "SNDK": {
+      "name": "SanDisk Corporation",
+      "category": "Cyclical Memory",
+      "low_pe": 22,
+      "high_pe": 28,
+      "mos": 0.3,
+      "metric": "normalized_pe",
+      "rationale": "Pure-play NAND flash, added back to the portfolio July 11, 2026 after being missed when WDC was rebuilt HDD-only post spin-off. Same AI-memory supercycle tailwind as MU, but independent public trading history only since Feb 2025 (~17 months) \u2014 no demonstrated down-cycle to anchor 'mid-cycle' EPS the way MU's decades of history do. Beta 4.74 vs MU's much lower beta. Wider MoS (0.30 vs MU's 0.20) to compensate for that added uncertainty.",
+      "eps_override_note": "Use normalized EPS ~$20/share \u2014 annualized off the Q2 FY26 print ($5.15/qtr diluted), one quarter back from the Q3 FY26 blowout ($23.03/qtr). Deliberately NOT annualizing the blowout quarter itself. PROVISIONAL: FMP financial-estimates endpoint is blocked on the Starter plan for this ticker, so no clean analyst consensus forward EPS was available \u2014 revisit with real estimate data at the next quarterly refresh.",
+      "bear_discount": 0.4
+    },
     "FSLR": {
       "name": "First Solar",
       "category": "Specialty / Mid-Cap Semis",
