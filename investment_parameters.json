@@ -1,0 +1,374 @@
+{
+  "_meta": {
+    "version": "3.0",
+    "date": "2026-06-29",
+    "formula": {
+      "tier1_floor": "Forward EPS \u00d7 Low P/E \u00d7 (1 \u2212 MoS)",
+      "tier1_ceiling": "Forward EPS \u00d7 Low P/E",
+      "tier2_ceiling": "Forward EPS \u00d7 High P/E \u00d7 (1 \u2212 \u00bd MoS)",
+      "dashboard_format": "$T1floor\u2013$T1ceil | $T1ceil+1\u2013$T2ceil",
+      "eps_source": "Analyst consensus 1-year forward estimate (or normalized mid-cycle EPS where noted)",
+      "notes": [
+        "MoS = Margin of Safety \u2014 applied in full to T1 floor, half to T2 ceiling",
+        "T1 = deep-value entry zone (conservative multiple, full discount)",
+        "T2 = fair-value zone (full multiple range, half discount \u2014 guides tranche 2 sizing)",
+        "Band width signals valuation uncertainty: wide = high uncertainty, narrow = high confidence",
+        "Reassess MoS tiers when macro triggers fire \u2014 see reassessment_triggers section",
+        "v3: Added T3 Bear Floor (recession scenario floor below T1)",
+        "v3: Added Execution Confirmation Layer (RSI, MACD, SMA timing signals)"
+      ],
+      "tier3_bear_floor": "T1 floor \u00d7 (1 \u2212 bear_discount)",
+      "bear_discount_tiers": {
+        "defensive_stable": "20% below T1 floor (MSFT, NEE, XLU, HESM, HPQ, AVGO, EWL)",
+        "growth_tech": "30% below T1 floor (NVDA, MRVL, GOOGL, CEG, TSM, SOXQ, SHEL)",
+        "cyclical_high": "35-40% below T1 floor (MU, WDC, LEU, LLY, NVO, EWY, FSLR, REMX, FRVO, BP)"
+      },
+      "execution_confirmation": {
+        "description": "Before deploying capital when price reaches T1 zone, check 2+ of 4 signals",
+        "signals": [
+          "RSI (14-day) < 45 \u2014 confirms oversold condition",
+          "MACD daily converging \u2014 histogram bars shrinking or bullish cross",
+          "Price at/below 50-day SMA \u2014 institutional support alignment",
+          "Price below 9-day EMA \u2014 confirms drawdown, not a dip on uptrend"
+        ],
+        "rule": "2+ signals = HIGH CONVICTION, scale up tranche; 0-1 signals = minimum tranche only"
+      }
+    },
+    "reassessment_triggers": {
+      "single_stock": [
+        "Earnings miss or beat >15% vs consensus",
+        "Management guidance cut >10% on revenue or EPS",
+        "CEO/CFO departure or major insider selling",
+        "New SEC investigation or class action filed",
+        "Single-day price move >20%"
+      ],
+      "sector_wide": [
+        "Semi book-to-bill < 0.9 for 2+ consecutive months",
+        "New trade restriction or export control affecting sector",
+        "Hyperscaler capex guidance cut >10%",
+        "Disruptive technology shift",
+        "Sector ETF drawdown >20% in <60 days"
+      ],
+      "portfolio_wide_add_5pct_mos": [
+        "Fed rate change \u00b150bps or more in single meeting",
+        "S&P 500 correction >10% in <30 days",
+        "VIX sustained above 30 for >2 weeks",
+        "Recession probability >60% (NY Fed model)",
+        "10-year Treasury moves >75bps in 60 days",
+        "Annual review: every January and July"
+      ]
+    }
+  },
+  "holdings": {
+    "NVDA": {
+      "name": "NVIDIA",
+      "category": "AI / Hyperscaler Infrastructure",
+      "low_pe": 35,
+      "high_pe": 42,
+      "mos": 0.15,
+      "metric": "fwd_pe",
+      "rationale": "AI infrastructure monopoly; durable pricing power",
+      "bear_discount": 0.3
+    },
+    "MRVL": {
+      "name": "Marvell Technology",
+      "category": "AI / Hyperscaler Infrastructure",
+      "low_pe": 28,
+      "high_pe": 35,
+      "mos": 0.15,
+      "metric": "fwd_pe",
+      "rationale": "Custom ASIC / AI networking; high growth, early cycle",
+      "bear_discount": 0.3
+    },
+    "AVGO": {
+      "name": "Broadcom",
+      "category": "AI / Hyperscaler Infrastructure",
+      "low_pe": 25,
+      "high_pe": 32,
+      "mos": 0.12,
+      "metric": "fwd_pe",
+      "rationale": "AI custom silicon + software; mature, dividend payer",
+      "bear_discount": 0.2
+    },
+    "MU": {
+      "name": "Micron Technology",
+      "category": "Cyclical Memory",
+      "low_pe": 22,
+      "high_pe": 28,
+      "mos": 0.2,
+      "metric": "normalized_pe",
+      "rationale": "Use mid-cycle normalized EPS \u2014 NOT peak. HBM adds premium but cycle risk is severe",
+      "eps_override_note": "Use analyst mid-cycle normalized EPS (~$50/share estimate), not peak forward EPS",
+      "bear_discount": 0.4
+    },
+    "WDC": {
+      "name": "Western Digital",
+      "category": "Cyclical Memory",
+      "low_pe": 14,
+      "high_pe": 18,
+      "mos": 0.2,
+      "metric": "ev_ebitda",
+      "rationale": "NAND/HDD; more commodity than DRAM. Restructured \u2014 EV/EBITDA preferred",
+      "bear_discount": 0.4
+    },
+    "FSLR": {
+      "name": "First Solar",
+      "category": "Specialty / Mid-Cap Semis",
+      "low_pe": 14,
+      "high_pe": 18,
+      "mos": 0.18,
+      "metric": "normalized_pe",
+      "rationale": "Solar; cyclical + policy-sensitive \u2014 use mid-cycle EPS",
+      "bear_discount": 0.35,
+      "eps_note": "Mid-cycle normalized EPS $18 (2026 consensus $17.41\u2013$18.04; use normalized not peak)"
+    },
+    "TSM": {
+      "name": "Taiwan Semiconductor",
+      "category": "Specialty / Mid-Cap Semis",
+      "low_pe": 20,
+      "high_pe": 26,
+      "mos": 0.15,
+      "metric": "fwd_pe",
+      "rationale": "Foundry monopoly; geopolitical discount applied",
+      "bear_discount": 0.25
+    },
+    "LEU": {
+      "name": "Centrus Energy",
+      "category": "Specialty / Mid-Cap Semis",
+      "low_pe": 25,
+      "high_pe": 55,
+      "mos": 0.2,
+      "metric": "fwd_pe",
+      "rationale": "Strategic monopoly premium: only US uranium enrichment at scale; wide range reflects policy/cycle uncertainty",
+      "bear_discount": 0.4
+    },
+    "MSFT": {
+      "name": "Microsoft",
+      "category": "Mature / Diversified Tech",
+      "low_pe": 28,
+      "high_pe": 34,
+      "mos": 0.1,
+      "metric": "fwd_pe",
+      "rationale": "Cloud + AI platform; highest quality in universe \u2014 minimal discount needed",
+      "bear_discount": 0.2
+    },
+    "GOOGL": {
+      "name": "Alphabet",
+      "category": "Mature / Diversified Tech",
+      "low_pe": 22,
+      "high_pe": 35,
+      "mos": 0.15,
+      "metric": "fwd_pe",
+      "rationale": "Search + Cloud + AI; antitrust risk partially priced in MoS",
+      "bear_discount": 0.3
+    },
+    "HPQ": {
+      "name": "HP Inc",
+      "category": "Mature / Diversified Tech",
+      "low_pe": 8,
+      "high_pe": 11,
+      "mos": 0.12,
+      "metric": "fwd_pe",
+      "rationale": "PC / printer; mature, shrinking TAM, buyback story",
+      "bear_discount": 0.2,
+      "eps_note": "Non-GAAP FY2026E EPS $3.00 (company guidance $2.90\u2013$3.10 raised Q2 2026)"
+    },
+    "LLY": {
+      "name": "Eli Lilly",
+      "category": "Healthcare / Pharma",
+      "low_pe": 25,
+      "high_pe": 35,
+      "mos": 0.15,
+      "metric": "fwd_pe",
+      "rationale": "GLP-1 + oncology pipeline; high P/E revised 50\u219235\u00d7 to reflect ATH-implied ceiling (~34.5\u00d7) and increased GLP-1 competition (NVO precedent)",
+      "bear_discount": 0.3,
+      "eps_note": "FY2026E consensus EPS ~$37 (range $34.79\u2013$41.91); high_pe revised Jun 23 2026"
+    },
+    "NVO": {
+      "name": "Novo Nordisk",
+      "category": "Healthcare / Pharma",
+      "low_pe": 10,
+      "high_pe": 22,
+      "mos": 0.2,
+      "metric": "fwd_pe",
+      "rationale": "GLP-1 pioneer; re-rated down on LLY competition. Low end reflects pessimistic scenario, high end reflects durable franchise",
+      "bear_discount": 0.35
+    },
+    "BRK-B": {
+      "name": "Berkshire Hathaway B",
+      "category": "Diversified / Financials",
+      "low_pe": 20,
+      "high_pe": 28,
+      "mos": 0.15,
+      "metric": "fwd_pe",
+      "rationale": "Conglomerate quality + insurance float + equity portfolio; P/B cross-check recommended",
+      "bear_discount": 0.25
+    },
+    "FRVO": {
+      "name": "Fervo Energy",
+      "category": "Energy",
+      "low_pe": 1.5,
+      "high_pe": 2.0,
+      "mos": 0.15,
+      "metric": "ev_ppa_backlog",
+      "rationale": "Pre-revenue geothermal; EV/PPA contracted backlog per share ($26.77). Not P/E \u2014 no earnings yet",
+      "bear_discount": 0.5
+    },
+    "EWY": {
+      "name": "iShares MSCI South Korea ETF",
+      "category": "ETF \u2014 International",
+      "low_pe": 9,
+      "high_pe": 13,
+      "mos": 0.15,
+      "metric": "index_pe",
+      "rationale": "Korea market weighted P/E; historically 9\u201313\u00d7 with geopolitical discount",
+      "bear_discount": 0.3
+    },
+    "EWL": {
+      "name": "iShares MSCI Switzerland ETF",
+      "category": "ETF \u2014 International",
+      "low_pe": 20,
+      "high_pe": 27,
+      "mos": 0.15,
+      "metric": "index_pe",
+      "rationale": "Swiss market quality premium (Roche, Novartis, Nestl\u00e9); CHF safe-haven adds multiple support",
+      "bear_discount": 0.2
+    },
+    "AVDE": {
+      "name": "Avantis International Equity ETF",
+      "category": "ETF \u2014 International",
+      "low_pe": 12,
+      "high_pe": 18,
+      "mos": 0.15,
+      "metric": "index_pe",
+      "rationale": "Developed markets value/small-cap tilt; discount to US multiple justified by lower growth",
+      "bear_discount": 0.25
+    },
+    "FENI": {
+      "name": "Fidelity Enhanced International ETF",
+      "category": "ETF \u2014 International",
+      "low_pe": 12,
+      "high_pe": 18,
+      "mos": 0.15,
+      "metric": "index_pe",
+      "rationale": "Developed markets quant-active; similar profile to AVDE",
+      "bear_discount": 0.25
+    },
+    "SCHF": {
+      "name": "Schwab International Equity ETF",
+      "category": "ETF \u2014 International",
+      "low_pe": 13,
+      "high_pe": 20,
+      "mos": 0.15,
+      "metric": "index_pe",
+      "rationale": "Broad developed markets passive; slight premium over AVDE/FENI for breadth",
+      "bear_discount": 0.25
+    },
+    "VOO": {
+      "name": "Vanguard S&P 500 ETF",
+      "category": "ETF \u2014 US",
+      "low_pe": 22,
+      "high_pe": 30,
+      "mos": 0.15,
+      "metric": "price_support",
+      "rationale": "S&P 500 index ETF; switched to price-support methodology (index P/E approach produced T2 ceiling above ATH). Entry at 15\u201322% corrections from 52-wk high; T2 = 8% below ATH. No earnings multiple used.",
+      "bear_discount": 0.25,
+      "eps_note": "N/A \u2014 price-support methodology. T1 floor = 52-wk low ~$545; T1 ceil = 15% below ATH $699; T2 ceil = 8% below ATH $699."
+    },
+    "HESM": {
+      "name": "Hess Midstream LP",
+      "category": "Energy / Infrastructure",
+      "low_pe": 11,
+      "high_pe": 14,
+      "mos": 0.12,
+      "metric": "p_dcf",
+      "bear_discount": 0.35,
+      "rationale": "MLP fee-based infrastructure; P/DCF on distributable cash flow ~$2.90/unit",
+      "eps_override_note": "Use DCF/unit ~$2.90, not GAAP EPS. K-1 structure."
+    },
+    "CEG": {
+      "name": "Constellation Energy",
+      "category": "Utilities / Clean Energy",
+      "low_pe": 20,
+      "high_pe": 28,
+      "mos": 0.15,
+      "metric": "fwd_pe",
+      "bear_discount": 0.3,
+      "rationale": "Nuclear fleet + AI data center PPAs; irreplaceable 24/7 carbon-free baseload"
+    },
+    "NEE": {
+      "name": "NextEra Energy",
+      "category": "Utilities / Clean Energy",
+      "low_pe": 20,
+      "high_pe": 28,
+      "mos": 0.12,
+      "metric": "fwd_pe",
+      "bear_discount": 0.25,
+      "rationale": "Regulated utility (FPL) + world's largest renewables developer; 28yr dividend growth"
+    },
+    "XLU": {
+      "name": "Utilities Select Sector SPDR ETF",
+      "category": "ETF \u2014 US Utilities",
+      "low_pe": 16,
+      "high_pe": 21,
+      "mos": 0.12,
+      "metric": "index_pe",
+      "bear_discount": 0.25,
+      "rationale": "US utilities sector ETF; defensive allocation + AI data center power theme"
+    },
+    "IAU": {
+      "name": "iShares Gold Trust",
+      "category": "ETF \u2014 Hard Assets",
+      "low_pe": null,
+      "high_pe": null,
+      "mos": null,
+      "metric": "commodity_support",
+      "bear_discount": 0.35,
+      "rationale": "Physical gold ETF; price-based support levels. T1: $61-68 (52-wk low area), T2: $69-88",
+      "eps_override_note": "No P/E. Use 52-week low and 200-day SMA as support levels for T1/T2."
+    },
+    "REMX": {
+      "name": "VanEck Rare Earth/Strategic Metals ETF",
+      "category": "ETF \u2014 Hard Assets",
+      "low_pe": null,
+      "high_pe": null,
+      "mos": null,
+      "metric": "commodity_support",
+      "bear_discount": 0.45,
+      "rationale": "Rare earth/strategic metals; hyper-cyclical. T1: $42-60 (near 52-wk low), T2: $61-88",
+      "eps_override_note": "No P/E. Use historical support/resistance levels and 200-day SMA."
+    },
+    "SOXQ": {
+      "name": "Invesco PHLX Semiconductor ETF",
+      "category": "ETF \u2014 US Semiconductors",
+      "low_pe": 20,
+      "high_pe": 28,
+      "mos": 0.15,
+      "metric": "index_pe",
+      "bear_discount": 0.35,
+      "rationale": "PHLX SOX semiconductor ETF; 0.19% ER vs. SOXX 0.35%. Full semi sector exposure."
+    },
+    "BP": {
+      "name": "BP p.l.c.",
+      "category": "Oil & Gas \u2014 International",
+      "low_pe": 8,
+      "high_pe": 12,
+      "mos": 0.2,
+      "metric": "normalized_pe",
+      "rationale": "Integrated oil major; GAAP EPS distorted by impairments \u2014 use underlying FCF/earnings (~$3.50/ADR normalized). Cheapest oil major on EV/EBITDA (~3.9x). Activist Elliott pressure for capital return.",
+      "bear_discount": 0.35,
+      "eps_note": "Use normalized underlying EPS ~$3.50 (not GAAP near-zero); FCF/share TTM ~$4.41 cross-check"
+    },
+    "SHEL": {
+      "name": "Shell plc",
+      "category": "Oil & Gas \u2014 International",
+      "low_pe": 10,
+      "high_pe": 16,
+      "mos": 0.15,
+      "metric": "normalized_pe",
+      "rationale": "Premium integrated oil major with world-class LNG franchise. Consistent EPS $5.06\u2013$6.02 (2023\u20132025). CEO Wael Sawan executing disciplined FCF strategy. $3.5B/quarter buyback + growing dividend.",
+      "bear_discount": 0.3,
+      "eps_note": "Use mid-cycle normalized EPS ~$6.00 (FY2025 actual: $6.02; 3yr avg: ~$5.59)"
+    }
+  }
+}
