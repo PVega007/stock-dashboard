@@ -2153,6 +2153,78 @@ const BRIEFINGS = [
     actionItems: ["Watch Strait of Hormuz closure duration/scope for confirmed physical supply disruption beyond price", "Watch US-China critical-minerals deadline outcome (lapsed today, unresolved)", "CPI release Jul 14 (ET \u2014 account for CST offset)", "FOMC Jul 29"],
     sources: ["Energy Connects \u2014 https://www.energyconnects.com/news/oil/2026/july/oil-climbs-as-fresh-tanker-strike-highlights-risks-around-hormuz/ \u2014 Jul 13, 2026 verified", "Wikipedia (2026 Strait of Hormuz crisis) \u2014 https://en.wikipedia.org/wiki/2026_Strait_of_Hormuz_crisis \u2014 updated through Jul 2026", "South China Morning Post (critical minerals deadline) \u2014 https://www.scmp.com/news/us/diplomacy/article/3339939/trump-sets-180-day-deadline-counter-chinas-control-critical-minerals"]
   }
+  ,
+  {
+    date: "2026-07-13",
+    displayDate: "July 13, 2026",
+    type: "MARKET-CLOSE",
+    runTime: "4:00 PM CT · Auto (corrected — see note)",
+    alert: "🔴 REASSESS NOW — already addressed via today's ad hoc macro-reassessment (Iran's formal Hormuz closure/blockade, memory-sector selloff): LEU -8.77%, EWY -8.41%, MRVL -7.75% all >5%; oil >3%. No further action needed beyond what that entry already covers.",
+    headline: "Trump reinstates a blockade on Iranian shipping through the Strait of Hormuz; oil jumps ~3.5%, semiconductors/memory extend the SK Hynix-estimate-cut selloff into the close. NASDAQ -1.55%, S&P -0.79%, Dow -0.26%. No new dashboard status changes today (SOXQ's OVERVALUED→WATCH flip already happened at this morning's manual catch-up).",
+    bullets: [
+      "⚠️ Correction note: an earlier version of this check mistakenly used stale Friday July 10 close data (returned by the FMP quote tool at the time) and mislabeled it as today's report — Patricia caught the error. That Friday data was factually accurate for Friday and has been re-filed as a backfilled entry above; this entry contains today's (July 13) real, verified closing data.",
+      "LEU -8.77% to $156.05 and EWY -8.41% to $168.08 lead today's decline — LEU extending losses despite the positive DOE/S&P SmallCap 600 news from last week; EWY hit by both the memory-sector selloff (Samsung/SK Hynix) and Hormuz-driven risk-off flows (Yahoo Finance/Motley Fool, Jul 13).",
+      "MRVL -7.75%, SOXQ -4.86%, WDC -4.64%, MU -4.32%, FRVO -4.68%, REMX -4.38% — broad memory/semiconductor selloff continuing from this morning's SK Hynix-linked estimate cut (already detailed in today's macro-reassessment).",
+      "BP +4.16%, SHEL +2.13%, CEG +2.46% — energy/utilities diverging higher as Trump's Hormuz blockade announcement pushed oil up ~3.5% (WTI ~$73.89, Brent ~$78.7-78.8) (Al Jazeera/CNBC, Jul 13 ✓).",
+      "MSFT Mini-tranche A GTC sell ($388.75) — closed $390.99, above the limit; day range ($384.15-$393.64) crossed $388.75, so this order likely filled today. MSFT tranches 2/3 (breakeven $394/$395) are also within ~1% now.",
+      "No new dashboard status changes today beyond this morning's SOXQ OVERVALUED→WATCH (recorded in the 9:20 AM manual catch-up pre-market entry)."
+    ],
+    macro: "S&P 500 -0.79% to 7,515.34; NASDAQ -1.55% to 25,873.18; Dow -0.26% (-138.37pts) to 52,498.64 (Yahoo Finance/Motley Fool, Jul 13 ✓). WTI ~$73.89 (+3.47%), Brent ~$78.68-78.82 (+3.5-4%) on Trump's Hormuz blockade announcement (Al Jazeera/CNBC/fxleaders, Jul 13 ✓). This continues and closes out the day already covered in detail by today's ad hoc MACRO-REASSESSMENT entry (Fed hawkish under Warsh, Hormuz formal closure, memory selloff, US-China minerals deadline lapsed) — no incremental macro news found between that reassessment and the close.",
+    geopolitical: "Trump announced a reinstated blockade on Iranian shipping through the Strait of Hormuz today, escalating from Iran's own Sunday (Jul 12) closure declaration — see today's MACRO-REASSESSMENT entry for full detail. Oil rose ~3.5-4% on the announcement.",
+    earnings: "No dashboard-ticker earnings found for Jul 13-18 in FMP's earnings-calendar.",
+    aiSemiLandscape: "Continuation of this morning's SK Hynix-linked memory-sector selloff (SK Hynix Q2 estimate cut by a South Korean brokerage) — no new structural developments identified between the mid-day macro-reassessment and the close.",
+    movers: [
+      { ticker: "LEU", change: "-8.77%", status: "OVERVALUED", note: "$171.05→$156.05 | Extending losses despite positive DOE/S&P SmallCap 600 news; well above T2 ceiling $151" },
+      { ticker: "EWY", change: "-8.41%", status: "WATCH", note: "$183.52→$168.08 | Memory-sector selloff (Samsung/SK Hynix) + Hormuz risk-off flows — Yahoo Finance/Motley Fool, Jul 13" },
+      { ticker: "MRVL", change: "-7.75%", status: "OVERVALUED", note: "$235.81→$217.53 | Broad memory/semi selloff, custom AI silicon thesis unchanged" },
+      { ticker: "SOXQ", change: "-4.86%", status: "WATCH", note: "$102.06→$97.10 | Semiconductor ETF tracking the broad selloff; already flipped OVERVALUED→WATCH this morning" },
+      { ticker: "WDC", change: "-4.64%", status: "OVERVALUED", note: "$582.59→$555.55 | Tracked memory-sector selloff, HDD/AI-storage demand thesis unchanged" },
+      { ticker: "FRVO", change: "-4.68%", status: "BUY ZONE", note: "$27.13→$25.86 | Broad risk-off tape; divergence vs stored price (4.68%) well under the 10% manual-review threshold" },
+      { ticker: "REMX", change: "-4.38%", status: "WATCH", note: "$79.76→$76.27 | Broad risk-off/hyper-cyclical ETF pullback" },
+      { ticker: "MU", change: "-4.32%", status: "WATCH", note: "$979.30→$937.00 | Memory selloff sentiment/rotation, HBM supercycle thesis intact" },
+      { ticker: "BP", change: "+4.16%", status: "OVERVALUED", note: "$39.20→$40.83 | Hormuz blockade announcement pushed oil up ~3.5-4%" },
+      { ticker: "CEG", change: "+2.46%", status: "WATCH", note: "$251.38→$257.57 | Energy/utilities defensive rotation on the Hormuz escalation" },
+      { ticker: "SHEL", change: "+2.13%", status: "WATCH", note: "$82.23→$83.98 | Oil-price tailwind from the Hormuz blockade announcement" },
+      { ticker: "HPQ", change: "+2.27%", status: "WATCH", note: "$24.22→$24.77 | No company-specific catalyst identified; broad market divergence" },
+      { ticker: "IAU", change: "-2.60%", status: "WATCH", note: "$77.26→$75.25 | Gold pulled back despite risk-off tape — DXY strength on safe-haven demand likely offsetting" },
+      { ticker: "AVGO", change: "-3.98%", status: "OVERVALUED", note: "$399.97→$384.05 | Broad semiconductor selloff" },
+      { ticker: "TSM", change: "-2.89%", status: "OVERVALUED", note: "$434.11→$421.58 | Broad semiconductor selloff" },
+      { ticker: "FSLR", change: "-2.98%", status: "WATCH", note: "$227.83→$221.03 | Broad market risk-off, no company-specific catalyst identified" },
+      { ticker: "NVDA", change: "-3.52%", status: "BUY ZONE", note: "$210.96→$203.53 | Broad tech/semiconductor selloff on the Hormuz escalation; still 25% below T1 floor $271 — deep in BUY ZONE" }
+    ],
+    statusChanges: [],
+    dataFlags: [],
+    stableStocks: ["MSFT","GOOGL","NVO","BRK-B","HESM","NEE","EWL","AVDE","FENI","SCHF","VOO","XLU","LLY"],
+    executionConfirmation: [
+      { ticker: "NVDA", status: "BUY ZONE", rsi: "49.89 ❌", sma50: "$209.08 — price below ✅", ema9: "$202.32 — price above ❌", macd: "converging ✅", signals: "2/4 → MODERATE CONVICTION 🟡" },
+      { ticker: "MSFT", status: "BUY ZONE", rsi: "50.96 ❌", sma50: "$402.95 — price below ✅", ema9: "$384.78 — price above ❌", macd: "converging ✅", signals: "2/4 → MODERATE CONVICTION 🟡" },
+      { ticker: "FSLR", status: "WATCH (T1 zone)", rsi: "37.41 ✅", sma50: "$248.99 — price below ✅", ema9: "$229.72 — price below ✅", macd: "not converging ❌", signals: "3/4 → HIGH CONVICTION 🟢" },
+      { ticker: "MU", status: "WATCH (T1 zone)", rsi: "46.19 ❌", sma50: "$907.42 — price above ❌", ema9: "$991.39 — price below ✅", macd: "not converging ❌", signals: "1/4 → LOW CONVICTION 🔴" },
+      { ticker: "FRVO", status: "BUY ZONE", rsi: "40.21 ✅", sma50: "n/a — recently-IPO'd, <50 days history", ema9: "$27.33 — price below ✅", macd: "not converging ❌", signals: "2/3 available → MODERATE CONVICTION 🟡 (scored out of 3, SMA50 unavailable)" }
+    ],
+    positionTracker: [
+      "MSFT Mini A (entry $369.00): GTC sell $388.75 | closed $390.99, day range crossed the limit → 🎯 TARGET LIKELY FILLED",
+      "MSFT tranches 2/3 (entries $394.00/$395.00): trim-75%-at-breakeven | closed $390.99 (0.76%/1.02% below) → APPROACHING TARGET",
+      "MSFT tranche 1 (entry $417.00) & Mini B (entry $406.00): breakeven targets | closed $390.99 (6.24%/3.70% below) → WATCHING",
+      "AVGO tranche 1 (entry $422.91): GTC target $410.75 | closed $384.05 (6.5% below target) → WATCHING",
+      "NVDA tranches 1-3 (entries $220.61/$224.35/$229.33): breakeven targets | closed $203.53 (7.7%/9.3%/11.3% below) → WATCHING"
+    ],
+    actionItems: [
+      "🔴 trigger already addressed: today's ad hoc macro-reassessment covers the Hormuz blockade and memory-sector selloff driving today's moves — no separate action needed from this close check.",
+      "MSFT Mini A GTC ($388.75) likely filled today — worth confirming with your broker; tranches 2/3 (breakeven $394/$395) are now within ~1%, worth watching closely this week.",
+      "Process note: this session's original market-close run used stale (Friday) price data due to an FMP data-timing issue that wasn't caught before reporting to Patricia — see correction note in bullets. Recommend double-checking `date` / quote timestamps at the start of future price-check runs before treating fetched data as current."
+    ],
+    sources: [
+      "Yahoo Finance — Stock market today: Monday, July 13 — https://finance.yahoo.com/markets/live/stock-market-today-monday-july-13-dow-sp-nasdaq-113249278.html — Date: verified ✓",
+      "The Motley Fool — Stock Market Today, July 13: Energy Stocks Cushion Dow as Tech Slides — https://www.fool.com/coverage/stock-market-today/2026/07/13/stock-market-today-july-13-energy-stocks-cushion-dow-as-tech-slides-on-geopolitical-tensions/ — Date: verified ✓",
+      "Al Jazeera — Oil prices jump as US and Iran trade attacks over Strait of Hormuz — https://www.aljazeera.com/economy/2026/7/13/oil-prices-jump-as-us-and-iran-trade-attacks-over-strait-of-hormuz — Date: verified ✓",
+      "FX Leaders — WTI and Brent Crude Oil Prices Jump as Hormuz Tensions Shake Global Energy Markets — https://www.fxleaders.com/news/2026/07/12/wti-and-brent-crude-oil-prices-jump-as-hormuz-tensions-shake-the-global-energy-markets/ — Date: verified ✓",
+      "FMP MCP connector — individual quote calls, all 30 tickers — Jul 13, 2026 (post-close, ~5:40 PM CT)",
+      "FMP MCP connector — technicalIndicators (RSI14/SMA50/EMA9/EMA12/EMA26), NVDA/MSFT/FRVO/FSLR/MU — Jul 13, 2026",
+      "Internal — today's 2026-07-13 MACRO-REASSESSMENT entry (Hormuz closure, memory selloff, Fed/Warsh, US-China minerals deadline)"
+    ]
+  }
+
 ];
 
 const FRAMEWORK_STEPS = [
