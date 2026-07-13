@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "stock_dashboard.html (via export_stocks.js)",
-    "exportedAt": "2026-07-13T15:11:48.540Z",
+    "exportedAt": "2026-07-13T15:12:18.779Z",
     "count": 31
   },
   "stocks": [
@@ -688,7 +688,7 @@
       "marketCap": "$98B",
       "pe_ttm": "—",
       "pe_target": "8–12× normalized",
-      "score_macro": 3,
+      "score_macro": 4,
       "score_business": 3,
       "score_financial": 3,
       "score_management": 3,
@@ -711,7 +711,7 @@
       "marketCap": "$214B",
       "pe_ttm": "12.8×",
       "pe_target": "10–16×",
-      "score_macro": 3,
+      "score_macro": 4,
       "score_business": 4,
       "score_financial": 4,
       "score_management": 4,

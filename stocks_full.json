@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "stock_dashboard.html (via export_stocks.js, full narrative export)",
-    "exportedAt": "2026-07-13T15:11:48.540Z",
+    "exportedAt": "2026-07-13T15:12:18.779Z",
     "count": 31,
     "note": "Full per-stock content: summary, steps.macroContext/priceAction/business/financial/management/governance/valuation/catalysts, redFlags, verdict (or steps.s11 for steps-format stocks), scores, entryTarget, PE data. Methodology (entry-target formulas, bear-floor formula, ECL signal rules) lives in investment_parameters.json and CLAUDE.md, also in this repo. Position_Tracker.md (personal tranche/exit tracker) is intentionally NOT included here — it contains account-level and tax-strategy detail Patricia has not authorized for public export."
   },
@@ -297,7 +297,7 @@
       ],
       "summary": "QUARTERLY REFRESH (Jul 4, 2026): Entry targets recalculated using FY2027 consensus EPS ~$17.79 (low_pe 14, high_pe 18, mos 0.20) → T1 $199–$249 | T2 $250–$288 — status moves OVERVALUED → WATCH, since $539 now sits closer to Street consensus ($533 cons./$575 med.) than the old stale pre-spin target implied. IMPORTANT CAVEAT: this P/E-based rebuild is still provisional — FMP's Starter-plan tools don't expose EBITDA/share or EV directly, so the EV_EBITDA metric this ticker is tagged with in investment_parameters.json couldn't be fully executed this cycle; peer Seagate trades 29-30x NTM EV/EBITDA vs WDC's 21-24x, suggesting WDC may be reasonably priced on a relative basis even though the P/E framework alone can't confidently reach $539 from any credible EPS input. Q3 FY2026 (ended Apr 3): revenue $3.34B (+28% seq.), operating income $1.19B — accelerating cleanly, HDD-only post SanDisk spin. Recommend a full EV/EBITDA-per-share rebuild (10-Q balance sheet data) at the next quarterly refresh to resolve this properly.",
       "steps": {
-        "s0": "MACRO: AI infrastructure buildout creates structural demand for high-capacity HDDs in data center cold/warm storage layers. Hyperscalers' CapEx is accelerating, with WDC management citing 25%+ exabyte CAGR for 3–5 years. Storage is the lagged beneficiary of the AI compute build — once models are trained, massive datasets accumulate on drives. Rate environment remains uncertain but is modestly favorable for capex decisions. China trade tensions a macro risk. Update (Jul 9, 2026): WDC +5.04% on the same memory-complex rally as MU (Samsung-selloff reversal, Micron's $3B U.S. supply-chain investment, SK Hynix's Friday Nasdaq debut) plus a Zacks piece on WDC's HAMR high-capacity HDD roadmap (Jul 9 ✓) reinforcing the AI-storage demand thesis. Score held at 4.",
+        "s0": "MACRO: AI infrastructure buildout creates structural demand for high-capacity HDDs in data center cold/warm storage layers. Hyperscalers' CapEx is accelerating, with WDC management citing 25%+ exabyte CAGR for 3–5 years. Storage is the lagged beneficiary of the AI compute build — once models are trained, massive datasets accumulate on drives. Rate environment remains uncertain but is modestly favorable for capex decisions. China trade tensions a macro risk. Update (Jul 9, 2026): WDC +5.04% on the same memory-complex rally as MU (Samsung-selloff reversal, Micron's $3B U.S. supply-chain investment, SK Hynix's Friday Nasdaq debut) plus a Zacks piece on WDC's HAMR high-capacity HDD roadmap (Jul 9 ✓) reinforcing the AI-storage demand thesis. Score held at 4. Update (Jul 13, 2026): WDC -5.1% led part of today's broad memory-sector selloff alongside MU/MRVL/SNDK, tied to a SK Hynix estimate cut rather than a WDC-specific fundamental change — HDD/AI-storage demand thesis unchanged. Score held at 4.",
         "s1": "BUSINESS MODEL: WDC is now a pure HDD company following the SanDisk (SNDK) spin-off completed in early 2025. Revenue from enterprise/cloud data center drives constitutes the majority of revenue. Higher-capacity drives (20TB, 22TB+, UltraSMR, High Bandwidth Drive) command better pricing and margins. Long-term agreements (LTAs) with hyperscalers (Microsoft, AWS, Google, Meta) provide multi-quarter visibility. Consumer/branded products are a secondary segment. The SNDK spin eliminated the loss-making NAND drag and massively improved balance sheet and margins.",
         "s2": "COMPETITIVE MOAT: WDC and Seagate are the only two major HDD manufacturers globally (Toshiba is a distant third). This is a genuine duopoly with decades of accumulated IP and precision manufacturing barriers to entry. HDDs remain cost-advantaged over SSDs for large-scale cold/warm storage at data center scale. Technology differentiation: WDC's ePMR, UltraSMR, and High Bandwidth Drive innovations create a technology roadmap for capacity scaling. Moat rating: moderate-to-strong. Primary risk is gradual SSD displacement in warm-storage tiers.",
         "s3": "BUSINESS QUALITY: Revenue TTM $11.78B (+32% YoY). Gross margin 45.4% (vs 28% in FY2024 when NAND dragged performance). Operating margin 30.3% — outstanding for a hardware company. FCF TTM $2.9B (25% FCF margin). Net cash +$469M — remarkable given WDC carried $7.4B net debt in FY2024 before SNDK spin. Inventory lean at $1.36B vs $3.7B in FY2023. FY2026 estimates: revenue $12.86B, FCF $3.5B. Quality has dramatically improved post-SNDK.",
@@ -1230,7 +1230,7 @@
       "category": "Energy",
       "bearFloor": "$14",
       "scores": {
-        "macro": 3,
+        "macro": 4,
         "business": 3,
         "financial": 3,
         "management": 3,
@@ -1275,7 +1275,7 @@
       "category": "Energy",
       "bearFloor": "$36",
       "scores": {
-        "macro": 3,
+        "macro": 4,
         "business": 4,
         "financial": 4,
         "management": 4,
