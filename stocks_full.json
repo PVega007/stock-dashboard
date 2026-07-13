@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "stock_dashboard.html (via export_stocks.js, full narrative export)",
-    "exportedAt": "2026-07-13T22:46:58.025Z",
+    "exportedAt": "2026-07-13T22:47:28.198Z",
     "count": 31,
     "note": "Full per-stock content: summary, steps.macroContext/priceAction/business/financial/management/governance/valuation/catalysts, redFlags, verdict (or steps.s11 for steps-format stocks), scores, entryTarget, PE data. Methodology (entry-target formulas, bear-floor formula, ECL signal rules) lives in investment_parameters.json and CLAUDE.md, also in this repo. Position_Tracker.md (personal tranche/exit tracker) is intentionally NOT included here — it contains account-level and tax-strategy detail Patricia has not authorized for public export."
   },
