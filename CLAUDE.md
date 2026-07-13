@@ -1,5 +1,5 @@
 # CLAUDE.md — Patricia Vega Portfolio Dashboard
-## Operational Knowledge Base · Last updated: July 11, 2026
+## Operational Knowledge Base · Last updated: July 13, 2026
 
 This file is read-first at the start of every session. It contains the authoritative operational knowledge for this workspace. **Before doing any work, read this file completely.**
 
@@ -754,6 +754,7 @@ Patricia flagged that the day's briefings had missed relevant news despite a ful
 | `Position_Tracker.md` created — tracks Patricia's personal open tranches and exit targets, separate from the dashboard's general valuation framework; `premarket-price-check` and `market-close-price-check` updated with a lightweight PART 1C step that flags when a tracked ticker's price reaches or nears its exit target. First tracked position: AVGO tranche (entry $422.91) — GTC limit sell set at $410.75 | July 9, 2026 |
 | External data exports added (`export_stocks.js` → `stocks.json`/`stocks.csv`/`stocks_full.json`) for Claude for Excel to pull from the public GitHub repo — built for Patricia's short-term-lens Excel dashboard project; wired into `github_push.py` (auto-regenerates before every push) and both price-check scheduled tasks; `investment_parameters.json` and `CLAUDE.md` also now pushed publicly for the first time (were tracked/referenced but never actually staged). `Position_Tracker.md` explicitly excluded — contains account/tax detail not approved for public export. See § 4B. | July 11, 2026 |
 | SNDK added as 31st holding (see § 7); MU's `summary`/`financial`/`valuation`/`entry`/`bullCase`/`bearCase` fields found and fixed — carried pre-rally (~10x ago) price/EPS scenario numbers ($75–85 entry, $450–675 trough, $150+ bull, $60–80 bear) despite `entryTarget`/`status`/`verdict` all being current; caught by Claude for Excel independently while reviewing the GitHub export for the short-term dashboard project. New stale-narrative scan added to § "Dashboard Consistency / QC" — checks fields the verdict/status audit doesn't reach. | July 11, 2026 |
+| `premarket-price-check` silently crashed mid-run (API ConnectionRefused) and went unnoticed for hours; ruled out "another chat was open" as the cause (scheduled tasks run independently — confirmed via session transcript review). Added `premarket-check-watchdog` (7:25 AM CT) and `market-close-check-watchdog` (4:20 PM CT) Mon–Fri to catch this going forward. Ran a manual catch-up pre-market check using live regular-market prices (market was already open): memory-chip selloff (SNDK -7.7%, EWY -6.7%, MRVL -5.6%, WDC -5.2%, MU -4.4% on a weak SK Hynix Q2 estimate) + genuine new Iran/Hormuz escalation (first energy-infrastructure strike, Hormuz declared "closed") — SOXQ OVERVALUED→WATCH; 🔴 REASSESS NOW triggered, macro-reassessment run same day. | July 13, 2026 |
 
 ---
 
