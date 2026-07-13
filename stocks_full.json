@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "stock_dashboard.html (via export_stocks.js, full narrative export)",
-    "exportedAt": "2026-07-13T14:34:45.788Z",
+    "exportedAt": "2026-07-13T14:35:15.479Z",
     "count": 31,
     "note": "Full per-stock content: summary, steps.macroContext/priceAction/business/financial/management/governance/valuation/catalysts, redFlags, verdict (or steps.s11 for steps-format stocks), scores, entryTarget, PE data. Methodology (entry-target formulas, bear-floor formula, ECL signal rules) lives in investment_parameters.json and CLAUDE.md, also in this repo. Position_Tracker.md (personal tranche/exit tracker) is intentionally NOT included here — it contains account-level and tax-strategy detail Patricia has not authorized for public export."
   },
@@ -1211,7 +1211,7 @@
         "bearCase": "(1) OVERVALUED at $106.98 — all near-term good news appears priced in. (2) AI capex cycle pause (hyperscalers managing margins) would trigger NVDA/TSMC order cuts. (3) US-China export restriction tightening could cut 20-25% of revenues for AVGO, QCOM, TXN. (4) Inventory correction cycle in 2H2026.",
         "risks": "AI capex cycle uncertainty; US-China export restriction escalation; semiconductor inventory correction; tariff impacts on supply chain costs; small ETF AUM.",
         "entry": "T1 Zone $66-$78 (conviction accumulation — requires 27-38% selloff). T2 Zone $79-$101 (fair value). Bear Floor $43. CURRENT: OVERVALUED. Set price alerts: $100 (approaching T2), $88 (200-day SMA), $78 (T1 ceiling). No action until $101 or below.",
-        "verdict": "OVERVALUED — at $101.97, SOXQ has crossed above the T2 ceiling ($101) as a broad AI/semiconductor rally (NVDA China H200 easing, Micron domestic supply-chain investment, SK Hynix Nasdaq debut anticipation) lifted the sector +3.05% on Jul 9. Exceeds bull-case fair value — hold but don't add; wait for a pullback to the $79–$101 T2 zone or deeper to the $66–$78 T1 zone for a stronger entry; sector corrects 30-50% every 2-3 years. At T2 ($79-$101) this is an excellent core semi allocation; at T1 ($66-$78) a generational opportunity."
+        "verdict": "WATCH — at $99.18, SOXQ has pulled back into the T2 zone ($79–$101) as a broad AI/semiconductor selloff (MU -4.4%, WDC -5.1%, MRVL -5.6%, SNDK -7.7%) reversed Friday's rally on Jul 13. Fairly valued to optimistic in this zone — hold, don't add; a drop to the $66–$78 T1 zone would offer a stronger entry; sector corrects 30-50% every 2-3 years. At T2 ($79-$101) this is an excellent core semi allocation; at T1 ($66-$78) a generational opportunity."
       },
       "pe_ttm": "—",
       "pe_target": "20–28×",
