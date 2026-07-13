@@ -1,32 +1,32 @@
 ticker,name,sector,category,status,price,priceDate,entryTarget,t1_floor,t1_ceiling,t2_ceiling,analystTarget,marketCap,pe_ttm,pe_target,score_macro,score_business,score_financial,score_management,score_governance,score_valuation
-FSLR,First Solar,Clean Energy / Solar,Energy,WATCH,219.68,"July 13, 2026",$207–$252 | $253–$295,207,252,295,$257.08 (34),$27.6B,16.2×,14–18× norm.,4,4,4,4,4,2
-AVGO,Broadcom,Semiconductors / Software,Semiconductors,OVERVALUED,394.05,"July 13, 2026",$242–$275 | $276–$331,242,275,331,$489.80 (48),$1.86T,61.6×,25–32×,4,5,4,4,3,4
-MU,Micron Technology,Memory Semiconductors,Semiconductors,WATCH,936.27,"July 13, 2026","$880–$1,100 | $1,101–$1,260",880,1100,1260,$821.10 (44),$1.04T,48.7×,22–28× norm.,4,3,4,3,3,2
-NVDA,NVIDIA Corporation,AI Semiconductors / GPUs,Semiconductors,BUY ZONE,208.15,"July 13, 2026",$271–$319 | $320–$354,271,319,354,$309.46 (62),$4.98T,30.6×,35–42×,5,5,5,5,4,4
-TSM,Taiwan Semiconductor (TSMC),Semiconductor Foundry,Semiconductors,OVERVALUED,430.64,"July 13, 2026",$254–$299 | $300–$359,254,299,359,$460.00 (19),$2.17T,33.5×,20–26×,5,5,5,5,4,3
-MRVL,Marvell Technology,AI Custom ASICs / Networking,Semiconductors,OVERVALUED,222.59,"July 13, 2026",$101–$119 | $120–$138,101,119,138,$231.52 (44),$229B,94.6×,28–35×,5,4,3,3,4,1
-WDC,Western Digital,HDD / AI Storage,Semiconductors,OVERVALUED,552.6,"July 13, 2026",$199–$249 | $250–$288,199,249,288,$533 cons. / $575 med. (Cantor $900 outlier),$225B,35.7×,14–18× EV/EBITDA,4,4,3,4,3,3
+FSLR,First Solar,Clean Energy / Solar,Energy,WATCH,221.03,"July 13, 2026",$207–$252 | $253–$295,207,252,295,$257.08 (34),$27.6B,16.2×,14–18× norm.,4,4,4,4,4,2
+AVGO,Broadcom,Semiconductors / Software,Semiconductors,OVERVALUED,384.05,"July 13, 2026",$242–$275 | $276–$331,242,275,331,$489.80 (48),$1.86T,61.6×,25–32×,4,5,4,4,3,4
+MU,Micron Technology,Memory Semiconductors,Semiconductors,WATCH,937,"July 13, 2026","$880–$1,100 | $1,101–$1,260",880,1100,1260,$821.10 (44),$1.04T,48.7×,22–28× norm.,4,3,4,3,3,2
+NVDA,NVIDIA Corporation,AI Semiconductors / GPUs,Semiconductors,BUY ZONE,203.53,"July 13, 2026",$271–$319 | $320–$354,271,319,354,$309.46 (62),$4.98T,30.6×,35–42×,5,5,5,5,4,4
+TSM,Taiwan Semiconductor (TSMC),Semiconductor Foundry,Semiconductors,OVERVALUED,421.58,"July 13, 2026",$254–$299 | $300–$359,254,299,359,$460.00 (19),$2.17T,33.5×,20–26×,5,5,5,5,4,3
+MRVL,Marvell Technology,AI Custom ASICs / Networking,Semiconductors,OVERVALUED,217.53,"July 13, 2026",$101–$119 | $120–$138,101,119,138,$231.52 (44),$229B,94.6×,28–35×,5,4,3,3,4,1
+WDC,Western Digital,HDD / AI Storage,Semiconductors,OVERVALUED,555.55,"July 13, 2026",$199–$249 | $250–$288,199,249,288,$533 cons. / $575 med. (Cantor $900 outlier),$225B,35.7×,14–18× EV/EBITDA,4,4,3,4,3,3
 SNDK,SanDisk Corporation,NAND Flash Memory / Storage Solutions,Semiconductors,OVERVALUED,1767.64,"July 13, 2026",$308–$440 | $441–$476,308,440,476,"$1,684.06 cons. / $1,585 med.",$283.7B,62.8×,22–28× norm.,4,3,3,3,3,1
-HPQ,HP Inc.,AI PCs / Printing / Consumer Hardware,Industrials,WATCH,24.27,"July 13, 2026",$21–$24 | $25–$31,21,24,31,$19.83 (12),$22.4B,8.7×,8–11×,3,3,3,3,3,1
-MSFT,Microsoft,Cloud / AI Platform / Enterprise Software,Tech/AI,BUY ZONE,385.86,"July 13, 2026",$488–$542 | $543–$626,488,542,626,$551.33 (56),$2.90T,22.1×,28–34×,5,5,5,5,4,4
-EWY,iShares MSCI South Korea ETF,ETF — South Korea Equities,ETFs,WATCH,171.25,"July 13, 2026",$145–$171 | $172–$228,145,171,228,N/A (ETF),$13.9B AUM,—,9–13×,4,3,3,4,3,2
-FRVO,Fervo Energy,Geothermal / Independent Power Producer,Energy,BUY ZONE,27.35,"July 13, 2026",$34–$40 | $41–$50,34,40,50,$46.86 (10),$6.9B,N/A,1.5–2.0× EV/PPA,5,3,1,4,3,3
-LEU,Centrus Energy,Uranium Enrichment / Nuclear Fuel,Energy,OVERVALUED,168.72,"July 13, 2026",$61–$76 | $77–$151,61,76,151,$264.50 (16),$2.93B,54.6×,25–55×,5,4,3,4,3,4
-LLY,Eli Lilly,Pharmaceuticals — GLP-1 / Obesity / Diabetes,Pharma,WATCH,1182.7,"July 13, 2026","$786–$925 | $926–$1,199",786,925,1199,"$1,268.94 (31)",$1.075T,39.3×,25–35×,5,5,5,5,4,3
-NVO,Novo Nordisk,Pharmaceuticals — GLP-1 / Obesity / Diabetes,Pharma,WATCH,49.31,"July 13, 2026",$31–$38 | $39–$76,31,38,76,$45.00 (1),$185.2B,11.2×,10–22×,5,2,4,3,4,3
-BRK-B,Berkshire Hathaway,Diversified Conglomerate — Insurance / Railroad / Utilities / Equities,Industrials,WATCH,496.21,"July 13, 2026",$407–$479 | $480–$620,407,479,620,$465.50 (4),$1.054T,14.7×,20–28×,4,5,5,4,3,2
-GOOGL,Alphabet (Google),Digital Advertising / AI / Cloud / Autonomous Vehicles,Tech/AI,WATCH,355.05,"July 13, 2026",$262–$308 | $309–$454,262,308,454,$411.80 (63),$4.38T,26.2×,22–35×,5,5,5,4,3,4
-EWL,iShares MSCI Switzerland ETF,Country ETF — Switzerland (Healthcare / Industrials / Consumer Staples),ETFs,WATCH,62.69,"July 13, 2026",$51–$60 | $61–$75,51,60,75,N/A — Country ETF,$1.71B AUM,—,20–27×,3,4,3,4,4,3
-AVDE,Avantis International Equity ETF,International ETF — Developed Markets (Value/Small-Cap Tilt),ETFs,WATCH,89.62,"July 13, 2026",$65–$77 | $78–$106,65,77,106,N/A — Diversified ETF,$16.8B AUM,—,12–18×,3,4,4,4,4,3
-FENI,Fidelity Enhanced International ETF,International ETF — Developed Markets (Quantitative Active),ETFs,WATCH,40.03,"July 13, 2026",$29–$34 | $35–$48,29,34,48,N/A — Diversified ETF,$6.95B AUM,—,12–18×,3,4,4,4,4,3
-SCHF,Schwab International Equity ETF,International ETF — Developed Markets (Passive Broad),ETFs,WATCH,27.2,"July 13, 2026",$20–$24 | $25–$34,20,24,34,N/A — Passive Index ETF,$65.9B AUM,—,13–20×,3,4,5,4,5,3
-VOO,Vanguard S&P 500 ETF,US Equity ETF — Large Cap Blend (S&P 500 Index),ETFs,OVERVALUED,691.8,"July 13, 2026",$545–$595 | $596–$640,545,595,640,N/A — Passive Index ETF,$1.70T AUM,—,price-support,3,5,5,5,5,2
-HESM,Hess Midstream LP,Oil & Gas Midstream / MLP Infrastructure,Energy,OVERVALUED,39.1,"July 13, 2026",$28-$32 | $33-$38,28,32,38,$35.00 (3),$7.8B,13.1×,11–14× P/DCF,3,4,4,3,3,3
-CEG,Constellation Energy,Nuclear / Clean Energy Infrastructure,Utilities,WATCH,254.58,"July 13, 2026",$203-$239 | $240-$309,203,239,309,$365.13 (20),$98.6B,23.7×,20–28×,4,5,4,4,4,3
-NEE,NextEra Energy,Regulated Utility / Renewable Infrastructure,Utilities,WATCH,88.16,"July 13, 2026",$65-$74 | $75-$98,65,74,98,$100.20 (36),$180.4B,21.9×,20–28×,4,4,4,4,4,3
-XLU,Utilities Select Sector SPDR ETF,ETF — US Utilities Sector (S&P 500),ETFs,WATCH,45.59,"July 13, 2026",$36-$41 | $42-$51,36,41,51,N/A (Sector ETF),$22.5B AUM,—,16–21×,3,4,4,3,4,3
-IAU,iShares Gold Trust,ETF — Physical Gold (Hard Asset),ETFs,WATCH,75.33,"July 13, 2026",$61-$68 | $69-$88,61,68,88,N/A (Hard Asset ETF),$62.8B AUM,—,Price-based,4,3,4,3,4,3
-REMX,VanEck Rare Earth/Strategic Metals ETF,ETF — Rare Earth Elements & Strategic Metals,ETFs,WATCH,77.26,"July 13, 2026",$42-$60 | $61-$88,42,60,88,N/A (Thematic ETF),$1.2B AUM,—,Price-based,3,3,2,2,2,2
-SOXQ,Invesco PHLX Semiconductor ETF,ETF — US Semiconductors (PHLX SOX Index),ETFs,WATCH,99.18,"July 13, 2026",$66-$78 | $79-$101,66,78,101,N/A (Sector ETF),$1.1B AUM,—,20–28×,3,4,3,3,4,2
-BP,BP p.l.c.,Oil & Gas Integrated,Energy,OVERVALUED,40.15,"July 13, 2026",$22–$28 | $29–$38,22,28,38,$42.87,$98B,—,8–12× normalized,4,3,3,3,3,3
-SHEL,Shell plc,Oil & Gas Integrated,Energy,WATCH,83.21,"July 13, 2026",$51–$60 | $61–$89,51,60,89,$101.60,$214B,12.8×,10–16×,4,4,4,4,3,3
+HPQ,HP Inc.,AI PCs / Printing / Consumer Hardware,Industrials,WATCH,24.77,"July 13, 2026",$21–$24 | $25–$31,21,24,31,$19.83 (12),$22.4B,8.7×,8–11×,3,3,3,3,3,1
+MSFT,Microsoft,Cloud / AI Platform / Enterprise Software,Tech/AI,BUY ZONE,390.99,"July 13, 2026",$488–$542 | $543–$626,488,542,626,$551.33 (56),$2.90T,22.1×,28–34×,5,5,5,5,4,4
+EWY,iShares MSCI South Korea ETF,ETF — South Korea Equities,ETFs,WATCH,168.08,"July 13, 2026",$145–$171 | $172–$228,145,171,228,N/A (ETF),$13.9B AUM,—,9–13×,4,3,3,4,3,2
+FRVO,Fervo Energy,Geothermal / Independent Power Producer,Energy,BUY ZONE,25.86,"July 13, 2026",$34–$40 | $41–$50,34,40,50,$46.86 (10),$6.9B,N/A,1.5–2.0× EV/PPA,5,3,1,4,3,3
+LEU,Centrus Energy,Uranium Enrichment / Nuclear Fuel,Energy,OVERVALUED,156.05,"July 13, 2026",$61–$76 | $77–$151,61,76,151,$264.50 (16),$2.93B,54.6×,25–55×,5,4,3,4,3,4
+LLY,Eli Lilly,Pharmaceuticals — GLP-1 / Obesity / Diabetes,Pharma,WATCH,1185.08,"July 13, 2026","$786–$925 | $926–$1,199",786,925,1199,"$1,268.94 (31)",$1.075T,39.3×,25–35×,5,5,5,5,4,3
+NVO,Novo Nordisk,Pharmaceuticals — GLP-1 / Obesity / Diabetes,Pharma,WATCH,49.28,"July 13, 2026",$31–$38 | $39–$76,31,38,76,$45.00 (1),$185.2B,11.2×,10–22×,5,2,4,3,4,3
+BRK-B,Berkshire Hathaway,Diversified Conglomerate — Insurance / Railroad / Utilities / Equities,Industrials,WATCH,496.89,"July 13, 2026",$407–$479 | $480–$620,407,479,620,$465.50 (4),$1.054T,14.7×,20–28×,4,5,5,4,3,2
+GOOGL,Alphabet (Google),Digital Advertising / AI / Cloud / Autonomous Vehicles,Tech/AI,WATCH,352.51,"July 13, 2026",$262–$308 | $309–$454,262,308,454,$411.80 (63),$4.38T,26.2×,22–35×,5,5,5,4,3,4
+EWL,iShares MSCI Switzerland ETF,Country ETF — Switzerland (Healthcare / Industrials / Consumer Staples),ETFs,WATCH,62.42,"July 13, 2026",$51–$60 | $61–$75,51,60,75,N/A — Country ETF,$1.71B AUM,—,20–27×,3,4,3,4,4,3
+AVDE,Avantis International Equity ETF,International ETF — Developed Markets (Value/Small-Cap Tilt),ETFs,WATCH,89.27,"July 13, 2026",$65–$77 | $78–$106,65,77,106,N/A — Diversified ETF,$16.8B AUM,—,12–18×,3,4,4,4,4,3
+FENI,Fidelity Enhanced International ETF,International ETF — Developed Markets (Quantitative Active),ETFs,WATCH,39.87,"July 13, 2026",$29–$34 | $35–$48,29,34,48,N/A — Diversified ETF,$6.95B AUM,—,12–18×,3,4,4,4,4,3
+SCHF,Schwab International Equity ETF,International ETF — Developed Markets (Passive Broad),ETFs,WATCH,27.07,"July 13, 2026",$20–$24 | $25–$34,20,24,34,N/A — Passive Index ETF,$65.9B AUM,—,13–20×,3,4,5,4,5,3
+VOO,Vanguard S&P 500 ETF,US Equity ETF — Large Cap Blend (S&P 500 Index),ETFs,OVERVALUED,688.5,"July 13, 2026",$545–$595 | $596–$640,545,595,640,N/A — Passive Index ETF,$1.70T AUM,—,price-support,3,5,5,5,5,2
+HESM,Hess Midstream LP,Oil & Gas Midstream / MLP Infrastructure,Energy,OVERVALUED,39.21,"July 13, 2026",$28-$32 | $33-$38,28,32,38,$35.00 (3),$7.8B,13.1×,11–14× P/DCF,3,4,4,3,3,3
+CEG,Constellation Energy,Nuclear / Clean Energy Infrastructure,Utilities,WATCH,257.57,"July 13, 2026",$203-$239 | $240-$309,203,239,309,$365.13 (20),$98.6B,23.7×,20–28×,4,5,4,4,4,3
+NEE,NextEra Energy,Regulated Utility / Renewable Infrastructure,Utilities,WATCH,88.38,"July 13, 2026",$65-$74 | $75-$98,65,74,98,$100.20 (36),$180.4B,21.9×,20–28×,4,4,4,4,4,3
+XLU,Utilities Select Sector SPDR ETF,ETF — US Utilities Sector (S&P 500),ETFs,WATCH,45.72,"July 13, 2026",$36-$41 | $42-$51,36,41,51,N/A (Sector ETF),$22.5B AUM,—,16–21×,3,4,4,3,4,3
+IAU,iShares Gold Trust,ETF — Physical Gold (Hard Asset),ETFs,WATCH,75.25,"July 13, 2026",$61-$68 | $69-$88,61,68,88,N/A (Hard Asset ETF),$62.8B AUM,—,Price-based,4,3,4,3,4,3
+REMX,VanEck Rare Earth/Strategic Metals ETF,ETF — Rare Earth Elements & Strategic Metals,ETFs,WATCH,76.27,"July 13, 2026",$42-$60 | $61-$88,42,60,88,N/A (Thematic ETF),$1.2B AUM,—,Price-based,3,3,2,2,2,2
+SOXQ,Invesco PHLX Semiconductor ETF,ETF — US Semiconductors (PHLX SOX Index),ETFs,WATCH,97.1,"July 13, 2026",$66-$78 | $79-$101,66,78,101,N/A (Sector ETF),$1.1B AUM,—,20–28×,3,4,3,3,4,2
+BP,BP p.l.c.,Oil & Gas Integrated,Energy,OVERVALUED,40.83,"July 13, 2026",$22–$28 | $29–$38,22,28,38,$42.87,$98B,—,8–12× normalized,4,3,3,3,3,3
+SHEL,Shell plc,Oil & Gas Integrated,Energy,WATCH,83.98,"July 13, 2026",$51–$60 | $61–$89,51,60,89,$101.60,$214B,12.8×,10–16×,4,4,4,4,3,3
