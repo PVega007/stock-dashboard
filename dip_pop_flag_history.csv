@@ -1,0 +1,4 @@
+Date,Run,Ticker,Flag,Category,Reason,VIX,VIX_Change_Pct
+2026-07-13,premarket,MU,Caution,sector-contagion,"SK Hynix -15% today (post-IPO rotation) sparking broad memory/chip-sector risk-off; Iran/Strait of Hormuz airstrikes lifting VIX +9% intraday",16.40,9.12
+2026-07-13,premarket,SNDK,Caution,sector-contagion,"Same memory-sector contagion risk as MU (SK Hynix -15% today); Iran/Strait of Hormuz airstrikes lifting VIX +9% intraday",16.40,9.12
+2026-07-13,premarket,MSFT,Caution,geopolitical,"Broad market volatility from Iran/Strait of Hormuz airstrikes (VIX +9% intraday, oil +4%); no MSFT-specific negative catalyst today — JMP Securities reiterated Outperform, $550 PT",16.40,9.12

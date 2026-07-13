@@ -1,7 +1,8 @@
 {
   "_meta": {
     "source": "FMP MCP connector (quote endpoint for VIX; premarket/news scan for flags)",
-    "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) — always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it. Derived from the daily macro calendar (CPI/PCE/jobs/FOMC/ISM), ticker-specific news, and the mandatory AI/semiconductor competitive-landscape query — see CLAUDE.md."
+    "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) — always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it. Derived from the daily macro calendar (CPI/PCE/jobs/FOMC/ISM), ticker-specific news, and the mandatory AI/semiconductor competitive-landscape query — see CLAUDE.md.",
+    "category_note": "Added July 13, 2026 for Claude for Excel's Option 2 flag-gating burn-in. category = the primary driver behind the flag, one of: macro-scheduled (scheduled CPI/PCE/jobs/FOMC/ISM release) | sector-contagion (a related name's move, e.g. a direct competitor) | single-name (catalyst specific to this ticker) | geopolitical (broad market-wide event unrelated to a specific company or scheduled release) | other. Gate logic currently treats all categories uniformly until burn-in data justifies differential weighting — see dip_pop_flag_history.csv for the append-only log used to test that."
   },
   "date": "2026-07-13",
   "generatedAt": "2026-07-13T12:55:00Z",
@@ -11,16 +12,19 @@
     {
       "ticker": "MU",
       "flag": "Caution",
+      "category": "sector-contagion",
       "reason": "SK Hynix -15% today (post-IPO rotation) sparking broad memory/chip-sector risk-off; Iran/Strait of Hormuz airstrikes lifting VIX +9% intraday"
     },
     {
       "ticker": "SNDK",
       "flag": "Caution",
+      "category": "sector-contagion",
       "reason": "Same memory-sector contagion risk as MU (SK Hynix -15% today); Iran/Strait of Hormuz airstrikes lifting VIX +9% intraday"
     },
     {
       "ticker": "MSFT",
       "flag": "Caution",
+      "category": "geopolitical",
       "reason": "Broad market volatility from Iran/Strait of Hormuz airstrikes (VIX +9% intraday, oil +4%); no MSFT-specific negative catalyst today — JMP Securities reiterated Outperform, $550 PT"
     }
   ]
