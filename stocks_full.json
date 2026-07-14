@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "stock_dashboard.html (via export_stocks.js, full narrative export)",
-    "exportedAt": "2026-07-14T11:55:01.390Z",
+    "exportedAt": "2026-07-14T17:57:25.329Z",
     "count": 31,
     "note": "Full per-stock content: summary, steps.macroContext/priceAction/business/financial/management/governance/valuation/catalysts, redFlags, verdict (or steps.s11 for steps-format stocks), scores, entryTarget, PE data. Methodology (entry-target formulas, bear-floor formula, ECL signal rules) lives in investment_parameters.json and CLAUDE.md, also in this repo. Position_Tracker.md (personal tranche/exit tracker) is intentionally NOT included here — it contains account-level and tax-strategy detail Patricia has not authorized for public export."
   },
@@ -54,10 +54,10 @@
       "sector": "Semiconductors / Software",
       "priceResearch": "$393.21",
       "priceDate": "July 14, 2026",
-      "entryTarget": "$242–$275 | $276–$331",
+      "entryTarget": "$427–$485 | $486–$584",
       "marketCap": "$1.86T",
       "analystTarget": "$489.80 (48)",
-      "status": "OVERVALUED",
+      "status": "BUY ZONE",
       "category": "Semiconductors",
       "scores": {
         "macro": 4,
@@ -87,7 +87,7 @@
         "bearCase": "Custom AI ASIC concentration risk — Google represents a large share of XPU revenue. If Google slows AI capex or brings design in-house, revenue impact is significant. VMware pricing backlash creates customer churn as enterprises migrate to alternatives. EU investigation leads to forced pricing remedies or structural changes. Debt burden limits flexibility if revenue growth disappoints.",
         "risks": "1. Google AI capex slowdown or XPU in-housing (P×S: Medium×High). 2. EU antitrust action requiring VMware pricing restructuring (P×S: Medium×High). 3. VMware customer churn accelerating due to pricing shock (P×S: Medium×Medium). 4. Debt service pressure if FCF misses in a downturn (P×S: Low×Medium). 5. NVIDIA launches competitive custom silicon co-design service (P×S: Low×High).",
         "entry": "Base case fair value: $380–420 (FCF-based). Bear case (Google slowdown + VMware pressure): $280–320. Target entry: $330–360 — provides adequate margin of safety in the base case while protecting against the bear. Current ~$413 is at the top of fair value range with limited upside cushion. Watch closely, not a buy yet.",
-        "verdict": "OVERVALUED — at $365, AVGO is above T2 ceiling $331. Pullback from ATH noted but price has not yet reached the entry zone ($232–$272). Q3 AI guidance miss ($16B vs $17.2B) is a one-quarter pause — custom AI ASIC and networking franchise intact. FCF strong, VMware integration progressing. EU investigation is the tail risk. Wait for pullback to $232–$272 entry zone before initiating. Confidence: High on business quality."
+        "verdict": "BUY ZONE — at $393, AVGO has dropped below the updated T1 floor of $427 after targets were refreshed to FY2027 consensus EPS of $19.40 (41 analysts, fiscal year ending Oct 31, 2027). At 20× FY2027 EPS the market prices AVGO below our deserved 25× floor multiple — an unusual discount for a business delivering $106B FY2026 revenue at 75% gross margins with locked-in AI ASIC wins at Google, Meta, and Apple, plus VMware integration ahead of schedule. Analyst consensus $524 (48 analysts, Strong Buy). ECL confirmation recommended before scaling tranche size; T1 zone $427–$485 is the high-conviction entry."
       },
       "pe_ttm": "61.6×",
       "pe_target": "25–32×",
@@ -230,10 +230,10 @@
       "sector": "AI Custom ASICs / Networking",
       "priceResearch": "$224.99",
       "priceDate": "July 14, 2026",
-      "entryTarget": "$101–$119 | $120–$138",
+      "entryTarget": "$184–$216 | $217–$257",
       "marketCap": "$229B",
       "analystTarget": "$231.52 (44)",
-      "status": "OVERVALUED",
+      "status": "WATCH",
       "category": "Semiconductors",
       "scores": {
         "macro": 5,
@@ -262,11 +262,11 @@
         "bearCase": "NVIDIA fights back with custom ASIC-like solutions (MGX/Spectrum networking). Hyperscaler custom silicon programs disappoint as ROI vs. NVIDIA GPUs proves marginal. Q1 'in-line' performance signals AI custom chip demand is being overestimated. Stock reverts to analyst consensus of $210 — a 28% decline. With 90x P/E, any guidance cut is catastrophic.",
         "risks": "1. MASSIVE OVERVALUATION (high × high) — 38% above analyst consensus target; 90x P/E; S&P inclusion pop is not fundamental. 2. EXECUTION RISK ON FY2027-28 GUIDANCE (medium × high) — $11B FY2027 revenue requires sustained 30% growth; any shortfall destroys the thesis. 3. NVIDIA COMPETITIVE RESPONSE (medium × medium) — NVIDIA expanding into custom silicon solutions could limit Marvell's TAM. 4. HYPERSCALER CONCENTRATION (medium × medium) — 2-3 hyperscalers likely account for >50% of custom ASIC revenue; losing one is severe. 5. VALUATION REVERSION (high × high) — stock above analyst targets is unstable; any negative catalyst triggers significant de-rating.",
         "entry": "Current $290 is 38% above analyst consensus target ($210) — do not enter. Entry zone: $180-220 (consensus target range; current P/E drops to ~56-69x — still expensive but reflects the growth trajectory). A failed quarterly beat, guidance cut, or broader AI multiple compression could create this entry. The S&P 500 inclusion pop should not be chased.",
-        "verdict": "OVERVALUED — Marvell has a real business and genuine AI exposure. But a 90x P/E on a company whose Q1 result was in-line (not a beat), trading 38% above analyst consensus while the S&P 500 inclusion creates forced buying momentum, is not an investable setup for a new position. File this at $180-220 for a better entry. Confidence: HIGH. Biggest unknown: whether FY2028 $15B revenue / $5 EPS guidance is achievable or aspirational."
+        "verdict": "WATCH — at $225, MRVL sits in the T2 zone ($217–$257) after targets were updated to FY2028 EPS of $6.18 (analyst consensus, fiscal year ending Jan 31, 2028) and an upgraded deserved P/E range of 35–45×, reflecting confirmed AI ASIC leadership at Google TPU, AWS Trainium, and Microsoft. Hold existing positions; the T1 zone ($184–$216) is the high-conviction entry level — watch for pullback on broad AI sentiment shifts or macro weakness. Analyst consensus target $251 (38 analysts). ECL confirmation required before deploying capital in T1."
       },
       "pe_ttm": "94.6×",
-      "pe_target": "28–35×",
-      "pe_note": "* TTM elevated — ramp yr"
+      "pe_target": "35–45× (FY2028)",
+      "pe_note": "* FY2028 EPS $6.18 (Jan 2028 FY); P/E range upgraded from 28–35×"
     },
     {
       "ticker": "WDC",
@@ -274,7 +274,7 @@
       "sector": "HDD / AI Storage",
       "priceResearch": "$576.77",
       "priceDate": "July 14, 2026",
-      "entryTarget": "$199–$249 | $250–$288",
+      "entryTarget": "$205–$256 | $257–$296",
       "marketCap": "$225B",
       "analystTarget": "$533 cons. / $575 med. (Cantor $900 outlier)",
       "status": "OVERVALUED",
@@ -308,7 +308,7 @@
         "s8": "VALUATION (recalculated Jul 4, 2026 quarterly refresh): Price $539.00. Market cap ~$225B. FY2027 consensus EPS ~$17.79 (range $11.30–$25.74 — wide dispersion reflecting post-spin estimate uncertainty). Entry formula per investment_parameters.json: Low P/E 14, High P/E 18, MoS 20%. T1 floor = $17.79×14×0.80 = $199. T1 ceiling = $17.79×14 = $249. T2 ceiling = $17.79×18×0.90 = $288. At $539, price is well above the P/E-derived T2 ceiling — but this contradicts Street consensus ($533–$575) and Seagate peer multiples (29-30x NTM EV/EBITDA vs WDC 21-24x), which both suggest $539 is roughly fair value, not overvalued. This is a genuine methodology gap (P/E framework calibrated pre-spin, EV/EBITDA data unavailable via FMP Starter plan) rather than a mispricing — status set to WATCH (provisional) rather than a P/E-derived OVERVALUED that would contradict the weight of other evidence.",
         "s9": "CATALYSTS: (1) Sustained hyperscaler CapEx and data center expansion. (2) Higher-capacity drive adoption (22TB, 28TB+ UltraSMR). (3) High Bandwidth Drive (HBD) commercial ramp for AI inference workloads. (4) LTA renewals and expansions. (5) Share buybacks with strong FCF reducing float. (6) Continued NAND-free margin expansion demonstrating sustainable 45%+ gross margins.",
         "s10": "RISKS: (1) Valuation risk — any deceleration in HDD demand or earnings miss at 31x P/E could cause major drawdown. (2) Cyclical risk — WDC's revenue collapsed 67% in FY2023; AI doesn't immunize against storage cycles. (3) SSD displacement accelerating in enterprise warm-storage. (4) China/geopolitical exposure — tariffs or export restrictions could hurt revenue. (5) High beta (2.20) amplifies any market downturn. (6) EPS quality risk — market eventually distinguishes clean vs. gain-inflated earnings.",
-        "s11": "OVERVALUED (mechanical, entryTarget stale) — at $577.46, WDC has moved further above Street consensus ($533 cons./$575 med.) following the SanDisk spin-off, now exceeding even the higher analyst target. The current entryTarget ($199–$249 | $250–$288) is stale legacy data from the pre-spin combined NAND+HDD business and does not reflect HDD-only fundamentals; status here is mechanically OVERVALUED per that stale target crossing, not a fresh fundamental sell signal. FMP's Starter-plan tools still can't supply the EV/EBITDA-per-share data this ticker's investment_parameters.json metric type calls for, and peer Seagate trades at richer EV/EBITDA multiples (29-30x vs WDC's 21-24x). Hold; do not add at current levels — a full EV/EBITDA-per-share rebuild remains overdue and is recommended at the next quarterly refresh."
+        "s11": "OVERVALUED — at $577, WDC is 95% above the updated T2 ceiling of $296, now reflecting the post-SNDK-spinoff HDD-only business: FY2027 consensus EPS $18.27 (23 analysts, fiscal year ending June 2027) at 14–18× through-cycle EV/EBITDA. Targets are no longer stale. The gap vs analyst consensus $606 (26 analysts, 33× peak EPS) represents a genuine thesis disagreement: our framework applies through-cycle multiples; analysts price peak AI data center nearline HDD demand as structurally durable. Hold; re-evaluate if price approaches the $256–$296 range or if HDD cycle shows peak signals."
       },
       "pe_ttm": "35.7×",
       "pe_target": "14–18× EV/EBITDA",
@@ -320,7 +320,7 @@
       "sector": "NAND Flash Memory / Storage Solutions",
       "priceResearch": "$1,744.28",
       "priceDate": "July 14, 2026",
-      "entryTarget": "$308–$440 | $441–$476",
+      "entryTarget": "$1,023–$1,461 | $1,462–$1,581",
       "marketCap": "$283.7B",
       "analystTarget": "$1,684.06 cons. / $1,585 med.",
       "status": "OVERVALUED",
@@ -353,11 +353,11 @@
         "bullCase": "The memory supercycle narrative is real and corroborated by SK Hynix's own commentary about a multi-year structural deficit. SanDisk is one of only three global NAND suppliers at scale, with a dramatically cleaner balance sheet post-spin-off (near-zero debt) and margins that, even if they moderate from Q3 FY26's peak, could settle at a level well above SNDK's pre-spin/transitional-quarter run-rate. If the supercycle proves more durable than past memory cycles (a real possibility given the AI storage demand driver is structurally different from prior PC/mobile-driven cycles), today's price could look cheap in hindsight.",
         "bearCase": "Memory cycles have a long history of boom-bust reversals, and SNDK's own quarterly history already shows how violently results can swing (a -$13.33 EPS quarter just five quarters ago). The stock is already priced above analyst consensus and median targets, beta of 4.74 signals the market itself is pricing enormous uncertainty, and at least one large investor (Millennium's Englander) has reportedly been trimming the position. A single disappointing quarter, a supply response from Samsung/Kioxia, or any sign the AI storage demand story is decelerating could trigger a sharp de-rating from these levels.",
         "risks": "Extreme quarter-to-quarter earnings volatility with almost no demonstrated down-cycle as an independent company; beta 4.74 implies outsized drawdown risk in any broader market pullback; NAND pricing could reverse as suppliers (including SanDisk itself) respond to record margins with capacity additions; concentration risk in a single product category (pure NAND, versus MU's DRAM+NAND+HBM diversification); FMP's Starter-plan data gaps mean the entry targets here rely on a judgment call rather than clean consensus estimates.",
-        "verdict": "OVERVALUED — at $1,915.92, SNDK trades roughly 4x above our provisional T2 ceiling ($476), calculated using a deliberately conservative normalized EPS (~$20/share) given the stock's short independent trading history and extreme volatility (beta 4.74). Even a more bullish EPS assumption only closes part of the gap. The underlying memory-supercycle thesis is credible and well-corroborated by SK Hynix's own guidance, but the current price already reflects a great deal of optimism, and the stock's own 30x swing in quarterly EPS over the last five quarters is a reminder of how quickly NAND economics can reverse. Not a buy at current levels; revisit entry targets with real consensus EPS data at the next quarterly refresh, and watch for a substantial pullback (or confirmation the supercycle has more durable pricing power than historical NAND cycles) before reconsidering."
+        "verdict": "OVERVALUED — at $1,744, SNDK trades 10% above the updated T2 ceiling of $1,581. Targets substantially revised from the prior provisional estimate: FY2026 consensus EPS $66.41 (19 analysts, fiscal year ended June 30, 2026) replaces the old provisional ~$20 figure, moving T2 ceiling from $476 to $1,581. At 26× FY2026 EPS the market is near the top of the deserved 22–28× range. Analyst consensus $2,035 (22 analysts) is consistent with peak-cycle pricing. SNDK has no demonstrated down-cycle track record as an independent public company (listed Feb 2025). Wait for pullback into T1 zone ($1,023–$1,461) before deploying; ideal entry near T1 floor ~$1,023."
       },
       "pe_ttm": "62.8×",
       "pe_target": "22–28× norm.",
-      "pe_note": "* TTM = single blowout quarter (Q3 FY26 EPS $23.03); target uses provisional ~$20 normalized EPS, not peak"
+      "pe_note": "* FY2026 consensus EPS $66.41 (19 analysts, FY ended June 2026); FY2027 est $204.47 (use with caution)"
     },
     {
       "ticker": "HPQ",
@@ -541,10 +541,10 @@
       "sector": "Uranium Enrichment / Nuclear Fuel",
       "priceResearch": "$159.60",
       "priceDate": "July 14, 2026",
-      "entryTarget": "$61–$76 | $77–$151",
+      "entryTarget": "$79–$99 | $100–$197",
       "marketCap": "$2.93B",
       "analystTarget": "$264.50 (16)",
-      "status": "OVERVALUED",
+      "status": "WATCH",
       "category": "Energy",
       "scores": {
         "macro": 5,
@@ -572,7 +572,7 @@
         "bearCase": "Expansion delays or cost overruns at multi-billion dollar enrichment plant. SMR commercial deployment pushed to 2030+; HALEU demand slower than expected. SWU spot price decline due to market oversupply. Continued share dilution to fund expansion depresses per-share metrics. FCF -$326M in 2026 consumes the $1.9B cash faster than expected. Stock falls toward 52-week low $140 or lower.",
         "risks": "1. EXPANSION EXECUTION (HIGH x MEDIUM) — multi-billion dollar construction is complex; Geiger Brothers selected but construction just beginning; timeline risk. 2. SMR TIMELINE (HIGH x MEDIUM) — HALEU demand depends on SMR deployment; regulatory delays could push demand to 2030+. 3. DILUTION (MEDIUM x HIGH) — shares up 62% in 5 years; additional equity raises likely to fund expansion. 4. MARGIN COMPRESSION (MEDIUM x HIGH) — gross margins declining from 40% (2022) to 26% (2025); expansion capex hits FCF hard in 2026. 5. RUSSIAN SWU TRANSITION (MEDIUM x LOW) — replacing Russian supply sources with domestic or ally sources at competitive cost is ongoing challenge.",
         "entry": "P/E entry: FY2026E EPS $4.16 x 25x–55x P/E range. Floor = $4.16 x 25 x 0.85 = $88. Ceiling = $4.16 x 55 = $229. At $163.74 = 54% through range → WATCH. Analyst avg target $278.64 = +70% upside — analysts pricing 2028-2030 expansion earnings. Near-term catalysts for entering BUY ZONE: (1) confirmation of expansion milestone on schedule + on budget; (2) additional HALEU customer announcements; (3) SWU contract pricing improvement. Best entry: $120-140 on another pullback toward 52-week low. EV context ($1.9B cash → EV $1.3B at current price) is already compelling; execution risk is the limiting factor.",
-        "verdict": "OVERVALUED — at $166, LEU has risen above T2 ceiling $151. Iran war + Strait of Hormuz closure created energy security crisis directly benefiting nuclear power. LEU is the only US domestic uranium enrichment company (HALEU critical for next-gen reactors). Consensus $264.50 implies significant upside long-term — but wait for pullback to $98–$115 entry zone. Speculative small-cap — size position accordingly. Confidence: Medium."
+        "verdict": "WATCH — at $159.60, LEU sits in the T2 zone ($100–$197) after targets were updated to FY2026 consensus EPS of $3.97 (12 analysts, calendar year ending Dec 31, 2026). LEU holds the only operational US uranium enrichment capacity and is the sole domestic HALEU supplier for next-gen reactors — the strategic premium is real. Analyst targets of $272 average ($390 high) imply multiples above our 55× ceiling, reflecting HALEU optionality not yet in EPS. Do not chase; the T1 entry zone ($79–$99) requires a significant pullback."
       },
       "pe_ttm": "54.6×",
       "pe_target": "25–55×",

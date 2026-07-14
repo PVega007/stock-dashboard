@@ -1,17 +1,17 @@
 ticker,name,sector,category,status,price,priceDate,entryTarget,t1_floor,t1_ceiling,t2_ceiling,analystTarget,marketCap,pe_ttm,pe_target,score_macro,score_business,score_financial,score_management,score_governance,score_valuation
 FSLR,First Solar,Clean Energy / Solar,Energy,WATCH,224.8,"July 14, 2026",$207–$252 | $253–$295,207,252,295,$257.08 (34),$27.6B,16.2×,14–18× norm.,4,4,4,4,4,2
-AVGO,Broadcom,Semiconductors / Software,Semiconductors,OVERVALUED,393.21,"July 14, 2026",$242–$275 | $276–$331,242,275,331,$489.80 (48),$1.86T,61.6×,25–32×,4,5,4,4,3,4
+AVGO,Broadcom,Semiconductors / Software,Semiconductors,BUY ZONE,393.21,"July 14, 2026",$427–$485 | $486–$584,427,485,584,$489.80 (48),$1.86T,61.6×,25–32×,4,5,4,4,3,4
 MU,Micron Technology,Memory Semiconductors,Semiconductors,WATCH,966.8,"July 14, 2026","$880–$1,100 | $1,101–$1,260",880,1100,1260,$821.10 (44),$1.04T,48.7×,22–28× norm.,4,3,4,3,3,2
 NVDA,NVIDIA Corporation,AI Semiconductors / GPUs,Semiconductors,BUY ZONE,206.07,"July 14, 2026",$271–$319 | $320–$354,271,319,354,$309.46 (62),$4.98T,30.6×,35–42×,5,5,5,5,4,4
 TSM,Taiwan Semiconductor (TSMC),Semiconductor Foundry,Semiconductors,OVERVALUED,428.41,"July 14, 2026",$254–$299 | $300–$359,254,299,359,$460.00 (19),$2.17T,33.5×,20–26×,5,5,5,5,4,3
-MRVL,Marvell Technology,AI Custom ASICs / Networking,Semiconductors,OVERVALUED,224.99,"July 14, 2026",$101–$119 | $120–$138,101,119,138,$231.52 (44),$229B,94.6×,28–35×,5,4,3,3,4,1
-WDC,Western Digital,HDD / AI Storage,Semiconductors,OVERVALUED,576.77,"July 14, 2026",$199–$249 | $250–$288,199,249,288,$533 cons. / $575 med. (Cantor $900 outlier),$225B,35.7×,14–18× EV/EBITDA,4,4,3,4,3,3
-SNDK,SanDisk Corporation,NAND Flash Memory / Storage Solutions,Semiconductors,OVERVALUED,1744.28,"July 14, 2026",$308–$440 | $441–$476,308,440,476,"$1,684.06 cons. / $1,585 med.",$283.7B,62.8×,22–28× norm.,4,3,3,3,3,1
+MRVL,Marvell Technology,AI Custom ASICs / Networking,Semiconductors,WATCH,224.99,"July 14, 2026",$184–$216 | $217–$257,184,216,257,$231.52 (44),$229B,94.6×,35–45× (FY2028),5,4,3,3,4,1
+WDC,Western Digital,HDD / AI Storage,Semiconductors,OVERVALUED,576.77,"July 14, 2026",$205–$256 | $257–$296,205,256,296,$533 cons. / $575 med. (Cantor $900 outlier),$225B,35.7×,14–18× EV/EBITDA,4,4,3,4,3,3
+SNDK,SanDisk Corporation,NAND Flash Memory / Storage Solutions,Semiconductors,OVERVALUED,1744.28,"July 14, 2026","$1,023–$1,461 | $1,462–$1,581",1023,1461,1581,"$1,684.06 cons. / $1,585 med.",$283.7B,62.8×,22–28× norm.,4,3,3,3,3,1
 HPQ,HP Inc.,AI PCs / Printing / Consumer Hardware,Industrials,WATCH,24.68,"July 14, 2026",$21–$24 | $25–$31,21,24,31,$19.83 (12),$22.4B,8.7×,8–11×,3,3,3,3,3,1
 MSFT,Microsoft,Cloud / AI Platform / Enterprise Software,Tech/AI,BUY ZONE,378.96,"July 14, 2026",$488–$542 | $543–$626,488,542,626,$551.33 (56),$2.90T,22.1×,28–34×,5,5,5,5,4,4
 EWY,iShares MSCI South Korea ETF,ETF — South Korea Equities,ETFs,WATCH,170.02,"July 14, 2026",$145–$171 | $172–$228,145,171,228,N/A (ETF),$13.9B AUM,—,9–13×,4,3,3,4,3,2
 FRVO,Fervo Energy,Geothermal / Independent Power Producer,Energy,BUY ZONE,26.08,"July 14, 2026",$34–$40 | $41–$50,34,40,50,$46.86 (10),$6.9B,N/A,1.5–2.0× EV/PPA,5,3,1,4,3,3
-LEU,Centrus Energy,Uranium Enrichment / Nuclear Fuel,Energy,OVERVALUED,159.6,"July 14, 2026",$61–$76 | $77–$151,61,76,151,$264.50 (16),$2.93B,54.6×,25–55×,5,4,3,4,3,4
+LEU,Centrus Energy,Uranium Enrichment / Nuclear Fuel,Energy,WATCH,159.6,"July 14, 2026",$79–$99 | $100–$197,79,99,197,$264.50 (16),$2.93B,54.6×,25–55×,5,4,3,4,3,4
 LLY,Eli Lilly,Pharmaceuticals — GLP-1 / Obesity / Diabetes,Pharma,WATCH,1176,"July 14, 2026","$786–$925 | $926–$1,199",786,925,1199,"$1,268.94 (31)",$1.075T,39.3×,25–35×,5,5,5,5,4,3
 NVO,Novo Nordisk,Pharmaceuticals — GLP-1 / Obesity / Diabetes,Pharma,WATCH,48.75,"July 14, 2026",$31–$38 | $39–$76,31,38,76,$45.00 (1),$185.2B,11.2×,10–22×,5,2,4,3,4,3
 BRK-B,Berkshire Hathaway,Diversified Conglomerate — Insurance / Railroad / Utilities / Equities,Industrials,WATCH,495.52,"July 14, 2026",$407–$479 | $480–$620,407,479,620,$465.50 (4),$1.054T,14.7×,20–28×,4,5,5,4,3,2
