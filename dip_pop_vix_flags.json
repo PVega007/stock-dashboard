@@ -1,31 +1,31 @@
 {
   "_meta": {
     "source": "FMP MCP connector (quote endpoint for VIX; premarket/news scan for flags)",
-    "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) — always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it. Derived from the daily macro calendar (CPI/PCE/jobs/FOMC/ISM), ticker-specific news, and the mandatory AI/semiconductor competitive-landscape query — see CLAUDE.md.",
-    "category_note": "Added July 13, 2026 for Claude for Excel's Option 2 flag-gating burn-in. category = the primary driver behind the flag, one of: macro-scheduled (scheduled CPI/PCE/jobs/FOMC/ISM release) | sector-contagion (a related name's move, e.g. a direct competitor) | single-name (catalyst specific to this ticker) | geopolitical (broad market-wide event unrelated to a specific company or scheduled release) | other. Gate logic currently treats all categories uniformly until burn-in data justifies differential weighting — see dip_pop_flag_history.csv for the append-only log used to test that."
+    "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) \u2014 always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it. Derived from the daily macro calendar (CPI/PCE/jobs/FOMC/ISM), ticker-specific news, and the mandatory AI/semiconductor competitive-landscape query \u2014 see CLAUDE.md.",
+    "category_note": "category = the primary driver behind the flag: macro-scheduled | sector-contagion | single-name | geopolitical | other. See dip_pop_flag_history.csv for the append-only burn-in log."
   },
-  "date": "2026-07-13",
-  "generatedAt": "2026-07-13T12:55:00Z",
-  "vix": 16.40,
-  "vix_change_pct": 9.12,
+  "date": "2026-07-14",
+  "generatedAt": "2026-07-14T11:52:26Z",
+  "vix": 17.34,
+  "vix_change_pct": 1.05,
   "flags": [
     {
       "ticker": "MU",
       "flag": "Caution",
-      "category": "sector-contagion",
-      "reason": "SK Hynix -15% today (post-IPO rotation) sparking broad memory/chip-sector risk-off; Iran/Strait of Hormuz airstrikes lifting VIX +9% intraday"
+      "category": "macro-scheduled",
+      "reason": "June CPI (HIGH impact) at 8:30 AM ET today with bond market pricing rising odds of a Fed HIKE at Jul 28-29 FOMC (Yahoo Finance, Jul 14); memory complex rebounding pre-market (MU +3.2%) on KeyBanc bull note (Barron's, Jul 14) but still whipsawing post SK Hynix-driven Jul 13 selloff"
     },
     {
       "ticker": "SNDK",
       "flag": "Caution",
-      "category": "sector-contagion",
-      "reason": "Same memory-sector contagion risk as MU (SK Hynix -15% today); Iran/Strait of Hormuz airstrikes lifting VIX +9% intraday"
+      "category": "macro-scheduled",
+      "reason": "June CPI (HIGH impact) at 8:30 AM ET today amid Fed-hike repricing; SNDK still -1.3% pre-market ($1,744) after Monday's -12.6% memory-sector rout even as MU/WDC rebound \u2014 post-crash volatility in a beta-4.74 name (Invezz, Jul 13)"
     },
     {
       "ticker": "MSFT",
       "flag": "Caution",
-      "category": "geopolitical",
-      "reason": "Broad market volatility from Iran/Strait of Hormuz airstrikes (VIX +9% intraday, oil +4%); no MSFT-specific negative catalyst today — JMP Securities reiterated Outperform, $550 PT"
+      "category": "macro-scheduled",
+      "reason": "June CPI (HIGH impact) at 8:30 AM ET today; MSFT -3.1% pre-market ($378.96) with no single clear catalyst found \u2014 AI-trade recalibration + rate-hike bets (Yahoo Finance, Jul 14), El-Erian AI-funding/yields commentary (247wallst, Jul 13), securities class-action PR (PRNewswire, Jul 14)"
     }
   ]
 }
