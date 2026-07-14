@@ -1,8 +1,8 @@
 {
   "_meta": {
     "source": "stock_dashboard.html (via export_stocks.js, full narrative export)",
-    "exportedAt": "2026-07-14T18:54:22.007Z",
-    "count": 31,
+    "exportedAt": "2026-07-14T19:19:54.408Z",
+    "count": 36,
     "note": "Full per-stock content: summary, steps.macroContext/priceAction/business/financial/management/governance/valuation/catalysts, redFlags, verdict (or steps.s11 for steps-format stocks), scores, entryTarget, PE data. Methodology (entry-target formulas, bear-floor formula, ECL signal rules) lives in investment_parameters.json and CLAUDE.md, also in this repo. Position_Tracker.md (personal tranche/exit tracker) is intentionally NOT included here — it contains account-level and tax-strategy detail Patricia has not authorized for public export."
   },
   "stocks": [
@@ -1305,6 +1305,235 @@
       "pe_ttm": "12.8×",
       "pe_target": "10–16×",
       "pe_note": "Integrated oil & gas + LNG; normalized P/E"
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle Corporation",
+      "sector": "Enterprise Software / Cloud Database",
+      "priceResearch": "$129.69",
+      "priceDate": "July 14, 2026",
+      "entryTarget": "$137–$161 | $162–$209",
+      "marketCap": "$356B",
+      "analystTarget": "$251.85 (43)",
+      "status": "BUY ZONE",
+      "category": "Software",
+      "bearFloor": "$96",
+      "scores": {
+        "macro": 4,
+        "business": 4,
+        "financial": 3,
+        "management": 4,
+        "governance": 3,
+        "valuation": 5
+      },
+      "redFlags": [
+        "FY2027 EPS growth only +5.4% despite +32% revenue — massive OCI data center CapEx drives deeply negative FCF (-$24.5B FY2026, -$47.7B FY2027 forecast)",
+        "Hyper-competitive cloud: AWS/Azure/GCP have superior developer ecosystems and scale",
+        "Larry Ellison founder control (~37%) — governance concentration risk",
+        "⚠️ SENTIMENT TRACKER — Patricia not investing; monitors enterprise software/cloud sentiment alongside MSFT"
+      ],
+      "summary": "Oracle at $129.69 trades at 16.1× FY2027 non-GAAP EPS of $8.05 — a multi-decade valuation low for one of the most defensible enterprise software franchises in the world. The market is discounting Oracle's OCI (cloud infrastructure) buildout because massive CapEx is consuming FCF and compressing near-term EPS growth. But revenue is accelerating sharply (+32% FY2027 to $89.2B) as OCI wins large AI training workloads — Oracle's GPU cluster strategy has attracted OpenAI, Meta, and enterprise customers. Analyst consensus target $251.85 (43 analysts, Buy) implies 94% upside. SENTIMENT TRACKER: ORCL in BUY ZONE signals extreme enterprise cloud pessimism — the same pessimism creating opportunities in MSFT and AI/cloud portfolio holdings.",
+      "steps": {
+        "macroContext": "IBM's Q2 2026 earnings warning (Jul 14: rev $17.2B vs $17.86B; clients shifted capex from software/mainframes to servers/storage/memory) is today's most relevant sector read — enterprise IT budgets are being consumed by AI infrastructure hardware. Oracle's OCI is the AI infrastructure layer enterprises are buying (GPU clusters), not the traditional software being displaced. Fed holds 3.50–3.75%; Iran/Hormuz escalation continues (oil ~$74). ORCL -1.41% today on sector software-to-hardware rotation. Score 4/5.",
+        "priceAction": "$129.69 on July 14, 2026. 43 analysts, avg target $251.85 (+94%). Trading at 16.1× FY2027 non-GAAP EPS — historically cheap for Oracle. IBM's Q2 miss dragging enterprise software sector; ORCL sold off on rotation from software to AI hardware. Score 3/5.",
+        "business": "Oracle Database (430,000+ enterprise customers) provides extraordinary switching cost moat. OCI is gaining cloud share rapidly with a GPU cluster strategy appealing to AI workloads. AI-native database features (Autonomous Database, Vector Search) position Oracle as the preferred AI enterprise data layer. Cerner acquisition extends reach into healthcare IT. Score 4/5.",
+        "financial": "FY2027 revenue consensus $89.2B (+32%). Non-GAAP EPS $8.05 (+5.4%). FCF deeply negative (-$24.5B FY2026) — deliberate massive CapEx investment cycle. Strong gross margins ~60%. Net debt from Cerner. Similar to AWS's FCF-negative buildout phase (2015–2018) that created enormous long-term value. Score 3/5.",
+        "management": "Larry Ellison (founder) made a visionary pivot to AI/cloud, winning OpenAI as a key OCI customer. CEO Safra Catz executed Cerner integration ahead of schedule. Conservative guidance style. Score 4/5.",
+        "governance": "Ellison's ~37% control creates concentration risk. Historical related-party transactions (Oracle-Tesla data center discussions) require monitoring. Governance improved post-Cerner with independent director additions. Score 3/5.",
+        "valuation": "FY2027 consensus EPS $8.05 (41 analysts, fiscal year ending May 31, 2027). Low P/E 20×, High P/E 28×, MoS 15%. T1 floor $137, T1 ceiling $161, T2 ceiling $209. Bear floor $96. At $129.69 — BUY ZONE (below T1 floor $137). Current 16.1× fwd P/E is a recession-level multiple on a durable franchise. Analyst consensus $251.85 implies even our T2 ceiling of $209 is conservative. Score 5/5.",
+        "bullCase": "(1) OCI GPU cluster wins accelerate — OpenAI, Meta, enterprise AI workloads. (2) FCF inflection 2028+ as CapEx cycle completes. (3) Database install base monetized through AI query pricing. (4) Analyst consensus 94% upside. (5) Multi-decade valuation low vs. franchise quality.",
+        "bearCase": "(1) AWS/Azure/GCP win most AI workloads due to superior scale and ecosystems. (2) OCI CapEx execution risk — $50B+/year buildout. (3) Negative FCF through 2027 constrains capital return. (4) Open-source databases (PostgreSQL) commoditize core revenue.",
+        "risks": "Cloud market competition; OCI CapEx execution risk; negative FCF constraint; Ellison concentration; Cerner integration complexity; database commoditization.",
+        "entry": "SENTIMENT TRACKER: Oracle in BUY ZONE signals extreme enterprise cloud pessimism. T1 zone $137–$161 reflects 20× FY2027 EPS with 15% MoS. At $129 already below T1 floor — watch for recovery through $137 as enterprise sentiment improvement signal correlated to MSFT.",
+        "verdict": "BUY ZONE — at $129.69, Oracle is below the T1 floor ($137), pricing in OCI execution failure at 16.1× forward EPS. As a SENTIMENT TRACKER: ORCL in BUY ZONE reflects extreme enterprise cloud pessimism — the same signal affecting MSFT and GOOGL — and suggests potential upside in core portfolio holdings as enterprise spending recovers."
+      },
+      "pe_ttm": "16.1×",
+      "pe_target": "20–28×",
+      "pe_note": "* FY2027 EPS $8.05 (41 analysts, FY ending May 31, 2027); cloud CapEx cycle compresses near-term margins"
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce, Inc.",
+      "sector": "CRM / Enterprise SaaS",
+      "priceResearch": "$168.07",
+      "priceDate": "July 14, 2026",
+      "entryTarget": "$240–$283 | $284–$353",
+      "marketCap": "$163B",
+      "analystTarget": "$245.41 (52)",
+      "status": "BUY ZONE",
+      "category": "Software",
+      "bearFloor": "$168",
+      "scores": {
+        "macro": 3,
+        "business": 3,
+        "financial": 4,
+        "management": 3,
+        "governance": 3,
+        "valuation": 5
+      },
+      "redFlags": [
+        "Microsoft Copilot / Dynamics 365 directly displacing Salesforce seats — existential competitive threat",
+        "Agentforce AI agent platform promising but monetization timeline uncertain (FY2027 consensus shows only 11% rev growth vs peak 25%)",
+        "KeyBanc downgrade to Hold (Jul 8, 2026) citing competitive pressure",
+        "Current price $168 is literally AT the Bear Floor — market pricing catastrophic scenario for enterprise SaaS",
+        "⚠️ SENTIMENT TRACKER — Patricia not investing; monitors enterprise SaaS sentiment alongside MSFT"
+      ],
+      "summary": "Salesforce at $168.07 trades at just 11.9× FY2027 non-GAAP EPS of $14.13 — the lowest P/E in CRM's history as a public company. The dominant CRM platform (150,000+ enterprise customers, industry-leading NPS) is repricing as Microsoft's Copilot suite challenges the core business and Agentforce AI agent monetization remains unproven. Revenue growth has decelerated from 25% (FY2022) to 11% (FY2027 consensus). FCF generation is exceptional ($16.4B FY2026). Analyst consensus $245.41 (52 analysts, Buy) implies 46% upside. SENTIMENT TRACKER: CRM at Bear Floor levels signals severe enterprise SaaS sentiment — a recession-level discount on one of the best-run enterprise software businesses.",
+      "steps": {
+        "macroContext": "IBM Q2 miss (Jul 14) is the day's enterprise software context: clients shifting capex from software/consulting to AI hardware. This confirms the Salesforce narrative — enterprise IT budgets are being reallocated. However, Salesforce's Agentforce is specifically positioned to BENEFIT from AI agent adoption (automating CRM workflows), not to compete with hardware. The shift in sentiment is macro not thesis-specific. Score 3/5.",
+        "priceAction": "$168.07 on July 14, 2026. CRM -1.84% today. 52 analysts, avg target $245.41 (+46%). Forward P/E 11.9× — multi-decade low. The Bear Floor in our framework is $168 — the stock has literally dropped to its bear floor as of today. Score 3/5.",
+        "business": "#1 CRM platform globally (Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud). 150,000+ enterprise customers. Agentforce AI agent platform is a genuine product innovation — allows autonomous AI agents to execute CRM workflows without human intervention. But Microsoft Copilot for Sales directly competes for the same enterprise budget. Score 3/5.",
+        "financial": "FY2026 revenue $41.5B (+10%). Non-GAAP EPS $12.52. FY2027 consensus: $46.1B (+11% rev), $14.13 EPS (+13%). Exceptional FCF generation: $16.4B FY2026, $14.9B FY2027. Non-GAAP gross margin ~78%. Balance sheet strong. Score 4/5.",
+        "management": "CEO Marc Benioff is a visionary but Agentforce execution is the make-or-break test. Activist pressure (Starboard, Elliott) has driven cost discipline and margin expansion. Score 3/5.",
+        "governance": "NYSE-listed C-Corp. Activist involvement (Elliott, Starboard) has improved governance and capital allocation. Board is adequately independent. Score 3/5.",
+        "valuation": "FY2027 consensus EPS $14.13 (47 analysts, FY ending Jan 31, 2027). Low P/E 20×, High P/E 27×, MoS 15%. T1 floor $240, T1 ceiling $283, T2 ceiling $353. Bear floor $168. At $168.07 — BUY ZONE, literally at Bear Floor. At 11.9× forward P/E the market is pricing Agentforce failure plus permanent seat displacement by Microsoft. Analyst consensus $245.41 implies modest recovery to T1 zone. Score 5/5.",
+        "bullCase": "(1) Agentforce AI agents create a new monetization layer beyond seat-based pricing. (2) FCF generation ($16.4B) funds aggressive buybacks at current depressed valuations. (3) Activist shareholders driving cost discipline and operational improvement. (4) 52 analysts Buy consensus — widespread conviction in recovery.",
+        "bearCase": "(1) Microsoft Copilot for Sales accelerates seat displacement faster than Agentforce can offset. (2) Agentforce revenue contribution remains minimal through 2027 while costs are elevated. (3) Enterprise IT budget consolidation removes Salesforce from non-core enterprise spending.",
+        "risks": "Microsoft Copilot seat displacement; Agentforce monetization failure; enterprise SaaS consolidation; macro capex reallocation to AI hardware; growth deceleration to single digits.",
+        "entry": "SENTIMENT TRACKER: CRM at Bear Floor ($168) signals maximum enterprise SaaS pessimism — the same pessimism that was previously priced into MSFT at lower levels. CRM recovery above $240 (T1 floor) would signal meaningful enterprise SaaS sentiment improvement.",
+        "verdict": "BUY ZONE — at $168.07, CRM is in BUY ZONE and has fallen to the Bear Floor level, pricing in catastrophic AI displacement of its CRM business. At 11.9× forward non-GAAP EPS, the market discounts Agentforce and prices only terminal decline. As a SENTIMENT TRACKER: CRM at Bear Floor is a critical signal — enterprise SaaS is being priced at recession multiples even as FCF generation ($16.4B) remains exceptional."
+      },
+      "pe_ttm": "11.9×",
+      "pe_target": "20–27×",
+      "pe_note": "* FY2027 EPS $14.13 (47 analysts, FY ending Jan 31, 2027); multi-decade low P/E on AI agent monetization uncertainty"
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir Technologies Inc.",
+      "sector": "AI / Data Analytics Platform",
+      "priceResearch": "$131.83",
+      "priceDate": "July 14, 2026",
+      "entryTarget": "$88–$104 | $105–$137",
+      "marketCap": "$290B",
+      "analystTarget": "$183.12 (32)",
+      "status": "WATCH",
+      "category": "Software",
+      "bearFloor": "$57",
+      "scores": {
+        "macro": 5,
+        "business": 4,
+        "financial": 3,
+        "management": 4,
+        "governance": 2,
+        "valuation": 2
+      },
+      "redFlags": [
+        "Trading at 89× FY2026 non-GAAP P/E — priced for perfection; any growth miss triggers severe correction",
+        "High stock-based compensation dilution reduces non-GAAP EPS quality",
+        "Dual-class share structure (Alex Karp/Peter Thiel voting control) — governance concerns",
+        "US government revenue concentration (~55% of total) — policy change risk",
+        "⚠️ SENTIMENT TRACKER — Patricia not investing; monitors AI/software sector enthusiasm"
+      ],
+      "summary": "Palantir at $131.83 trades at 89× FY2026 non-GAAP EPS of $1.48 — an extreme premium valuation that reflects genuine excitement about the AI Platforms product (AIP) which saw revenue accelerating +97% in FY2025. Government contracts (DOD, CIA, NHS) provide a durable moat; commercial AI platform adoption is the growth frontier. Revenue growing 72% in FY2026 to $7.7B. At these valuations, PLTR is the 'thermometer' for AI software sentiment: at WATCH/upper T2 zone, the market is enthusiastic; at BUY ZONE ($88–$104) it would signal extreme pessimism about AI software monetization. SENTIMENT TRACKER: PLTR's multiple trajectory is the single best read on market conviction in AI platform value.",
+      "steps": {
+        "macroContext": "AI analytics demand is the strongest tailwind in the software sector. Defense spending acceleration (US at 4%+ GDP) directly benefits Palantir's government contracts. The IBM Q2 miss (clients shifting to AI hardware) is actually POSITIVE for Palantir — that hardware is being used to run AI models, and Palantir's AIP platform manages and operationalizes those models. PLTR +1.37% today vs. software sector broadly negative — divergence is meaningful. Score 5/5.",
+        "priceAction": "$131.83 on July 14, 2026. +1.37% today — diverging positively from broad software selloff. 32 analysts, avg target $183.12 (+39%). At 89× FY2026 non-GAAP EPS. In the T2 zone ($105–$137) — WATCH. Score 3/5.",
+        "business": "Two segments: Government (DOD, CIA, NHS, allied governments — trusted AI analytics with classified data clearance moat) and Commercial (AIP platform enabling enterprise AI deployment). AIP Boot Camp rapid adoption (companies deploying in days vs. months) is a genuine differentiation. Revenue mix shifting toward commercial over time. Score 4/5.",
+        "financial": "FY2025 revenue $4.48B (+56%). FY2026 consensus $7.72B (+72%). Non-GAAP EPS $1.48. Profitable on non-GAAP basis but GAAP losses continue (SBC). FCF positive ($4.33B FY2026 forecast). Net cash position. SBC dilution is significant. Score 3/5.",
+        "management": "CEO Alex Karp is unconventional but mission-aligned; deep US government relationships. Peter Thiel co-founder involvement provides political network value. Score 4/5.",
+        "governance": "Dual-class shares give Karp/Thiel effective voting control. Limited minority shareholder rights. SBC practice dilutes economic ownership. Score 2/5.",
+        "valuation": "FY2026 consensus EPS $1.48 (30 analysts, calendar year Dec 31, 2026). Low P/E 70×, High P/E 100×, MoS 15%. T1 floor $88, T1 ceiling $104, T2 ceiling $137. Bear floor $57. At $131.83 — WATCH (T2 zone, near ceiling). At 89× forward P/E in T2 zone. T2 ceiling $137 is near the current price — stock approaching OVERVALUED territory. Score 2/5.",
+        "bullCase": "(1) AIP platform becomes standard for enterprise AI deployment — TAM is enormous. (2) Defense spending acceleration locks in multi-year government contract growth. (3) Commercial segment growth inflection: AIP Boot Camp creates viral adoption momentum. (4) Analyst consensus $183 implies significant upside even from premium valuation.",
+        "bearCase": "(1) At 89× P/E, a slowdown in growth from 72% to 40% triggers severe multiple compression. (2) AWS/Azure/GCP building competing AI orchestration platforms. (3) US government spending cuts under fiscal pressure. (4) SBC dilution compounds if growth disappoints.",
+        "risks": "Multiple compression risk at 89× P/E; SBC dilution; government contract dependency; hyperscaler AI platform competition; Karp/Thiel governance concentration.",
+        "entry": "SENTIMENT TRACKER: PLTR in T2 zone ($105–$137) signals healthy enthusiasm for AI software. A drop to BUY ZONE ($88–$104) would signal extreme AI platform pessimism. OVERVALUED above $137 signals frothy AI sentiment. Current $131.83 — near upper T2 zone, monitor for OVERVALUED cross.",
+        "verdict": "WATCH — at $131.83, Palantir is in the T2 zone ($105–$137) — just $5 below the OVERVALUED threshold. The market is pricing aggressive AI platform monetization at 89× forward P/E. As a SENTIMENT TRACKER: PLTR approaching OVERVALUED signals peak AI software enthusiasm; a correction toward T1 zone ($88–$104) would signal a buying opportunity in more fairly-valued AI infrastructure holdings."
+      },
+      "pe_ttm": "89.1×",
+      "pe_target": "70–100×",
+      "pe_note": "* FY2026 EPS $1.48 (30 analysts); hypergrowth AI analytics — P/E range reflects growth optionality premium"
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow, Inc.",
+      "sector": "Enterprise IT Workflow / AI Automation",
+      "priceResearch": "$106.06",
+      "priceDate": "July 14, 2026",
+      "entryTarget": "$123–$144 | $145–$183",
+      "marketCap": "$212B",
+      "analystTarget": "$141.27 (48)",
+      "status": "BUY ZONE",
+      "category": "Software",
+      "bearFloor": "$86",
+      "scores": {
+        "macro": 4,
+        "business": 5,
+        "financial": 4,
+        "management": 4,
+        "governance": 4,
+        "valuation": 4
+      },
+      "redFlags": [
+        "Stock down significantly from highs on enterprise SaaS sector de-rating",
+        "IBM Q2 miss dragging enterprise software broadly; NOW -4.67% today on sector contagion",
+        "UBS Hold reiteration at $115 target (Jul 14) — tepid institutional conviction",
+        "⚠️ SENTIMENT TRACKER — Patricia not investing; monitors AI workflow/automation sentiment"
+      ],
+      "summary": "ServiceNow at $106.06 trades at 25.7× FY2026 non-GAAP EPS of $4.12 — historically cheap for one of the highest-quality enterprise software businesses (consistent 22% revenue growth, industry-leading NRR, sticky enterprise workflows). The AI-powered Now Assist and AI Agents platform is driving genuine upsell cycles, not just feature additions. 48 analysts with Strong Buy consensus and $141.27 avg target (33% upside). Down 4.67% today on IBM Q2 earnings-miss sector contagion — not a ServiceNow-specific fundamental issue. SENTIMENT TRACKER: NOW in BUY ZONE ($106 < $123) signals that enterprise AI workflow automation is being repriced alongside broader SaaS, creating a significant opportunity signal.",
+      "steps": {
+        "macroContext": "IBM Q2 miss (Jul 14: clients shifting capex to AI hardware servers/memory from software/consulting) is today's enterprise software headwind — but NOT because of ServiceNow's business model. NOW provides the AI workflow orchestration layer ON TOP of those AI servers, not competing with them. The capex shift actually benefits enterprises deploying ServiceNow's AI agents to automate workflows on top of new AI infrastructure. Score 4/5.",
+        "priceAction": "$106.06 on July 14, 2026. -4.67% today on IBM Q2 earnings contagion (not NOW-specific). 48 analysts (Strong Buy consensus), avg target $141.27 (+33%). Forward P/E 25.7× — historically low for ServiceNow. Multiple key analysts updated targets today (UBS $115, Truist $130, Goldman Sachs $145). Score 3/5.",
+        "business": "ServiceNow's platform automates IT service management (ITSM), HR workflows, customer service, and operations across large enterprises. Stickiness is extreme — ServiceNow is embedded in mission-critical enterprise processes. AI agents (Now Assist, AI Agent Orchestrator) are enabling automated resolution of IT tickets and HR requests. NRR consistently >125%. Score 5/5.",
+        "financial": "FY2025 revenue $13.28B (+21%). FY2026 consensus $16.2B (+22%). Non-GAAP EPS $4.12. FCF $5.67B FY2026. Non-GAAP gross margins 79%. Consistent 22% revenue growth for 5+ consecutive years. Score 4/5.",
+        "management": "CEO Bill McDermott has executed flawlessly — AI Now platform adopted faster than any previous platform expansion. Conservative guidance with consistent beats. Score 4/5.",
+        "governance": "NYSE-listed. Clean C-Corp structure. Strong institutional ownership. Independent board majority. No governance concerns. Score 4/5.",
+        "valuation": "FY2026 consensus EPS $4.12 (45 analysts, calendar year Dec 31, 2026). Low P/E 35×, High P/E 48×, MoS 15%. T1 floor $123, T1 ceiling $144, T2 ceiling $183. Bear floor $86. At $106.06 — BUY ZONE (below T1 floor $123). Historically NOW has traded at 50–60× forward P/E; 25.7× is deeply discounted. Analyst consensus $141.27 targets our T1 zone, suggesting analysts see recovery to T1 as the base case. Score 4/5.",
+        "bullCase": "(1) AI agents create entirely new revenue stream beyond seat licensing. (2) NRR >125% compounds existing customer base without new logo acquisition. (3) 22% revenue growth consistency through multiple macro environments. (4) 48 analysts Strong Buy consensus — broad institutional conviction.",
+        "bearCase": "(1) Macro enterprise spending slowdown delays renewals or reduces seat expansion. (2) Microsoft Power Automate or other platforms commoditize workflow automation. (3) AI agents fail to monetize at the scale analysts expect.",
+        "risks": "Macro enterprise spending; Microsoft workflow automation competition; AI agent monetization timeline; customer concentration risk (large enterprise deals).",
+        "entry": "SENTIMENT TRACKER: NOW in BUY ZONE signals enterprise AI workflow automation is priced pessimistically — historically the best setup for MSFT's Copilot and AI enterprise investments. Recovery through $123 (T1 floor) would confirm enterprise software sentiment improvement.",
+        "verdict": "BUY ZONE — at $106.06, ServiceNow is below the T1 floor ($123) and trading at 25.7× forward P/E — the cheapest it has been relative to its 22% consistent growth rate. Today's -4.67% drop is IBM sector contagion, not a NOW-specific fundamental. As a SENTIMENT TRACKER: NOW in BUY ZONE at 25.7× is the highest-quality enterprise SaaS sentiment signal in the software category."
+      },
+      "pe_ttm": "25.7×",
+      "pe_target": "35–48×",
+      "pe_note": "* FY2026 EPS $4.12 (45 analysts); historically cheap vs. growth rate for enterprise AI workflow leader"
+    },
+    {
+      "ticker": "IBM",
+      "name": "International Business Machines Corporation",
+      "sector": "Hybrid Cloud / AI / IT Consulting",
+      "priceResearch": "$218.93",
+      "priceDate": "July 14, 2026",
+      "entryTarget": "$159–$187 | $188–$231",
+      "marketCap": "$197B",
+      "analystTarget": "$293.46 (24)",
+      "status": "WATCH",
+      "category": "Software",
+      "bearFloor": "$119",
+      "scores": {
+        "macro": 3,
+        "business": 3,
+        "financial": 3,
+        "management": 3,
+        "governance": 4,
+        "valuation": 3
+      },
+      "redFlags": [
+        "⚠️ IBM down 24.57% TODAY (July 14, 2026) — Q2 2026 earnings warning: revenue $17.2B vs $17.86B expected, EPS $2.93 vs $3.02 (Yahoo/CNBC, Jul 14)",
+        "Root cause: clients shifted quarterly capex from software/mainframes/consulting to servers, storage, and memory to secure supply-constrained AI infrastructure ahead of price increases — CEO Arvind Krishna",
+        "Worst single-day decline since Black Monday 1987 (-23.7%)",
+        "FY2026 EPS consensus ($12.47) will likely be revised DOWN after Jul 22 earnings call — treat current targets as approximate",
+        "HSBC downgraded to Sell (target $191, Jul 14) — below current price; signal of continued downside risk",
+        "⚠️ SENTIMENT TRACKER — Patricia not investing; IBM's earnings/revenue trend is the key enterprise IT spending gauge"
+      ],
+      "summary": "IBM reported a Q2 2026 earnings warning on July 14, 2026, with revenue of $17.2B vs. the $17.86B consensus and EPS of $2.93 vs. $3.02 expected. CEO Arvind Krishna cited clients shifting quarterly capex from software and mainframes to servers, storage, and memory to secure supply-constrained AI infrastructure ahead of expected price increases. The stock fell 24.57% — its worst day since Black Monday 1987. This warning is highly significant for the portfolio: it confirms that enterprise IT budgets are being consumed by AI hardware (NVDA, MU, WDC category) at the expense of traditional software/consulting. IBM as a SENTIMENT TRACKER is THE enterprise IT bellwether — when IBM's revenue misses, it signals budget reallocation to AI hardware; when IBM recovers, it signals enterprises are both buying hardware AND restoring software/services spending.",
+      "steps": {
+        "macroContext": "IBM's Q2 miss is the defining enterprise IT event of today. The mechanism: enterprises rushed to secure AI servers and memory (supply-constrained) before expected price increases, consuming Q2 IT budgets and leaving software and consulting underspent. This is a POSITIVE signal for AI infrastructure holdings (NVDA, MU, WDC, AVGO) and a NEGATIVE signal for traditional enterprise software (CRM, NOW also sold off today on IBM contagion). Critical distinction: IBM's WATSONX AI platform and hybrid cloud (HashiCorp) are IBM's growth drivers — the headwind was timing/capex allocation, not secular decline in those businesses. FOMC Jul 29 will matter for IBM's rate-sensitive consulting segment. Score 3/5.",
+        "priceAction": "$218.93 on July 14, 2026. -24.57% intraday (worst day since Black Monday 1987). 24 analysts, avg target $293.46 (+34%). Multiple analyst actions today: UBS Hold $236, Morgan Stanley Hold $293, Oppenheimer Buy $350, Susquehanna Hold $303, HSBC Sell $191. Wide dispersion ($191 to $350) reflects deep uncertainty about FY2026 EPS trajectory post-warning. Score 2/5.",
+        "business": "IBM's four segments: Software (Red Hat, WatsonX AI — ~40% of revenue, growing), Consulting (~30%, flat-to-slight pressure), Infrastructure (mainframe/z-series — declining), Financing. HashiCorp acquisition (closed 2024) adds multi-cloud infrastructure automation. WatsonX enterprise AI platform is the key AI bet. Software and Consulting are the strategic segments; Infrastructure is legacy harvest. Score 3/5.",
+        "financial": "FY2025 revenue $67.5B. Q2 2026 preliminary: $17.2B (miss). FY2026 consensus EPS $12.47 — ⚠️ likely to be revised DOWN after Jul 22 earnings call. Dividend $6.75/ADR (~3.1% yield at $218). FCF $15.4B FY2026 consensus. Strong dividend history. Net debt from HashiCorp acquisition. Score 3/5.",
+        "management": "CEO Arvind Krishna is executing the hybrid cloud pivot. The Q2 miss explanation (capex timing shift) is credible — similar to other enterprise software companies seeing the same dynamic. Track record of transformation has been slower than peers. Score 3/5.",
+        "governance": "NYSE-listed, 111-year history. Strong independent board. Transparent quarterly earnings disclosure. High institutional ownership. Score 4/5.",
+        "valuation": "FY2026 consensus EPS $12.47 (22 analysts, calendar year Dec 31, 2026). ⚠️ This estimate will likely be revised down after Jul 22 earnings call — use with caution. Low P/E 15×, High P/E 20×, MoS 15%. T1 floor $159, T1 ceiling $187, T2 ceiling $231. Bear floor $119. At $218.93 — WATCH (T2 zone). Current 17.6× forward P/E vs. our 15–20× deserved range puts IBM in fair-value territory after today's collapse. Analyst consensus $293.46 implies 34% upside but targets are stale (set before today's warning). Score 3/5.",
+        "bullCase": "(1) WatsonX enterprise AI adoption accelerates — IBM has unique hybrid cloud position for regulated industries. (2) Dividend yield ~3.1% provides income floor. (3) HashiCorp integration unlocks multi-cloud management market. (4) Q2 capex timing headwind is one-time, not structural — Q3 recovery likely.",
+        "bearCase": "(1) Worst-case: Q2 capex shift signals structural rather than timing budget reallocation away from IBM. (2) HSBC Sell at $191 suggests downside below current price. (3) FY2026 EPS consensus likely revised to $11–12 after Jul 22 call. (4) Mainframe/Infrastructure declining faster than Software/WatsonX can offset.",
+        "risks": "FY2026 EPS downward revision risk (post-Jul 22 call); structural capex reallocation to AI hardware; mainframe decline; consulting commoditization; HashiCorp integration complexity; rate sensitivity on consulting spending.",
+        "entry": "SENTIMENT TRACKER: IBM is the premier enterprise IT bellwether. IBM in WATCH (T2 zone, $188–$231) after today's 25% drop signals enterprise IT budget stress but not collapse. A drop to T1 zone ($159–$187) would signal enterprise IT recessionary conditions. Recovery through $231 (T2 ceiling) would signal enterprise spending normalization.",
+        "verdict": "WATCH — at $218.93 (post -24.57% drop), IBM is in the T2 zone ($188–$231) at 17.6× FY2026 forward P/E. ⚠️ Monitor closely: the Jul 22 earnings call will clarify whether Q2 was a timing miss or structural capex reallocation. As a SENTIMENT TRACKER: IBM's move from ~$290 to $219 in one day is the single most important enterprise IT signal of 2026 — it confirms AI hardware is consuming enterprise budgets, validating the portfolio's AI infrastructure overweight (NVDA, MU, AVGO, MRVL)."
+      },
+      "pe_ttm": "17.6×",
+      "pe_target": "15–20×",
+      "pe_note": "* FY2026 EPS $12.47 (22 analysts); ⚠️ Q2 2026 miss Jul 14 (rev $17.2B vs $17.86B exp) — EPS likely revised down post Jul 22 call"
     }
   ]
 }
