@@ -7,7 +7,7 @@ This file is read-first at the start of every session. It contains the authorita
 
 ## 1. What This Workspace Is
 
-An active portfolio analysis and monitoring system for Patricia's 31-stock watchlist, consisting of:
+An active portfolio analysis and monitoring system for Patricia's 36-stock watchlist (31 core holdings + 5 Software/Enterprise Tech sentiment trackers), consisting of:
 - An interactive HTML dashboard (`stock_dashboard.html`) with live prices, entry targets, statuses, and full stock analyses
 - Automated scheduled tasks for pre-market briefings, market-close checks, and macro reactions
 - A persistent parameters file (`investment_parameters.json`) as the single source of truth for all valuation inputs
@@ -20,7 +20,7 @@ An active portfolio analysis and monitoring system for Patricia's 31-stock watch
 ```
 /Users/pvegamacbookair/Claude Cowork/       ← WORKSPACE ROOT
 ├── CLAUDE.md                                ← THIS FILE (read first) — now pushed to GitHub on every price check
-├── stock_dashboard.html                     ← Main dashboard (31 stocks)
+├── stock_dashboard.html                     ← Main dashboard (36 stocks: 31 core + 5 Software/Enterprise Tech sentiment trackers)
 ├── investment_parameters.json               ← Valuation parameters (authoritative) — now pushed to GitHub too
 ├── Position_Tracker.md                      ← Patricia's personal tranche/exit tracker (added Jul 9, 2026) — NEVER pushed to GitHub (see §4B)
 ├── index.html                               ← GitHub Pages redirect
@@ -346,9 +346,9 @@ This applies to ALL briefing types: pre-market, market-close, weekly review, and
 
 ---
 
-## 7. The 31 Holdings
+## 7. The 36 Holdings (31 Core + 5 Sentiment Trackers)
 
-**Current as of July 11, 2026.** Grouped by category (matches dashboard category filter):
+**Current as of July 14, 2026.** Grouped by category (matches dashboard category filter):
 
 | Category | Tickers |
 |---|---|
@@ -360,24 +360,30 @@ This applies to ALL briefing types: pre-market, market-close, weekly review, and
 | Utilities | CEG, NEE |
 | International ETF | EWY, EWL, AVDE, FENI, SCHF |
 | US ETF | VOO, XLU, IAU, REMX, SOXQ |
+| Software (Sentiment Trackers) | ORCL, CRM, PLTR, NOW, IBM |
+
+**⚠️ Software / Sentiment Tracker category notes (added July 14, 2026):** ORCL, CRM, PLTR, NOW, IBM are NOT primary investment targets. Patricia is not planning to invest in these stocks. They exist in the dashboard because their moves correlate with enterprise software / AI sentiment that directly affects MSFT and the broader AI portfolio. They use the same valuation framework (T1/T2/Bear Floor) so status labels are meaningful for context, but daily briefings should report them as "sentiment trackers" — not as investment opportunities. IBM is particularly notable as the enterprise IT bellwether: IBM revenue/earnings miss = capex shifting to AI hardware (bullish NVDA/MU/WDC); IBM recovery = enterprise both buying hardware AND restoring software/services. CRM at Bear Floor level ($168 as of July 14) signals maximum enterprise SaaS pessimism. **Do NOT include these in `Position_Tracker.md` exit tracking** — they are sentiment gauges, not portfolio positions. **Do NOT exclude these from daily price checks** — checking them is the whole point.
 
 **Removed June 23, 2026:** AMKR, AMAT, TER, CRWV, SWKS, NXPI, QCOM, CSCO, INTC, LITE  
 **Added June 23, 2026:** HESM, CEG, NEE, XLU, IAU, REMX, SOXQ  
 **Removed June 29, 2026:** HON (Aerospace spin-off — too much complexity post-HONA split), AMD, HPE, CRUS, TXN, AMZN, PLAB (portfolio simplification)  
 **Added June 29, 2026:** BP, SHEL (oil & gas majors — robust financials, high dividends, Energy sector diversification)  
-**Added July 11, 2026:** SNDK (SanDisk — pure-play NAND flash spun off from WDC in Feb 2025; was missed when WDC was rebuilt HDD-only at the July 4 quarterly refresh, added back at Patricia's request while setting up the Claude for Excel short-term dashboard project. Uses a provisional normalized-P/E valuation — see Section 5 and § 9 Lessons Learned)
+**Added July 11, 2026:** SNDK (SanDisk — pure-play NAND flash spun off from WDC in Feb 2025; was missed when WDC was rebuilt HDD-only at the July 4 quarterly refresh, added back at Patricia's request while setting up the Claude for Excel short-term dashboard project. Uses a provisional normalized-P/E valuation — see Section 5 and § 9 Lessons Learned)  
+**Added July 14, 2026:** ORCL, CRM, PLTR, NOW, IBM (Software / Enterprise Tech sentiment tracker category — see note above). IBM added on the day of its worst single-day drop since Black Monday 1987 (-24.57%) on a Q2 2026 revenue miss ($17.2B vs $17.86B exp) — clients shifting capex from software to AI hardware. IBM FY2026 EPS consensus ($12.47) likely revised after July 22 earnings call.
 
 ---
 
-## 8. Current Status Snapshot (as of June 29, 2026 — market close)
+## 8. Current Status Snapshot (as of July 14, 2026 — intraday, after entry target corrections and Software tracker additions)
 
 | Status | Tickers |
 |---|---|
-| BUY ZONE | FRVO, MSFT, NVDA |
-| WATCH | AVDE, BP, BRK-B, CEG, EWL, EWY, FENI, FSLR, GOOGL, HPQ, IAU, MU, NEE, NVO, SCHF, SHEL, XLU |
-| OVERVALUED | AVGO, HESM, LEU, LLY, MRVL, REMX, SOXQ, TSM, VOO, WDC, SNDK (added Jul 11, 2026) |
+| BUY ZONE | FRVO, MSFT, NVDA, AVGO, ORCL, CRM, NOW |
+| WATCH | AVDE, BP, BRK-B, CEG, EWL, EWY, FENI, FSLR, GOOGL, HPQ, IAU, LEU, MU, NEE, NVO, SCHF, SHEL, XLU, PLTR (T2 zone), IBM (T2 zone) |
+| OVERVALUED | HESM, LLY, MRVL, REMX, SOXQ, TSM, VOO, WDC, SNDK |
 
-*Status changes whenever prices are updated — check dashboard for current state. This table is a point-in-time snapshot from June 29 and has not been reconciled against every subsequent price move — SNDK's entry is current as of its July 11 addition, but treat the rest of this table as illustrative rather than live.*
+**Software tracker statuses as of July 14 prices:** ORCL $129.69 (BUY ZONE, below T1 floor $137); CRM $168.07 (BUY ZONE, AT Bear Floor $168); PLTR $131.83 (WATCH, T2 zone near ceiling $137); NOW $106.06 (BUY ZONE, below T1 floor $123); IBM $218.93 (WATCH, T2 zone after -24.57% Q2 earnings drop).
+
+*Status changes whenever prices are updated — check dashboard for current state. AVGO is BUY ZONE after July 14 target correction (T1 floor $427, price $393). MRVL is WATCH after upgrade (T1 floor $184, price ~$260). IBM EPS consensus likely revised down after July 22 earnings call — IBM status may shift.*
 
 ---
 
@@ -798,6 +804,7 @@ Patricia flagged that the day's briefings had missed relevant news despite a ful
 | A same-day `market-close-price-check` run used stale, FMP-cached Friday (Jul 10) closing prices and mislabeled them as the current day's (Jul 13) report — pushed to dashboard/GitHub before Patricia caught it by checking live prices. `list_scheduled_tasks` showed both `premarket-price-check` and `market-close-price-check` `lastRunAt` stuck on Jul 10 as of Monday evening, confirming neither had actually auto-fired that Monday (this session's work was an ad hoc/manual invocation, not a real scheduled run). Corrected the dashboard + both Briefings .md files (Jul 10 entry relabeled as a backfill, new accurate Jul 13 entry added) and re-pushed. Added a mandatory STEP 0 (verify `date` + cross-check FMP quote `timestamp` before trusting any price as current) to both `premarket-price-check` and `market-close-price-check` prompts. Root cause of the cron not firing at all that Monday is still unconfirmed — leading suspect is the Mac/Claude-app needing to be awake/running at trigger time — flagged for Patricia to monitor over the following few trading days. | July 13, 2026 |
 | Entry targets refreshed for 5 stale positions: **MRVL** (P/E upgraded 28–35× → 35–45×, EPS updated to FY2028 $6.18, target $101–$138 → $184–$257, OVERVALUED→WATCH); **AVGO** (EPS updated to FY2027 $19.40, target $242–$331 → $427–$584, OVERVALUED→BUY ZONE at $393); **WDC** (post-spin HDD-only FY2027 EPS $18.27, target $199–$288 → $205–$296, stays OVERVALUED — thesis gap vs analyst $606); **SNDK** (provisional ~$20 EPS replaced by FY2026 consensus $66.41, target $308–$476 → $1,023–$1,581, stays OVERVALUED at ~10% above T2); **LEU** (EPS updated to FY2026 $3.97, target $61–$151 → $79–$197, OVERVALUED→WATCH). All 31 stocks QC audit clean ✅. | July 14, 2026 |
 | Full 31-stock entry target audit completed (Patricia's request to verify all targets). 6 additional corrections applied: **TSM** (EPS $14.94→$15.52 FY2026, target $254–$359 → $264–$373, stays OVERVALUED); **CEG** (EPS $11.94→$11.72, target $203–$309 → $199–$303, stays WATCH); **NEE** (EPS $3.69→$4.04, target $65–$98 → $71–$106, stays WATCH); **NVO** (EPS $3.88→$3.20 USD, DKK EPS 21.00 / fwd PE 15.42 cross-check, target $31–$76 → $26–$63, stays WATCH); **BRK-B** (EPS $23.94→$20.27 non-GAAP Class B / 2 analysts sparse, target $407–$620 → $345–$525, stays WATCH); **GOOGL** (EPS $14.01→$14.23 minor, target $262–$454 → $266–$461, stays WATCH). Confirmed accurate: MSFT ($19.37 = FY2027 $19.36 exactly ✓), NVDA/FSLR/HPQ/MU/LLY/MRVL/AVGO/WDC/SNDK/LEU/BP/SHEL (already updated Jun 23 / Jul 14). Special stocks: HESM DCF/unit $2.89 confirmed from TTM quarterly EPS ✓; VOO/IAU/REMX price-support levels still valid ✓. All 31 stocks QC audit clean ✅. See § "All 31 Stocks Entry Target Audit — Findings and Process Changes" in Lessons Learned for full root-cause analysis and process improvements. | July 14, 2026 |
+| **Software / Enterprise Tech sentiment tracker category added** — 5 new stocks: ORCL, CRM, PLTR, NOW, IBM. All added with full 12-step framework analysis, PE_DATA entries, INVESTMENT_PARAMS entries, and "💻 Software" filter pill in dashboard. Patricia's rationale: these stocks' moves correlate with enterprise software/AI sentiment that affects MSFT. Not investment targets — **SENTIMENT TRACKERS ONLY**. IBM added same day as worst single-day drop since Black Monday 1987 (-24.57%, Q2 2026 revenue miss $17.2B vs $17.86B — clients shifted capex from software/consulting to AI hardware). CRM at Bear Floor ($168 = $168 Bear Floor) — extreme enterprise SaaS pessimism signal. IBM FY2026 EPS consensus $12.47 to be updated after July 22 earnings call. ORCL BUY ZONE ($129.69 < $137 T1 floor). NOW BUY ZONE ($106 < $123 T1 floor). PLTR WATCH (T2 zone $131.83 near ceiling $137). All 36 stocks QC audit clean ✅. | July 14, 2026 |
 
 ---
 

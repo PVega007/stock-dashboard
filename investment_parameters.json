@@ -388,6 +388,61 @@
       "rationale": "Premium integrated oil major with world-class LNG franchise. Consistent EPS $5.06–$6.02 (2023–2025). CEO Wael Sawan executing disciplined FCF strategy. $3.5B/quarter buyback + growing dividend.",
       "bear_discount": 0.3,
       "eps_note": "Use mid-cycle normalized EPS ~$6.00 (FY2025 actual: $6.02; 3yr avg: ~$5.59)"
+    },
+    "ORCL": {
+      "name": "Oracle Corporation",
+      "category": "Software / Enterprise Tech (Sentiment Tracker)",
+      "low_pe": 20,
+      "high_pe": 28,
+      "mos": 0.15,
+      "metric": "fwd_pe",
+      "rationale": "Enterprise cloud database leader; OCI GPU cluster growth compressing near-term margins. Sentiment tracker for enterprise cloud/MSFT correlation. Not a primary investment target.",
+      "bear_discount": 0.3,
+      "eps_note": "FY2027 non-GAAP consensus EPS $8.05 (41 analysts, fiscal year ending May 31, 2027). At $129.69 = 16.1× fwd PE — multi-decade valuation low on OCI CapEx cycle. Non-December FY: use FY2027 since we are well into FY2026 (started Jun 2026)."
+    },
+    "CRM": {
+      "name": "Salesforce, Inc.",
+      "category": "Software / Enterprise Tech (Sentiment Tracker)",
+      "low_pe": 20,
+      "high_pe": 27,
+      "mos": 0.15,
+      "metric": "fwd_pe",
+      "rationale": "Dominant CRM platform; repriced on Microsoft Copilot competition and Agentforce monetization uncertainty. Sentiment tracker for enterprise SaaS/MSFT. Not a primary investment target.",
+      "bear_discount": 0.3,
+      "eps_note": "FY2027 non-GAAP consensus EPS $14.13 (47 analysts, fiscal year ending Jan 31, 2027). At $168.07 = 11.9× fwd PE — literally at Bear Floor as of July 14, 2026. Non-December FY: FY2027 ends Jan 31, 2027 — use FY2027 since FY2026 ended Jan 2026 (>75% elapsed)."
+    },
+    "PLTR": {
+      "name": "Palantir Technologies Inc.",
+      "category": "Software / Enterprise Tech (Sentiment Tracker)",
+      "low_pe": 70,
+      "high_pe": 100,
+      "mos": 0.15,
+      "metric": "fwd_pe",
+      "rationale": "Hypergrowth AI analytics platform (AIP/AIP Boot Camp). High P/E range reflects durable government moat + commercial AI adoption optionality. Extreme premium — P/E range calibrated to analyst target sanity check. Sentiment tracker for AI software enthusiasm. Not a primary investment target.",
+      "bear_discount": 0.35,
+      "eps_note": "FY2026 non-GAAP consensus EPS $1.48 (30 analysts, calendar year Dec 31, 2026). At $131.83 = 89.1× fwd PE. High SBC dilution reduces non-GAAP EPS quality. December FY."
+    },
+    "NOW": {
+      "name": "ServiceNow, Inc.",
+      "category": "Software / Enterprise Tech (Sentiment Tracker)",
+      "low_pe": 35,
+      "high_pe": 48,
+      "mos": 0.15,
+      "metric": "fwd_pe",
+      "rationale": "Enterprise IT workflow leader with 22% consistent revenue growth and NRR >125%. AI agents (Now Assist) are genuine product differentiation. Historically trades 50–60× forward P/E. Sentiment tracker for enterprise AI workflow/MSFT. Not a primary investment target.",
+      "bear_discount": 0.3,
+      "eps_note": "FY2026 non-GAAP consensus EPS $4.12 (45 analysts, calendar year Dec 31, 2026). At $106.06 = 25.7× fwd PE — historically cheap for ServiceNow's consistent growth rate. December FY."
+    },
+    "IBM": {
+      "name": "International Business Machines Corporation",
+      "category": "Software / Enterprise Tech (Sentiment Tracker)",
+      "low_pe": 15,
+      "high_pe": 20,
+      "mos": 0.15,
+      "metric": "fwd_pe",
+      "rationale": "Enterprise IT bellwether — hybrid cloud (HashiCorp), WatsonX AI, consulting, infrastructure. Q2 2026 miss (Jul 14) = clients shifting capex to AI hardware (NVDA/MU direction). Premier enterprise IT sentiment gauge. Sentiment tracker for enterprise IT/MSFT correlation. Not a primary investment target.",
+      "bear_discount": 0.25,
+      "eps_note": "FY2026 non-GAAP consensus EPS $12.47 (22 analysts, calendar year Dec 31, 2026). ⚠️ LIKELY REVISED DOWN after Jul 22, 2026 earnings call — Q2 miss (rev $17.2B vs $17.86B exp). Use $12.47 as approximate; update after Jul 22. December FY. Dividend $6.75/ADR (~3.1% yield at $218)."
     }
   }
 }
