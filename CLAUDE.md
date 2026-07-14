@@ -640,6 +640,45 @@ for t, field, val in flags:
 
 Run this at every quarterly refresh (in addition to, not instead of, the verdict/status check above) — any stock that re-rates 3x+ between quarterly refreshes is a candidate for this exact drift.
 
+### All 31 Stocks Entry Target Audit — Findings and Process Changes (July 14, 2026)
+
+Patricia requested a thorough audit of all 31 entry targets after the earlier session corrected 5 grossly stale positions (MRVL, AVGO, WDC, SNDK, LEU). The audit found 6 additional corrections needed, all smaller in magnitude than those 5. Key findings and process lessons:
+
+**What the audit found:**
+
+| Ticker | Implied EPS | Actual Consensus | Delta | Root Cause | Status Change? |
+|--------|-------------|-----------------|-------|------------|----------------|
+| NVO | $3.88 | $3.20 USD | −17.5% | GLP-1 competition causing revenue decline; not rechecked since original add | No (WATCH) |
+| BRK-B | $23.94 | $20.27 | −15.2% | Berkshire FY2025 had elevated nat-cat losses; EPS not rechecked since original add (Jun 11); ⚠️ only 2 analyst estimates | No (WATCH) |
+| NEE | $3.69 | $4.04 | +9.5% | Utility EPS grew; not rechecked since original add | No (WATCH) |
+| TSM | $14.94 | $15.52 USD | +3.9% | AI foundry demand growth; minor drift | No (OVERVALUED) |
+| CEG | $11.94 | $11.72 | −1.9% | Minor, within noise | No (WATCH) |
+| GOOGL | $14.01 | $14.23 | +1.6% | Negligible; corrected for accuracy | No (WATCH) |
+
+**Confirmed accurate (no change needed):** MSFT (FY2027 $19.37 ✓), NVDA, FSLR, HPQ, MU (intentional mid-cycle), LLY, and 5 earlier-session corrections (MRVL, AVGO, WDC, SNDK, LEU, BP, SHEL).
+
+**Special methodology stocks confirmed:** HESM DCF/unit $2.89 from TTM GAAP quarterly EPS ✓. VOO/IAU/REMX price-support levels valid ✓. International ETF P/E ranges stable ✓.
+
+**Why these drifted but the others didn't:** The 5 corrected earlier (MRVL, AVGO, SNDK especially) had dramatic company-level events (spinoff, AI ASIC re-rating, new IPO EPS consensus forming). The 6 found in this audit drifted more quietly — slower EPS revisions, currency effects, or competitive dynamics — with no single event that would trigger a manual re-check under the current process.
+
+**Root causes of EPS drift:**
+1. **No quarterly EPS refresh step** — price-check tasks update prices daily but never re-fetch analyst consensus EPS. EPS can drift 5–20% over a quarter without triggering any alert.
+2. **Foreign-currency EPS stocks (TSM, NVO) require an extra cross-check step** — the raw EPS shown by stockanalysis.com is in TWD/DKK, not USD. Must derive USD EPS via forward PE × current price, not direct conversion (exchange rates and ADS ratios vary).
+3. **Berkshire's EPS is uniquely opaque** — only 2 analysts, GAAP is useless (investment mark-to-market volatility), and "operating earnings" is the right metric but not clearly labeled. Flag BRK-B for extra care at each quarterly refresh.
+4. **The >75% fiscal year timing rule** requires knowing each company's FY end date, not just the calendar year. MSFT (Jun 30 FY) and MRVL (Jan 31 FY) are the non-December-FY companies currently in the portfolio.
+
+**Process improvements added:**
+
+1. **Quarterly refresh EPS re-check list** — at every `quarterly-full-refresh`, explicitly re-fetch analyst consensus EPS for ALL non-special stocks (not just the ones being fully re-analyzed). Cross-check each implied EPS (back-calculated from T1 floor) against actual consensus. Flag any >5% divergence for target recalculation.
+
+2. **Fiscal year timing rule documented** — see §5 Entry Target Methodology. Applied: when >75% into the FY, use NEXT year's EPS. Not-December FY companies: MSFT (Jun 30), MRVL (Jan 31 FY), SNDK (Jun 30 FY), WDC (Jun 30 FY), AVGO (Oct 31 FY), HPQ (Oct 31 FY).
+
+3. **Foreign-currency cross-check rule** — for TSM (TWD) and NVO (DKK), never use the raw local-currency EPS directly. Always cross-check: USD EPS = (current USD price) ÷ (forward PE shown on stockanalysis.com). This auto-accounts for ADS ratios and exchange rates.
+
+4. **BRK-B special handling** — Berkshire's operating earnings are the correct EPS input; GAAP EPS is meaningless. Only 2 analysts provide forecasts — treat any estimate as approximate. At each quarterly refresh, cross-check implied EPS against Berkshire's actual latest quarter press release rather than relying on analyst consensus.
+
+5. **Analyst count quality gate** — note the number of analysts behind any EPS estimate. < 5 analysts = treat as approximate, flag for manual review. BRK-B (2 analysts) and NVO (14 analysts) are the current low-count stocks.
+
 ### Authoritative Sources Hierarchy
 
 Always prefer sources in this order. Briefings must cite source + date for every market-moving claim.
@@ -758,6 +797,7 @@ Patricia flagged that the day's briefings had missed relevant news despite a ful
 | `premarket-price-check` silently crashed mid-run (API ConnectionRefused) and went unnoticed for hours; ruled out "another chat was open" as the cause (scheduled tasks run independently — confirmed via session transcript review). Added `premarket-check-watchdog` (7:25 AM CT) and `market-close-check-watchdog` (4:20 PM CT) Mon–Fri to catch this going forward. Ran a manual catch-up pre-market check using live regular-market prices (market was already open): memory-chip selloff (SNDK -7.7%, EWY -6.7%, MRVL -5.6%, WDC -5.2%, MU -4.4% on a weak SK Hynix Q2 estimate) + genuine new Iran/Hormuz escalation (first energy-infrastructure strike, Hormuz declared "closed") — SOXQ OVERVALUED→WATCH; 🔴 REASSESS NOW triggered, macro-reassessment run same day. | July 13, 2026 |
 | A same-day `market-close-price-check` run used stale, FMP-cached Friday (Jul 10) closing prices and mislabeled them as the current day's (Jul 13) report — pushed to dashboard/GitHub before Patricia caught it by checking live prices. `list_scheduled_tasks` showed both `premarket-price-check` and `market-close-price-check` `lastRunAt` stuck on Jul 10 as of Monday evening, confirming neither had actually auto-fired that Monday (this session's work was an ad hoc/manual invocation, not a real scheduled run). Corrected the dashboard + both Briefings .md files (Jul 10 entry relabeled as a backfill, new accurate Jul 13 entry added) and re-pushed. Added a mandatory STEP 0 (verify `date` + cross-check FMP quote `timestamp` before trusting any price as current) to both `premarket-price-check` and `market-close-price-check` prompts. Root cause of the cron not firing at all that Monday is still unconfirmed — leading suspect is the Mac/Claude-app needing to be awake/running at trigger time — flagged for Patricia to monitor over the following few trading days. | July 13, 2026 |
 | Entry targets refreshed for 5 stale positions: **MRVL** (P/E upgraded 28–35× → 35–45×, EPS updated to FY2028 $6.18, target $101–$138 → $184–$257, OVERVALUED→WATCH); **AVGO** (EPS updated to FY2027 $19.40, target $242–$331 → $427–$584, OVERVALUED→BUY ZONE at $393); **WDC** (post-spin HDD-only FY2027 EPS $18.27, target $199–$288 → $205–$296, stays OVERVALUED — thesis gap vs analyst $606); **SNDK** (provisional ~$20 EPS replaced by FY2026 consensus $66.41, target $308–$476 → $1,023–$1,581, stays OVERVALUED at ~10% above T2); **LEU** (EPS updated to FY2026 $3.97, target $61–$151 → $79–$197, OVERVALUED→WATCH). All 31 stocks QC audit clean ✅. | July 14, 2026 |
+| Full 31-stock entry target audit completed (Patricia's request to verify all targets). 6 additional corrections applied: **TSM** (EPS $14.94→$15.52 FY2026, target $254–$359 → $264–$373, stays OVERVALUED); **CEG** (EPS $11.94→$11.72, target $203–$309 → $199–$303, stays WATCH); **NEE** (EPS $3.69→$4.04, target $65–$98 → $71–$106, stays WATCH); **NVO** (EPS $3.88→$3.20 USD, DKK EPS 21.00 / fwd PE 15.42 cross-check, target $31–$76 → $26–$63, stays WATCH); **BRK-B** (EPS $23.94→$20.27 non-GAAP Class B / 2 analysts sparse, target $407–$620 → $345–$525, stays WATCH); **GOOGL** (EPS $14.01→$14.23 minor, target $262–$454 → $266–$461, stays WATCH). Confirmed accurate: MSFT ($19.37 = FY2027 $19.36 exactly ✓), NVDA/FSLR/HPQ/MU/LLY/MRVL/AVGO/WDC/SNDK/LEU/BP/SHEL (already updated Jun 23 / Jul 14). Special stocks: HESM DCF/unit $2.89 confirmed from TTM quarterly EPS ✓; VOO/IAU/REMX price-support levels still valid ✓. All 31 stocks QC audit clean ✅. See § "All 31 Stocks Entry Target Audit — Findings and Process Changes" in Lessons Learned for full root-cause analysis and process improvements. | July 14, 2026 |
 
 ---
 

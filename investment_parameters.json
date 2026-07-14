@@ -3,21 +3,21 @@
     "version": "3.0",
     "date": "2026-06-29",
     "formula": {
-      "tier1_floor": "Forward EPS \u00d7 Low P/E \u00d7 (1 \u2212 MoS)",
-      "tier1_ceiling": "Forward EPS \u00d7 Low P/E",
-      "tier2_ceiling": "Forward EPS \u00d7 High P/E \u00d7 (1 \u2212 \u00bd MoS)",
-      "dashboard_format": "$T1floor\u2013$T1ceil | $T1ceil+1\u2013$T2ceil",
+      "tier1_floor": "Forward EPS × Low P/E × (1 − MoS)",
+      "tier1_ceiling": "Forward EPS × Low P/E",
+      "tier2_ceiling": "Forward EPS × High P/E × (1 − ½ MoS)",
+      "dashboard_format": "$T1floor–$T1ceil | $T1ceil+1–$T2ceil",
       "eps_source": "Analyst consensus 1-year forward estimate (or normalized mid-cycle EPS where noted)",
       "notes": [
-        "MoS = Margin of Safety \u2014 applied in full to T1 floor, half to T2 ceiling",
+        "MoS = Margin of Safety — applied in full to T1 floor, half to T2 ceiling",
         "T1 = deep-value entry zone (conservative multiple, full discount)",
-        "T2 = fair-value zone (full multiple range, half discount \u2014 guides tranche 2 sizing)",
+        "T2 = fair-value zone (full multiple range, half discount — guides tranche 2 sizing)",
         "Band width signals valuation uncertainty: wide = high uncertainty, narrow = high confidence",
-        "Reassess MoS tiers when macro triggers fire \u2014 see reassessment_triggers section",
+        "Reassess MoS tiers when macro triggers fire — see reassessment_triggers section",
         "v3: Added T3 Bear Floor (recession scenario floor below T1)",
         "v3: Added Execution Confirmation Layer (RSI, MACD, SMA timing signals)"
       ],
-      "tier3_bear_floor": "T1 floor \u00d7 (1 \u2212 bear_discount)",
+      "tier3_bear_floor": "T1 floor × (1 − bear_discount)",
       "bear_discount_tiers": {
         "defensive_stable": "20% below T1 floor (MSFT, NEE, XLU, HESM, HPQ, AVGO, EWL)",
         "growth_tech": "30% below T1 floor (NVDA, MRVL, GOOGL, CEG, TSM, SOXQ, SHEL)",
@@ -26,10 +26,10 @@
       "execution_confirmation": {
         "description": "Before deploying capital when price reaches T1 zone, check 2+ of 4 signals",
         "signals": [
-          "RSI (14-day) < 45 \u2014 confirms oversold condition",
-          "MACD daily converging \u2014 histogram bars shrinking or bullish cross",
-          "Price at/below 50-day SMA \u2014 institutional support alignment",
-          "Price below 9-day EMA \u2014 confirms drawdown, not a dip on uptrend"
+          "RSI (14-day) < 45 — confirms oversold condition",
+          "MACD daily converging — histogram bars shrinking or bullish cross",
+          "Price at/below 50-day SMA — institutional support alignment",
+          "Price below 9-day EMA — confirms drawdown, not a dip on uptrend"
         ],
         "rule": "2+ signals = HIGH CONVICTION, scale up tranche; 0-1 signals = minimum tranche only"
       }
@@ -50,7 +50,7 @@
         "Sector ETF drawdown >20% in <60 days"
       ],
       "portfolio_wide_add_5pct_mos": [
-        "Fed rate change \u00b150bps or more in single meeting",
+        "Fed rate change ±50bps or more in single meeting",
         "S&P 500 correction >10% in <30 days",
         "VIX sustained above 30 for >2 weeks",
         "Recession probability >60% (NY Fed model)",
@@ -98,7 +98,7 @@
       "high_pe": 28,
       "mos": 0.2,
       "metric": "normalized_pe",
-      "rationale": "Use mid-cycle normalized EPS \u2014 NOT peak. HBM adds premium but cycle risk is severe",
+      "rationale": "Use mid-cycle normalized EPS — NOT peak. HBM adds premium but cycle risk is severe",
       "eps_override_note": "Use analyst mid-cycle normalized EPS (~$50/share estimate), not peak forward EPS",
       "bear_discount": 0.4
     },
@@ -120,8 +120,8 @@
       "high_pe": 28,
       "mos": 0.3,
       "metric": "normalized_pe",
-      "rationale": "Pure-play NAND flash, added back to the portfolio July 11, 2026 after being missed when WDC was rebuilt HDD-only post spin-off. Same AI-memory supercycle tailwind as MU, but independent public trading history only since Feb 2025 (~17 months) \u2014 no demonstrated down-cycle to anchor 'mid-cycle' EPS the way MU's decades of history do. Beta 4.74 vs MU's much lower beta. Wider MoS (0.30 vs MU's 0.20) to compensate for that added uncertainty.",
-      "eps_note": "FY2026 consensus EPS $66.41 (19 analysts, fiscal year ended June 30, 2026) \u2014 replaces provisional ~$20 estimate. FY2027 analyst estimate $204.47 (use with caution \u2014 revenue math doesn't fully support it). Use FY2026 $66.41 for current target calculations. July 14, 2026.",
+      "rationale": "Pure-play NAND flash, added back to the portfolio July 11, 2026 after being missed when WDC was rebuilt HDD-only post spin-off. Same AI-memory supercycle tailwind as MU, but independent public trading history only since Feb 2025 (~17 months) — no demonstrated down-cycle to anchor 'mid-cycle' EPS the way MU's decades of history do. Beta 4.74 vs MU's much lower beta. Wider MoS (0.30 vs MU's 0.20) to compensate for that added uncertainty.",
+      "eps_note": "FY2026 consensus EPS $66.41 (19 analysts, fiscal year ended June 30, 2026) — replaces provisional ~$20 estimate. FY2027 analyst estimate $204.47 (use with caution — revenue math doesn't fully support it). Use FY2026 $66.41 for current target calculations. July 14, 2026.",
       "bear_discount": 0.4
     },
     "FSLR": {
@@ -131,9 +131,9 @@
       "high_pe": 18,
       "mos": 0.18,
       "metric": "normalized_pe",
-      "rationale": "Solar; cyclical + policy-sensitive \u2014 use mid-cycle EPS",
+      "rationale": "Solar; cyclical + policy-sensitive — use mid-cycle EPS",
       "bear_discount": 0.35,
-      "eps_note": "Mid-cycle normalized EPS $18 (2026 consensus $17.41\u2013$18.04; use normalized not peak)"
+      "eps_note": "Mid-cycle normalized EPS $18 (2026 consensus $17.41–$18.04; use normalized not peak)"
     },
     "TSM": {
       "name": "Taiwan Semiconductor",
@@ -143,7 +143,8 @@
       "mos": 0.15,
       "metric": "fwd_pe",
       "rationale": "Foundry monopoly; geopolitical discount applied",
-      "bear_discount": 0.25
+      "bear_discount": 0.25,
+      "eps_note": "FY2026 consensus EPS $15.52 USD per ADS (38 analysts) — derived from fwd PE 27.16 at price $421.58. Financial currency TWD; USD EPS cross-checked via Forward PE. Updated July 14, 2026 from implied $14.94."
     },
     "LEU": {
       "name": "Centrus Energy",
@@ -162,7 +163,7 @@
       "high_pe": 34,
       "mos": 0.1,
       "metric": "fwd_pe",
-      "rationale": "Cloud + AI platform; highest quality in universe \u2014 minimal discount needed",
+      "rationale": "Cloud + AI platform; highest quality in universe — minimal discount needed",
       "bear_discount": 0.2
     },
     "GOOGL": {
@@ -173,7 +174,8 @@
       "mos": 0.15,
       "metric": "fwd_pe",
       "rationale": "Search + Cloud + AI; antitrust risk partially priced in MoS",
-      "bear_discount": 0.3
+      "bear_discount": 0.3,
+      "eps_note": "FY2026 consensus EPS $14.23 (51 analysts, calendar year Dec 31, 2026). Updated July 14, 2026 from implied $14.01 — minor correction (+1.6%). Forward PE 25.12 cross-check: $357.36 / $14.23 = 25.11x confirmed."
     },
     "HPQ": {
       "name": "HP Inc",
@@ -184,7 +186,7 @@
       "metric": "fwd_pe",
       "rationale": "PC / printer; mature, shrinking TAM, buyback story",
       "bear_discount": 0.2,
-      "eps_note": "Non-GAAP FY2026E EPS $3.00 (company guidance $2.90\u2013$3.10 raised Q2 2026)"
+      "eps_note": "Non-GAAP FY2026E EPS $3.00 (company guidance $2.90–$3.10 raised Q2 2026)"
     },
     "LLY": {
       "name": "Eli Lilly",
@@ -193,9 +195,9 @@
       "high_pe": 35,
       "mos": 0.15,
       "metric": "fwd_pe",
-      "rationale": "GLP-1 + oncology pipeline; high P/E revised 50\u219235\u00d7 to reflect ATH-implied ceiling (~34.5\u00d7) and increased GLP-1 competition (NVO precedent)",
+      "rationale": "GLP-1 + oncology pipeline; high P/E revised 50→35× to reflect ATH-implied ceiling (~34.5×) and increased GLP-1 competition (NVO precedent)",
       "bear_discount": 0.3,
-      "eps_note": "FY2026E consensus EPS ~$37 (range $34.79\u2013$41.91); high_pe revised Jun 23 2026"
+      "eps_note": "FY2026E consensus EPS ~$37 (range $34.79–$41.91); high_pe revised Jun 23 2026"
     },
     "NVO": {
       "name": "Novo Nordisk",
@@ -205,7 +207,8 @@
       "mos": 0.2,
       "metric": "fwd_pe",
       "rationale": "GLP-1 pioneer; re-rated down on LLY competition. Low end reflects pessimistic scenario, high end reflects durable franchise",
-      "bear_discount": 0.35
+      "bear_discount": 0.35,
+      "eps_note": "FY2026 consensus EPS $3.20 USD per ADS (28 analysts, calendar year Dec 31, 2026) — derived from fwd PE 15.42 at price $49.31. DKK EPS 21.00 / ~6.5 DKK per USD = $3.23 confirmed. FY2025 EPS was $3.54 USD — FY2026 revenue declining -5.1% on GLP-1 competition pressure. Updated July 14, 2026 from implied $3.88. Only 14 analysts, analyst consensus price target $47.91 (below current $49.31 — analysts modestly bearish)."
     },
     "BRK-B": {
       "name": "Berkshire Hathaway B",
@@ -215,7 +218,8 @@
       "mos": 0.15,
       "metric": "fwd_pe",
       "rationale": "Conglomerate quality + insurance float + equity portfolio; P/B cross-check recommended",
-      "bear_discount": 0.25
+      "bear_discount": 0.25,
+      "eps_note": "FY2026 non-GAAP (operating earnings) consensus EPS ~$20.27 per Class B share (Class A 30,412.37 / 1500 = $20.27 B-share). Only 2 analysts — very sparse coverage. GAAP EPS distorted by investment portfolio mark-to-market. Updated July 14, 2026 from implied $23.94. Use with caution given thin analyst consensus."
     },
     "FRVO": {
       "name": "Fervo Energy",
@@ -224,32 +228,32 @@
       "high_pe": 2.0,
       "mos": 0.15,
       "metric": "ev_ppa_backlog",
-      "rationale": "Pre-revenue geothermal; EV/PPA contracted backlog per share ($26.77). Not P/E \u2014 no earnings yet",
+      "rationale": "Pre-revenue geothermal; EV/PPA contracted backlog per share ($26.77). Not P/E — no earnings yet",
       "bear_discount": 0.5
     },
     "EWY": {
       "name": "iShares MSCI South Korea ETF",
-      "category": "ETF \u2014 International",
+      "category": "ETF — International",
       "low_pe": 9,
       "high_pe": 13,
       "mos": 0.15,
       "metric": "index_pe",
-      "rationale": "Korea market weighted P/E; historically 9\u201313\u00d7 with geopolitical discount",
+      "rationale": "Korea market weighted P/E; historically 9–13× with geopolitical discount",
       "bear_discount": 0.3
     },
     "EWL": {
       "name": "iShares MSCI Switzerland ETF",
-      "category": "ETF \u2014 International",
+      "category": "ETF — International",
       "low_pe": 20,
       "high_pe": 27,
       "mos": 0.15,
       "metric": "index_pe",
-      "rationale": "Swiss market quality premium (Roche, Novartis, Nestl\u00e9); CHF safe-haven adds multiple support",
+      "rationale": "Swiss market quality premium (Roche, Novartis, Nestlé); CHF safe-haven adds multiple support",
       "bear_discount": 0.2
     },
     "AVDE": {
       "name": "Avantis International Equity ETF",
-      "category": "ETF \u2014 International",
+      "category": "ETF — International",
       "low_pe": 12,
       "high_pe": 18,
       "mos": 0.15,
@@ -259,7 +263,7 @@
     },
     "FENI": {
       "name": "Fidelity Enhanced International ETF",
-      "category": "ETF \u2014 International",
+      "category": "ETF — International",
       "low_pe": 12,
       "high_pe": 18,
       "mos": 0.15,
@@ -269,7 +273,7 @@
     },
     "SCHF": {
       "name": "Schwab International Equity ETF",
-      "category": "ETF \u2014 International",
+      "category": "ETF — International",
       "low_pe": 13,
       "high_pe": 20,
       "mos": 0.15,
@@ -279,14 +283,14 @@
     },
     "VOO": {
       "name": "Vanguard S&P 500 ETF",
-      "category": "ETF \u2014 US",
+      "category": "ETF — US",
       "low_pe": 22,
       "high_pe": 30,
       "mos": 0.15,
       "metric": "price_support",
-      "rationale": "S&P 500 index ETF; switched to price-support methodology (index P/E approach produced T2 ceiling above ATH). Entry at 15\u201322% corrections from 52-wk high; T2 = 8% below ATH. No earnings multiple used.",
+      "rationale": "S&P 500 index ETF; switched to price-support methodology (index P/E approach produced T2 ceiling above ATH). Entry at 15–22% corrections from 52-wk high; T2 = 8% below ATH. No earnings multiple used.",
       "bear_discount": 0.25,
-      "eps_note": "N/A \u2014 price-support methodology. T1 floor = 52-wk low ~$545; T1 ceil = 15% below ATH $699; T2 ceil = 8% below ATH $699."
+      "eps_note": "N/A — price-support methodology. T1 floor = 52-wk low ~$545; T1 ceil = 15% below ATH $699; T2 ceil = 8% below ATH $699."
     },
     "HESM": {
       "name": "Hess Midstream LP",
@@ -307,7 +311,8 @@
       "mos": 0.15,
       "metric": "fwd_pe",
       "bear_discount": 0.3,
-      "rationale": "Nuclear fleet + AI data center PPAs; irreplaceable 24/7 carbon-free baseload"
+      "rationale": "Nuclear fleet + AI data center PPAs; irreplaceable 24/7 carbon-free baseload",
+      "eps_note": "FY2026 consensus EPS $11.72 (14 analysts, calendar year Dec 31, 2026). FY2027 estimate $13.58. Updated July 14, 2026 from implied $11.94. Note: revenue estimate wide range ($26.4B–$42.8B) due to nuclear PPA uncertainty."
     },
     "NEE": {
       "name": "NextEra Energy",
@@ -317,11 +322,12 @@
       "mos": 0.12,
       "metric": "fwd_pe",
       "bear_discount": 0.25,
-      "rationale": "Regulated utility (FPL) + world's largest renewables developer; 28yr dividend growth"
+      "rationale": "Regulated utility (FPL) + world's largest renewables developer; 28yr dividend growth",
+      "eps_note": "FY2026 consensus EPS $4.04 (18 analysts, calendar year Dec 31, 2026). Updated July 14, 2026 from implied $3.69. Analyst target $99.15 (22 analysts)."
     },
     "XLU": {
       "name": "Utilities Select Sector SPDR ETF",
-      "category": "ETF \u2014 US Utilities",
+      "category": "ETF — US Utilities",
       "low_pe": 16,
       "high_pe": 21,
       "mos": 0.12,
@@ -331,7 +337,7 @@
     },
     "IAU": {
       "name": "iShares Gold Trust",
-      "category": "ETF \u2014 Hard Assets",
+      "category": "ETF — Hard Assets",
       "low_pe": null,
       "high_pe": null,
       "mos": null,
@@ -342,7 +348,7 @@
     },
     "REMX": {
       "name": "VanEck Rare Earth/Strategic Metals ETF",
-      "category": "ETF \u2014 Hard Assets",
+      "category": "ETF — Hard Assets",
       "low_pe": null,
       "high_pe": null,
       "mos": null,
@@ -353,7 +359,7 @@
     },
     "SOXQ": {
       "name": "Invesco PHLX Semiconductor ETF",
-      "category": "ETF \u2014 US Semiconductors",
+      "category": "ETF — US Semiconductors",
       "low_pe": 20,
       "high_pe": 28,
       "mos": 0.15,
@@ -363,23 +369,23 @@
     },
     "BP": {
       "name": "BP p.l.c.",
-      "category": "Oil & Gas \u2014 International",
+      "category": "Oil & Gas — International",
       "low_pe": 8,
       "high_pe": 12,
       "mos": 0.2,
       "metric": "normalized_pe",
-      "rationale": "Integrated oil major; GAAP EPS distorted by impairments \u2014 use underlying FCF/earnings (~$3.50/ADR normalized). Cheapest oil major on EV/EBITDA (~3.9x). Activist Elliott pressure for capital return.",
+      "rationale": "Integrated oil major; GAAP EPS distorted by impairments — use underlying FCF/earnings (~$3.50/ADR normalized). Cheapest oil major on EV/EBITDA (~3.9x). Activist Elliott pressure for capital return.",
       "bear_discount": 0.35,
       "eps_note": "Use normalized underlying EPS ~$3.50 (not GAAP near-zero); FCF/share TTM ~$4.41 cross-check"
     },
     "SHEL": {
       "name": "Shell plc",
-      "category": "Oil & Gas \u2014 International",
+      "category": "Oil & Gas — International",
       "low_pe": 10,
       "high_pe": 16,
       "mos": 0.15,
       "metric": "normalized_pe",
-      "rationale": "Premium integrated oil major with world-class LNG franchise. Consistent EPS $5.06\u2013$6.02 (2023\u20132025). CEO Wael Sawan executing disciplined FCF strategy. $3.5B/quarter buyback + growing dividend.",
+      "rationale": "Premium integrated oil major with world-class LNG franchise. Consistent EPS $5.06–$6.02 (2023–2025). CEO Wael Sawan executing disciplined FCF strategy. $3.5B/quarter buyback + growing dividend.",
       "bear_discount": 0.3,
       "eps_note": "Use mid-cycle normalized EPS ~$6.00 (FY2025 actual: $6.02; 3yr avg: ~$5.59)"
     }
