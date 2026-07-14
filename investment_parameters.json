@@ -73,12 +73,13 @@
     "MRVL": {
       "name": "Marvell Technology",
       "category": "AI / Hyperscaler Infrastructure",
-      "low_pe": 28,
-      "high_pe": 35,
+      "low_pe": 35,
+      "high_pe": 45,
       "mos": 0.15,
       "metric": "fwd_pe",
-      "rationale": "Custom ASIC / AI networking; high growth, early cycle",
-      "bear_discount": 0.3
+      "rationale": "Confirmed AI ASIC leadership (Google TPU, AWS Trainium, MSFT) — P/E range upgraded from 28–35× to 35–45× (July 14, 2026) to reflect re-rating. Still below NVDA (35–42×) due to customer concentration risk.",
+      "bear_discount": 0.3,
+      "eps_note": "Using FY2028 EPS $6.18 (analyst consensus, fiscal year ending Jan 31, 2028); FY2027 EPS $4.05 (38 analysts). FY2028 used because market is pricing ahead of Jan 2027 close."
     },
     "AVGO": {
       "name": "Broadcom",
@@ -108,7 +109,8 @@
       "high_pe": 18,
       "mos": 0.2,
       "metric": "ev_ebitda",
-      "rationale": "NAND/HDD; more commodity than DRAM. Restructured \u2014 EV/EBITDA preferred",
+      "rationale": "HDD-only post-SNDK spinoff; more commodity cyclical. EV/EBITDA preferred for through-cycle valuation. Targets updated July 14, 2026 to post-spin HDD-only consensus EPS.",
+      "eps_note": "FY2027 consensus EPS $18.27 (23 analysts, fiscal year ending June 30, 2027). FY2026 actual $9.94. Using FY2027 as forward EPS since FY2026 just ended June 30, 2026.",
       "bear_discount": 0.4
     },
     "SNDK": {
@@ -119,7 +121,7 @@
       "mos": 0.3,
       "metric": "normalized_pe",
       "rationale": "Pure-play NAND flash, added back to the portfolio July 11, 2026 after being missed when WDC was rebuilt HDD-only post spin-off. Same AI-memory supercycle tailwind as MU, but independent public trading history only since Feb 2025 (~17 months) \u2014 no demonstrated down-cycle to anchor 'mid-cycle' EPS the way MU's decades of history do. Beta 4.74 vs MU's much lower beta. Wider MoS (0.30 vs MU's 0.20) to compensate for that added uncertainty.",
-      "eps_override_note": "Use normalized EPS ~$20/share \u2014 annualized off the Q2 FY26 print ($5.15/qtr diluted), one quarter back from the Q3 FY26 blowout ($23.03/qtr). Deliberately NOT annualizing the blowout quarter itself. PROVISIONAL: FMP financial-estimates endpoint is blocked on the Starter plan for this ticker, so no clean analyst consensus forward EPS was available \u2014 revisit with real estimate data at the next quarterly refresh.",
+      "eps_note": "FY2026 consensus EPS $66.41 (19 analysts, fiscal year ended June 30, 2026) \u2014 replaces provisional ~$20 estimate. FY2027 analyst estimate $204.47 (use with caution \u2014 revenue math doesn't fully support it). Use FY2026 $66.41 for current target calculations. July 14, 2026.",
       "bear_discount": 0.4
     },
     "FSLR": {
