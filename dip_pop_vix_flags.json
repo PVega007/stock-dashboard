@@ -1,31 +1,31 @@
 {
   "_meta": {
     "source": "FMP MCP connector (quote endpoint for VIX; premarket/news scan for flags)",
-    "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) \u2014 always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it. Derived from the daily macro calendar (CPI/PCE/jobs/FOMC/ISM), ticker-specific news, and the mandatory AI/semiconductor competitive-landscape query \u2014 see CLAUDE.md.",
+    "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) — always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it.",
     "category_note": "category = the primary driver behind the flag: macro-scheduled | sector-contagion | single-name | geopolitical | other. See dip_pop_flag_history.csv for the append-only burn-in log."
   },
-  "date": "2026-07-14",
-  "generatedAt": "2026-07-14T11:52:26Z",
-  "vix": 17.34,
-  "vix_change_pct": 1.05,
+  "date": "2026-07-15",
+  "generatedAt": "2026-07-15T07:11:41.391143-05:00",
+  "vix": 16.36,
+  "vix_change_pct": -0.85,
   "flags": [
     {
       "ticker": "MU",
       "flag": "Caution",
       "category": "macro-scheduled",
-      "reason": "June CPI (HIGH impact) at 8:30 AM ET today with bond market pricing rising odds of a Fed HIKE at Jul 28-29 FOMC (Yahoo Finance, Jul 14); memory complex rebounding pre-market (MU +3.2%) on KeyBanc bull note (Barron's, Jul 14) but still whipsawing post SK Hynix-driven Jul 13 selloff"
+      "reason": "June PPI (MEDIUM) 8:30 AM ET + Fed Beige Book 2 PM ET amid live Fed-hike debate (July hike odds 17% vs 42% pre-CPI, CME FedWatch via Benzinga, Jul 15); Barron's (Jul 15) flags intensifying Chinese memory competition — MU -0.8% pre-market after Tuesday's KeyBanc-driven pop"
     },
     {
       "ticker": "SNDK",
       "flag": "Caution",
-      "category": "macro-scheduled",
-      "reason": "June CPI (HIGH impact) at 8:30 AM ET today amid Fed-hike repricing; SNDK still -1.3% pre-market ($1,744) after Monday's -12.6% memory-sector rout even as MU/WDC rebound \u2014 post-crash volatility in a beta-4.74 name (Invezz, Jul 13)"
+      "category": "sector-contagion",
+      "reason": "Memory-complex whipsaw continues — SNDK -2.4% pre-market ($1,715.89) consolidating Tuesday's SK Hynix leveraged-ETF/KeyBanc-driven pop (SKHY +19%, 247wallst Jul 14) in a beta-4.74 name; June PPI 8:30 AM ET adds macro overlay"
     },
     {
       "ticker": "MSFT",
       "flag": "Caution",
       "category": "macro-scheduled",
-      "reason": "June CPI (HIGH impact) at 8:30 AM ET today; MSFT -3.1% pre-market ($378.96) with no single clear catalyst found \u2014 AI-trade recalibration + rate-hike bets (Yahoo Finance, Jul 14), El-Erian AI-funding/yields commentary (247wallst, Jul 13), securities class-action PR (PRNewswire, Jul 14)"
+      "reason": "June PPI 8:30 AM ET + Beige Book 2 PM ET; IBM's software-spend warning (-25.2% worst day on record, WSJ Jul 14) still weighing on enterprise software sentiment — MSFT +0.3% pre-market, no MSFT-specific negative catalyst found"
     }
   ]
 }
