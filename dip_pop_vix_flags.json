@@ -5,27 +5,27 @@
     "category_note": "category = the primary driver behind the flag: macro-scheduled | sector-contagion | single-name | geopolitical | other. See dip_pop_flag_history.csv for the append-only burn-in log."
   },
   "date": "2026-07-16",
-  "generatedAt": "2026-07-16T07:14:22-05:00",
-  "vix": 16.13,
-  "vix_change_pct": 2.94,
+  "generatedAt": "2026-07-16T16:20:00-05:00",
+  "vix": 16.73,
+  "vix_change_pct": 6.76,
   "flags": [
     {
       "ticker": "MU",
       "flag": "Caution",
       "category": "sector-contagion",
-      "reason": "Memory rout day 2: MU -5.1% pre-market ($858.22, crossing below T1 floor $880 into BUY ZONE) as the CXMT Shanghai IPO overhang and SK Hynix US listing keep pressure on the complex (Barron's, Jul 16: -20% past month); TSMC's record Q2 (+80% net profit) failed to lift memory names; June Retail Sales 8:30 ET adds macro overlay"
+      "reason": "Memory rout continues (day 3): MU -5.65% ($853.20 close) as TSMC's blowout Q2 (record profit, +33% rev, raised US capex to $100B) triggered capex-fear selloff across the AI/semi complex instead of relief (Investopedia, Zacks, Jul 16); broad chip names down 2nd-3rd straight session"
     },
     {
       "ticker": "SNDK",
       "flag": "Caution",
       "category": "sector-contagion",
-      "reason": "SNDK -7.7% pre-market ($1,491.41), day 2 of the CXMT-IPO memory rout \u2014 drops below T2 ceiling $1,581 into WATCH; MarketBeat (Jul 16) flags impending CXMT IPO reshaping NAND competition; beta 4.74, treat with care"
+      "reason": "SNDK -12.6% ($1,411.08 close), steepest single-day drop of the current memory rout; Motley Fool (Jul 16) still bullish long-term NAND-shortage thesis (pricier iPhone memory), but today's move tracks the broader MU/AVGO/FSLR complex selloff on TSM capex-fear contagion, not SNDK-specific news; beta 4.74, treat with care"
     },
     {
       "ticker": "MSFT",
-      "flag": "Caution",
-      "category": "macro-scheduled",
-      "reason": "June Retail Sales + jobless claims + Philly Fed 8:30 AM ET today; MSFT +1.2% pre-market ($400.45) trading ABOVE the $396 range top pre-open \u2014 breakout decision day per Position Tracker July 15 rules; no negative catalyst found (sources Jul 16)"
+      "flag": "Normal",
+      "category": "other",
+      "reason": "MSFT +1.4% ($401.10 close) bucking the Nasdaq's -1.3% day; stronger jobless claims (208K vs 220K exp, Dept of Labor) + blowout Philly Fed (41.4 vs 13 exp, Jul 16) offset chip-sector drag; session high $405.99 retested the $396 former range top for a 2nd session (Position Tracker breakout watch)"
     }
   ]
 }
