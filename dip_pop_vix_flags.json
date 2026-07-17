@@ -1,31 +1,12 @@
 {
-  "_meta": {
-    "source": "FMP MCP connector (quote endpoint for VIX; premarket/news scan for flags)",
-    "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) \u2014 always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it.",
-    "category_note": "category = the primary driver behind the flag: macro-scheduled | sector-contagion | single-name | geopolitical | other. See dip_pop_flag_history.csv for the append-only burn-in log."
-  },
-  "date": "2026-07-16",
-  "generatedAt": "2026-07-16T16:20:00-05:00",
-  "vix": 16.73,
-  "vix_change_pct": 6.76,
+  "_meta": {"source": "FMP MCP connector (quote endpoint for VIX; premarket/news scan for flags)", "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) — always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it.", "category_note": "category = the primary driver behind the flag: macro-scheduled | sector-contagion | single-name | geopolitical | other. See dip_pop_flag_history.csv for the append-only burn-in log."},
+  "date": "2026-07-17",
+  "generatedAt": "2026-07-17T07:16:00-05:00",
+  "vix": 18.08,
+  "vix_change_pct": 8.07,
   "flags": [
-    {
-      "ticker": "MU",
-      "flag": "Caution",
-      "category": "sector-contagion",
-      "reason": "Memory rout continues (day 3): MU -5.65% ($853.20 close) as TSMC's blowout Q2 (record profit, +33% rev, raised US capex to $100B) triggered capex-fear selloff across the AI/semi complex instead of relief (Investopedia, Zacks, Jul 16); broad chip names down 2nd-3rd straight session"
-    },
-    {
-      "ticker": "SNDK",
-      "flag": "Caution",
-      "category": "sector-contagion",
-      "reason": "SNDK -12.6% ($1,411.08 close), steepest single-day drop of the current memory rout; Motley Fool (Jul 16) still bullish long-term NAND-shortage thesis (pricier iPhone memory), but today's move tracks the broader MU/AVGO/FSLR complex selloff on TSM capex-fear contagion, not SNDK-specific news; beta 4.74, treat with care"
-    },
-    {
-      "ticker": "MSFT",
-      "flag": "Normal",
-      "category": "other",
-      "reason": "MSFT +1.4% ($401.10 close) bucking the Nasdaq's -1.3% day; stronger jobless claims (208K vs 220K exp, Dept of Labor) + blowout Philly Fed (41.4 vs 13 exp, Jul 16) offset chip-sector drag; session high $405.99 retested the $396 former range top for a 2nd session (Position Tracker breakout watch)"
-    }
+    {"ticker": "MU", "flag": "Caution", "category": "sector-contagion", "reason": "Broad semiconductor-led premarket selloff (NASDAQ futures -1.8%) amid Iran/Hormuz escalation and hawkish Fed comments (Jefferson); MU -2.17% premarket, no MU-specific catalyst found [WebSearch, Jul 17]."},
+    {"ticker": "SNDK", "flag": "Caution", "category": "sector-contagion", "reason": "Same broad semiconductor-led selloff as MU; SNDK -1.42% premarket, no SNDK-specific catalyst found [WebSearch, Jul 17]."},
+    {"ticker": "MSFT", "flag": "Caution", "category": "geopolitical", "reason": "Broad market risk-off (S&P futures -0.9%) on Iran escalation (6th consecutive night of US strikes) + Fed's Jefferson flagging sticky inflation delaying cuts; MSFT -1.79% premarket, no company-specific catalyst [WebSearch, Jul 17]."}
   ]
 }
