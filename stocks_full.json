@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "stock_dashboard.html (via export_stocks.js, full narrative export)",
-    "exportedAt": "2026-07-17T21:10:54.434Z",
+    "exportedAt": "2026-07-17T21:11:24.805Z",
     "count": 36,
     "note": "Full per-stock content: summary, steps.macroContext/priceAction/business/financial/management/governance/valuation/catalysts, redFlags, verdict (or steps.s11 for steps-format stocks), scores, entryTarget, PE data. Methodology (entry-target formulas, bear-floor formula, ECL signal rules) lives in investment_parameters.json and CLAUDE.md, also in this repo. Position_Tracker.md (personal tranche/exit tracker) is intentionally NOT included here — it contains account-level and tax-strategy detail Patricia has not authorized for public export."
   },
@@ -262,7 +262,7 @@
         "bearCase": "NVIDIA fights back with custom ASIC-like solutions (MGX/Spectrum networking). Hyperscaler custom silicon programs disappoint as ROI vs. NVIDIA GPUs proves marginal. Q1 'in-line' performance signals AI custom chip demand is being overestimated. Stock reverts to analyst consensus of $210 — a 28% decline. With 90x P/E, any guidance cut is catastrophic.",
         "risks": "1. MASSIVE OVERVALUATION (high × high) — 38% above analyst consensus target; 90x P/E; S&P inclusion pop is not fundamental. 2. EXECUTION RISK ON FY2027-28 GUIDANCE (medium × high) — $11B FY2027 revenue requires sustained 30% growth; any shortfall destroys the thesis. 3. NVIDIA COMPETITIVE RESPONSE (medium × medium) — NVIDIA expanding into custom silicon solutions could limit Marvell's TAM. 4. HYPERSCALER CONCENTRATION (medium × medium) — 2-3 hyperscalers likely account for >50% of custom ASIC revenue; losing one is severe. 5. VALUATION REVERSION (high × high) — stock above analyst targets is unstable; any negative catalyst triggers significant de-rating.",
         "entry": "Current $290 is 38% above analyst consensus target ($210) — do not enter. Entry zone: $180-220 (consensus target range; current P/E drops to ~56-69x — still expensive but reflects the growth trajectory). A failed quarterly beat, guidance cut, or broader AI multiple compression could create this entry. The S&P 500 inclusion pop should not be chased.",
-        "verdict": "WATCH — at $225, MRVL sits in the T2 zone ($217–$257) after targets were updated to FY2028 EPS of $6.18 (analyst consensus, fiscal year ending Jan 31, 2028) and an upgraded deserved P/E range of 35–45×, reflecting confirmed AI ASIC leadership at Google TPU, AWS Trainium, and Microsoft. Hold existing positions; the T1 zone ($184–$216) is the high-conviction entry level — watch for pullback on broad AI sentiment shifts or macro weakness. Analyst consensus target $251 (38 analysts). ECL confirmation required before deploying capital in T1."
+        "verdict": "WATCH — at $188.68, MRVL sits in the T1 zone ($184–$216) after targets were updated to FY2028 EPS of $6.18 (analyst consensus, fiscal year ending Jan 31, 2028) and an upgraded deserved P/E range of 35–45×, reflecting confirmed AI ASIC leadership at Google TPU, AWS Trainium, and Microsoft. Hold existing positions; the T1 zone ($184–$216) is the high-conviction entry level — watch for pullback on broad AI sentiment shifts or macro weakness. Analyst consensus target $251 (38 analysts). ECL confirmation required before deploying capital in T1."
       },
       "pe_ttm": "94.6×",
       "pe_target": "35–45× (FY2028)",
