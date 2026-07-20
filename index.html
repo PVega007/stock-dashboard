@@ -959,13 +959,21 @@ const BRIEFINGS = [
         { ticker: "MU", from: "BUY ZONE", to: "WATCH", preMarket: "$889.75", note: "Crossed above T1 floor $880 on the SK Hynix-driven memory-sector rebound; price is bouncing off ~30% below its June ATH, now in the T1 watch zone rather than the deepest discount band." }
       ],
       dataFlags: [
-        "ECL was only fully run for NVDA this cycle (2/4 signals, MODERATE CONVICTION) — AVGO, MU, FRVO, MRVL, EWY were not checked due to time constraints; recommend a manual RSI/SMA/EMA/MACD check before sizing any new tranche.",
         "EWL, AVDE, FENI, NEE, HESM, ORCL showed zero pre-market volume — kept at stored prices.",
-        "Position Tracker: MSFT's two outstanding BUY GTCs ($380.00/$388.00) remain unfilled, price $390.80 still above both."
+        "Position Tracker: MSFT's two outstanding BUY GTCs ($380.00/$388.00) remain unfilled, price $390.80 still above both.",
+        "One AVGO EMA(12) technical-indicator call hit a transient connector hiccup; retried once per protocol and succeeded — no data gap."
+      ],
+      ecl: [
+        { ticker: "NVDA", status: "BUY ZONE", rsi: "48.2 ❌", sma50: "$209.91, price $205.34 ✅", ema9: "$205.50, price $205.34 ✅", macd: "0.16 vs 0.39 yesterday ❌ (diverging)", signals: "2/4", conviction: "MODERATE 🟡" },
+        { ticker: "AVGO", status: "BUY ZONE", rsi: "43.8 ✅", sma50: "$402.94, price $375.44 ✅", ema9: "$382.13, price $375.44 ✅", macd: "-4.38 vs -3.52 yesterday ❌ (diverging)", signals: "3/4", conviction: "HIGH 🟢" },
+        { ticker: "MU", status: "WATCH (T1 zone)", rsi: "41.0 ✅", sma50: "$933.69, price $889.75 ✅", ema9: "$928.80, price $889.75 ✅", macd: "-17.75 vs -9.24 yesterday ❌ (diverging)", signals: "3/4", conviction: "HIGH 🟢" },
+        { ticker: "MRVL", status: "WATCH (T1 zone)", rsi: "35.7 ✅", sma50: "$235.55, price $193.88 ✅", ema9: "$216.67, price $193.88 ✅", macd: "-13.67 vs -11.14 yesterday ❌ (diverging)", signals: "3/4", conviction: "HIGH 🟢" },
+        { ticker: "FRVO", status: "BUY ZONE", rsi: "40.0 ✅", sma50: "$33.10, price $25.86 ✅", ema9: "$25.53, price $25.86 ❌", macd: "-2.57 vs -2.61 yesterday ✅ (converging)", signals: "3/4", conviction: "HIGH 🟢" },
+        { ticker: "EWY", status: "WATCH (T1 zone)", rsi: "38.1 ✅", sma50: "$190.76, price $165.14 ✅", ema9: "$173.94, price $165.14 ✅", macd: "-6.95 vs -6.04 yesterday ❌ (diverging)", signals: "3/4", conviction: "HIGH 🟢" }
       ],
       stableStocks: ["HPQ","MSFT","LLY","NVO","BRK-B","GOOGL","SCHF","VOO","CEG","XLU","IAU","BP","IBM","EWL","AVDE","FENI","NEE","HESM","ORCL"],
       actionItems: [
-        "Complete the skipped ECL checks (AVGO, MU, FRVO, MRVL, EWY) before sizing any new BUY ZONE entries today.",
+        "ECL confirms HIGH CONVICTION (3/4 signals) on AVGO, MU, MRVL, FRVO, and EWY — MACD is the lone holdout on every one, consistent with an early bounce rather than a confirmed reversal. NVDA is 2/4 (RSI not yet oversold).",
         "Continue monitoring the Hormuz conflict for BP/SHEL and broader energy/risk sentiment — 9 consecutive days of strikes is a live tail risk even though markets are currently decoupled from it.",
         "No action needed on Position Tracker — all open tranches remain outside their target bands; MSFT GTCs still unfilled."
       ],
