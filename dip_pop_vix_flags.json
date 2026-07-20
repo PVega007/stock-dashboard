@@ -1,12 +1,32 @@
 {
-  "_meta": {"source": "FMP MCP connector (quote endpoint for VIX; premarket/news scan for flags)", "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) — always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it.", "category_note": "category = the primary driver behind the flag: macro-scheduled | sector-contagion | single-name | geopolitical | other. See dip_pop_flag_history.csv for the append-only burn-in log."},
-  "date": "2026-07-17",
-  "generatedAt": "2026-07-17T07:16:00-05:00",
-  "vix": 18.08,
-  "vix_change_pct": 8.07,
+  "_meta": {
+    "source": "FMP MCP connector (quote endpoint for VIX; premarket/news scan for flags)",
+    "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) \u2014 always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it.",
+    "category_note": "category = the primary driver behind the flag: macro-scheduled | sector-contagion | single-name | geopolitical | other. See dip_pop_flag_history.csv for the append-only burn-in log.",
+    "repair_note": "2026-07-20: manually restored from dip_pop_flag_history.csv after the 7:07 AM premarket run wrote a stale (Jul 17) payload; values = today's premarket flags. Close run refreshes normally tonight."
+  },
+  "date": "2026-07-20",
+  "generatedAt": "2026-07-20T11:35:00-05:00",
+  "vix": 18.0,
+  "vix_change_pct": -4.1,
   "flags": [
-    {"ticker": "MU", "flag": "Caution", "category": "sector-contagion", "reason": "Broad semiconductor-led premarket selloff (NASDAQ futures -1.8%) amid Iran/Hormuz escalation and hawkish Fed comments (Jefferson); MU -2.17% premarket, no MU-specific catalyst found [WebSearch, Jul 17]."},
-    {"ticker": "SNDK", "flag": "Caution", "category": "sector-contagion", "reason": "Same broad semiconductor-led selloff as MU; SNDK -1.42% premarket, no SNDK-specific catalyst found [WebSearch, Jul 17]."},
-    {"ticker": "MSFT", "flag": "Caution", "category": "geopolitical", "reason": "Broad market risk-off (S&P futures -0.9%) on Iran escalation (6th consecutive night of US strikes) + Fed's Jefferson flagging sticky inflation delaying cuts; MSFT -1.79% premarket, no company-specific catalyst [WebSearch, Jul 17]."}
+    {
+      "ticker": "MU",
+      "flag": "Caution",
+      "category": "sector-contagion",
+      "reason": "MU +4.8% premarket rebounding off bear-market lows after SK Hynix memory-price warning sparked broad buy-the-dip in memory names (Barrons/Invezz, Jul 20); still ~30% below June ATH."
+    },
+    {
+      "ticker": "SNDK",
+      "flag": "Caution",
+      "category": "sector-contagion",
+      "reason": "SNDK +4.2% premarket tracking MU's memory-sector rebound after SK Hynix price warning (Invezz, Jul 20); up ~580% YTD, extreme-volatility name."
+    },
+    {
+      "ticker": "MSFT",
+      "flag": "Normal",
+      "category": "other",
+      "reason": "No MSFT-specific catalyst found premarket; -0.8% in line with broad pre-open tone."
+    }
   ]
 }
