@@ -921,6 +921,64 @@ verdict:"OVERVALUED — at $670, VOO is above T2 ceiling $640. VOO is the founda
 // ──────────────────────────────────────────────
 const BRIEFINGS = [
     {
+      date: "2026-07-20",
+      displayDate: "July 20, 2026",
+      type: "PRE-MARKET",
+      runTime: "7:00 AM CT · Auto",
+      alert: "🟡 MONITOR CLOSELY — memory/semiconductor sector rebounding sharply off last week's bear-market lows while the Iran/Hormuz conflict enters day 9 of US strikes, Brent above $90",
+      headline: "MU and SNDK bounce 4-5% premarket on an SK Hynix memory-price-warning-driven snapback after last week's SOX bear market; MU crosses back above its T1 floor (BUY ZONE → WATCH); Hormuz conflict escalates further on oil",
+      bullets: [
+        "Memory-sector rebound: MU +4.8%, SNDK +4.2%, WDC +3.7%, SOXQ +2.8% premarket after an SK Hynix price warning sparked broad buy-the-dip flows following a week where SOX fell >20% into a technical bear market.",
+        "TSM posted record Q2 revenue ($40.2B, +34% YoY), raised FY2026 growth outlook to 40%+, and committed another $100B to its Arizona buildout — broadly bullish for the AI/semi complex.",
+        "US-Iran conflict, day 9 of strikes: Brent above $90/bbl for the first time in over a month, Hormuz shipping disrupted — BP/SHEL both firmer premarket on the back of it.",
+        "Software sentiment trackers split: CRM sitting right at its $168 Bear Floor (maximum SaaS pessimism) even as hardware/memory names bounce — a notable divergence in the tape."
+      ],
+      macro: "No high/medium-impact US macro releases identified for today. VIX 18.00 (-4.1%), easing despite the Hormuz escalation — consistent with the memory/semi bounce dominating risk sentiment this morning.",
+      geopolitical: "US-Iran conflict enters its 9th consecutive day of strikes; Strait of Hormuz shipping described as 'slowing to a trickle'; Brent crude above $90/bbl for the first time in over a month (Proactive Investors, Jul 20 ✓). Kospi fell >4% overnight on the combination of Samsung/SK Hynix weakness and the war overhang (Invezz, Jul 20 ✓).",
+      earnings: "None of the 36 dashboard tickers report today.",
+      aiSemiLandscape: "SK Hynix's memory-price warning triggered a broad buy-the-dip in memory names (MU, SNDK, WDC, SOXQ) after SOX fell >20% from its June ATH into a technical bear market last week. TSM's record Q2 print and expanded $100B Arizona investment reinforce the underlying AI-capex demand thesis even as near-term sentiment on individual names stays volatile.",
+      movers: [
+        { ticker: "MU", change: "+4.81%", status: "WATCH", note: "SK Hynix price-warning-driven memory-sector rebound; crossed back above T1 floor $880 — STATUS CHANGE from BUY ZONE" },
+        { ticker: "SNDK", change: "+4.16%", status: "WATCH", note: "Tracking MU's rebound; up ~580% YTD 2026, extreme-volatility name; divergence within normal auto-update range" },
+        { ticker: "FRVO", change: "+4.89%", status: "BUY ZONE", note: "Divergence within normal range (<10% manual-review threshold)" },
+        { ticker: "WDC", change: "+3.74%", status: "OVERVALUED", note: "Memory-sector tailwind" },
+        { ticker: "SOXQ", change: "+2.76%", status: "WATCH", note: "Semiconductor ETF tracking the broad rebound" },
+        { ticker: "MRVL", change: "+2.75%", status: "WATCH", note: "In T1 zone" },
+        { ticker: "TSM", change: "+2.18%", status: "OVERVALUED", note: "Record Q2 revenue, raised FY2026 guidance, $100B Arizona expansion" },
+        { ticker: "LEU", change: "+2.06%", status: "WATCH", note: "No company-specific driver identified" },
+        { ticker: "EWY", change: "+1.60%", status: "WATCH", note: "ADR premium vs. weak Kospi overnight" },
+        { ticker: "AVGO", change: "+1.24%", status: "BUY ZONE", note: "Memory/semi-sector tailwind" },
+        { ticker: "NVDA", change: "+1.24%", status: "BUY ZONE", note: "Broad AI/semi tailwind" },
+        { ticker: "REMX", change: "-2.21%", status: "WATCH", note: "No company-specific driver identified" },
+        { ticker: "NOW", change: "-1.67%", status: "BUY ZONE", note: "Enterprise software sentiment stays weak — SENTIMENT TRACKER, not an investment target" },
+        { ticker: "CRM", change: "-1.51%", status: "BUY ZONE", note: "Near $168 Bear Floor — maximum SaaS pessimism signal — SENTIMENT TRACKER" },
+        { ticker: "PLTR", change: "-1.26%", status: "WATCH", note: "SENTIMENT TRACKER" },
+        { ticker: "SHEL", change: "-1.03%", status: "WATCH", note: "Modest pullback despite Hormuz tailwind for the sector" }
+      ],
+      statusChanges: [
+        { ticker: "MU", from: "BUY ZONE", to: "WATCH", preMarket: "$889.75", note: "Crossed above T1 floor $880 on the SK Hynix-driven memory-sector rebound; price is bouncing off ~30% below its June ATH, now in the T1 watch zone rather than the deepest discount band." }
+      ],
+      dataFlags: [
+        "ECL was only fully run for NVDA this cycle (2/4 signals, MODERATE CONVICTION) — AVGO, MU, FRVO, MRVL, EWY were not checked due to time constraints; recommend a manual RSI/SMA/EMA/MACD check before sizing any new tranche.",
+        "EWL, AVDE, FENI, NEE, HESM, ORCL showed zero pre-market volume — kept at stored prices.",
+        "Position Tracker: MSFT's two outstanding BUY GTCs ($380.00/$388.00) remain unfilled, price $390.80 still above both."
+      ],
+      stableStocks: ["HPQ","MSFT","LLY","NVO","BRK-B","GOOGL","SCHF","VOO","CEG","XLU","IAU","BP","IBM","EWL","AVDE","FENI","NEE","HESM","ORCL"],
+      actionItems: [
+        "Complete the skipped ECL checks (AVGO, MU, FRVO, MRVL, EWY) before sizing any new BUY ZONE entries today.",
+        "Continue monitoring the Hormuz conflict for BP/SHEL and broader energy/risk sentiment — 9 consecutive days of strikes is a live tail risk even though markets are currently decoupled from it.",
+        "No action needed on Position Tracker — all open tranches remain outside their target bands; MSFT GTCs still unfilled."
+      ],
+      sources: [
+        "Barrons — https://www.barrons.com/articles/micron-stock-price-sk-hynix-memory-9f3285c7 — Jul 20, 2026 ✓",
+        "Invezz — https://invezz.com/news/2026/07/20/micron-stock-up-3-sandisk-gains-2-5-what-woke-the-memory-trade/ — Jul 20, 2026 ✓",
+        "Invezz — https://invezz.com/news/2026/07/20/kospi-index-slides-as-samsung-sk-hynix-sink-barclays-stays-bullish-on-semis/ — Jul 20, 2026 ✓",
+        "Proactive Investors — https://www.proactiveinvestors.co.uk/companies/news/1095688 — Jul 20, 2026 ✓",
+        "Reuters — https://www.reuters.com/world/asia-pacific/tsmc-expects-strong-multi-year-demand-ai-chips-it-ramps-up-arizona-investment-2026-07-19/ — Jul 19, 2026 ✓",
+        "Finbold — https://finbold.com/semiconductor-stocks-enter-bear-market-is-bubble-burst-next/ — Jul 19, 2026 ✓"
+      ]
+    },
+    {
       date: "2026-07-09",
       displayDate: "July 9, 2026",
       type: "MACRO-REASSESSMENT",

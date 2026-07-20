@@ -1,31 +1,12 @@
 {
-  "_meta": {
-    "source": "FMP MCP connector (quote endpoint for VIX; premarket/news scan for flags)",
-    "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) \u2014 always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it.",
-    "category_note": "category = the primary driver behind the flag: macro-scheduled | sector-contagion | single-name | geopolitical | other. See dip_pop_flag_history.csv for the append-only burn-in log."
-  },
+  "_meta": {"source": "FMP MCP connector (quote endpoint for VIX; premarket/news scan for flags)", "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) — always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it.", "category_note": "category = the primary driver behind the flag: macro-scheduled | sector-contagion | single-name | geopolitical | other. See dip_pop_flag_history.csv for the append-only burn-in log."},
   "date": "2026-07-17",
-  "generatedAt": "2026-07-17T16:15:00-05:00",
-  "vix": 18.77,
-  "vix_change_pct": 12.19,
+  "generatedAt": "2026-07-17T07:16:00-05:00",
+  "vix": 18.08,
+  "vix_change_pct": 8.07,
   "flags": [
-    {
-      "ticker": "MU",
-      "flag": "Caution",
-      "category": "sector-contagion",
-      "reason": "VIX spiked +12.19% to 18.77 amid broad semiconductor selloff; MU -0.50% close but intraday range was volatile (session low $804, -5.8% off prior close) [FMP quote, Jul 17 close]."
-    },
-    {
-      "ticker": "SNDK",
-      "flag": "Caution",
-      "category": "sector-contagion",
-      "reason": "Same VIX spike/semiconductor risk-off; SNDK -4.02% close, session low $1,325.03 (-6.1% off prior close) [FMP quote, Jul 17 close]."
-    },
-    {
-      "ticker": "MSFT",
-      "flag": "Caution",
-      "category": "geopolitical",
-      "reason": "Broad market risk-off persisted into the close (VIX +12.19%); MSFT -1.82% close, session low $389.39 [FMP quote, Jul 17 close]."
-    }
+    {"ticker": "MU", "flag": "Caution", "category": "sector-contagion", "reason": "Broad semiconductor-led premarket selloff (NASDAQ futures -1.8%) amid Iran/Hormuz escalation and hawkish Fed comments (Jefferson); MU -2.17% premarket, no MU-specific catalyst found [WebSearch, Jul 17]."},
+    {"ticker": "SNDK", "flag": "Caution", "category": "sector-contagion", "reason": "Same broad semiconductor-led selloff as MU; SNDK -1.42% premarket, no SNDK-specific catalyst found [WebSearch, Jul 17]."},
+    {"ticker": "MSFT", "flag": "Caution", "category": "geopolitical", "reason": "Broad market risk-off (S&P futures -0.9%) on Iran escalation (6th consecutive night of US strikes) + Fed's Jefferson flagging sticky inflation delaying cuts; MSFT -1.79% premarket, no company-specific catalyst [WebSearch, Jul 17]."}
   ]
 }

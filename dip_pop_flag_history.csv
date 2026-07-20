@@ -23,3 +23,6 @@ Date,Run,Ticker,Flag,Category,Reason,VIX,VIX_Change_Pct
 2026-07-17,market-close,MU,Caution,sector-contagion,"VIX spiked +12.19% to 18.77 amid broad semiconductor selloff; MU -0.50% close ($848.95), session low $804 (-5.8% off prior close)",18.77,12.19
 2026-07-17,market-close,SNDK,Caution,sector-contagion,"Same VIX spike/semiconductor risk-off; SNDK -4.02% close ($1354.38), session low $1325.03 (-6.1% off prior close)",18.77,12.19
 2026-07-17,market-close,MSFT,Caution,geopolitical,"Broad market risk-off persisted into the close (VIX +12.19%); MSFT -1.82% close ($393.82), session low $389.39",18.77,12.19
+2026-07-20,premarket,MU,Caution,sector-contagion,"MU +4.8% premarket rebounding off bear-market lows after SK Hynix memory-price warning sparked broad buy-the-dip in memory names (Barrons/Invezz, Jul 20); still ~30% below June ATH.",18.0,-4.10
+2026-07-20,premarket,SNDK,Caution,sector-contagion,"SNDK +4.2% premarket tracking MU's memory-sector rebound after SK Hynix price warning (Invezz, Jul 20); up ~580% YTD, extreme-volatility name.",18.0,-4.10
+2026-07-20,premarket,MSFT,Normal,other,No MSFT-specific catalyst found premarket; -0.8% in line with broad pre-open tone.,18.0,-4.10
