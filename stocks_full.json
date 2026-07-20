@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "stock_dashboard.html (via export_stocks.js, full narrative export)",
-    "exportedAt": "2026-07-20T21:31:12.461Z",
+    "exportedAt": "2026-07-20T21:31:57.487Z",
     "count": 36,
     "note": "Full per-stock content: summary, steps.macroContext/priceAction/business/financial/management/governance/valuation/catalysts, redFlags, verdict (or steps.s11 for steps-format stocks), scores, entryTarget, PE data. Methodology (entry-target formulas, bear-floor formula, ECL signal rules) lives in investment_parameters.json and CLAUDE.md, also in this repo. Position_Tracker.md (personal tranche/exit tracker) is intentionally NOT included here — it contains account-level and tax-strategy detail Patricia has not authorized for public export."
   },
@@ -42,7 +42,7 @@
         "bearCase": "Full IRA rollback eliminates the 45X credit — significant EPS impact. Utility-scale solar market softening due to grid interconnection delays or permitting issues. Competitors accelerate CdTe or alternative technology, eroding the moat. Competition from cheaper Chinese panels in international markets.",
         "risks": "1. IRA rollback / 45X credit elimination (P×S: Low×High). 2. Grid permitting delays slow utility deployments (P×S: Medium×Medium). 3. Technology parity by silicon competitors in high-heat conditions (P×S: Low×Medium). 4. Customer concentration in utility contracts (P×S: Low×Medium). 5. Raw material cost inflation for cadmium/tellurium (P×S: Low×Low).",
         "entry": "Base case fair value: $200–220 (intact IRA). Bear case (partial rollback): $140–160. Current price (~$160) is near the bear case floor, providing a genuine margin of safety for a business with clean fundamentals. Entry: $140–155 for a conservative entry with margin of safety. Current price is at or near the zone.",
-        "verdict": "WATCH — at $239, FSLR is in the T1 watch zone ($207–$252). Original thesis has largely played out — stock recovered from $136 lows. CdTe moat and 45X IRA credits intact but the valuation discount is mostly closed. Iran war energy crisis creates urgency for domestic solar. Consider initial tranche only below $207 T1 floor for full margin of safety."
+        "verdict": "BUY ZONE — at $205.31, FSLR has fallen below the T1 floor $207 — entry territory reached (July 20 close). Prior WATCH-zone thesis $136 lows. CdTe moat and 45X IRA credits intact but the valuation discount is mostly closed. Iran war energy crisis creates urgency for domestic solar. Consider initial tranche only below $207 T1 floor for full margin of safety."
       },
       "pe_ttm": "16.2×",
       "pe_target": "14–18× norm.",
