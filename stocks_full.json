@@ -1,7 +1,7 @@
 {
   "_meta": {
     "source": "stock_dashboard.html (via export_stocks.js, full narrative export)",
-    "exportedAt": "2026-07-21T13:50:10.516Z",
+    "exportedAt": "2026-07-21T13:50:40.858Z",
     "count": 36,
     "note": "Full per-stock content: summary, steps.macroContext/priceAction/business/financial/management/governance/valuation/catalysts, redFlags, verdict (or steps.s11 for steps-format stocks), scores, entryTarget, PE data. Methodology (entry-target formulas, bear-floor formula, ECL signal rules) lives in investment_parameters.json and CLAUDE.md, also in this repo. Position_Tracker.md (personal tranche/exit tracker) is intentionally NOT included here — it contains account-level and tax-strategy detail Patricia has not authorized for public export."
   },
@@ -132,7 +132,7 @@
         "bearCase": "HBM oversupply hits in 2027 as Samsung and SK Hynix both ramp massively. Prices fall 40–50% on HBM (as they did for standard DRAM in prior cycles). Normalized EPS compresses toward $30–35 (mild) or lower (severe). Multiple expansion on falling earnings creates the 'multiple trap' — stock looks cheap on trailing P/E but earnings are falling fast underneath it. Bear case: a break below the $528 T3 Bear Floor in a severe downturn.",
         "risks": "1. HBM oversupply 2027 — Samsung/SK Hynix/Micron all ramping (P×S: Medium×Very High). 2. NVIDIA AI capex slowdown reduces HBM demand (P×S: Medium×High). 3. Price/earnings 'multiple trap' — EPS falls faster than stock price adjusts (P×S: High×High). 4. China market access restrictions (P×S: Medium×Medium). 5. Parabolic 7 unwind continues, forcing momentum selling regardless of fundamentals (P×S: High×Medium).",
         "entry": "Don't use simple trailing P/E to determine entry — use the v3 grid: BUY ZONE below $880 (T1 floor, ~$50 normalized EPS × 22x × 80% after MoS), WATCH $880–$1,260, OVERVALUED above $1,260. Bear Floor $528 is the recession/crash-scenario line (T1 floor × 60%). Entry with adequate margin of safety requires knowing where in the HBM cycle we are — current recommendation: watch Q4 FY2026 earnings (expected ~Sept 2026) for whether HBM pricing/bookings hold. If the supercycle thesis holds and price pulls back into the $880–$1,100 T1 zone, that's the entry; if HBM oversupply signals emerge in 2027, wait for a deeper pullback toward the Bear Floor.",
-        "verdict": "BUY ZONE — at $858.22 (pre-market, Jul 16), MU has fallen below the T1 floor $880 — entry territory reached with full margin of safety. Compelling business, but cycle timing still demands care: the 'multiple trap' is the key risk to understand before entering. Confidence: Medium. Biggest unknown: whether 2027 HBM supply/demand tilts toward oversupply (bear case) or structural AI demand absorbs all new capacity (bull case)."
+        "verdict": "WATCH — at $932.56 (Jul 21, market open), MU is in the T1 zone (floor $880, ceiling $1,100) — approaching low-end fair value, consider a smaller tranche rather than full-size entry. Compelling business, but cycle timing still demands care: the 'multiple trap' is the key risk to understand before entering. Confidence: Medium. Biggest unknown: whether 2027 HBM supply/demand tilts toward oversupply (bear case) or structural AI demand absorbs all new capacity (bull case)."
       },
       "pe_ttm": "48.7×",
       "pe_target": "22–28× norm.",
