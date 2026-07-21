@@ -49,13 +49,13 @@ Date,Ticker,PrevClose,Premarket_0705ET,Premarket_0925ET,Open,Low,PostDipHigh,Clo
 2026-07-21,AVGO,378.16,,382.38,,,,,,,2026-07-21 08:47 CT premarket-final captured late at 09:46 ET (same notes as VOO row)
 2026-07-21,MRVL,194.94,,205.26,,,,,,,2026-07-21 08:47 CT premarket-final captured late at 09:46 ET (same notes as VOO row)
 2026-07-21,LLY,1146.90,,1148.19,,,,,,,2026-07-21 08:47 CT premarket-final captured late at 09:46 ET (same notes as VOO row)
-2026-07-21,VOO,682.21,,,,,,,,,2026-07-21 09:45 CT open (PrevClose=FMP previousClose fallback; no finalized 7/20 close in CSV); stale-open suspected - left blank (FMP open matched Jul-20 stored Open on 2 retries)
-2026-07-21,SOXQ,92.42,,,96.66,,,,,,2026-07-21 09:45 CT open (PrevClose=FMP previousClose fallback; no finalized 7/20 close in CSV)
-2026-07-21,BRK-B,491.25,,,489,,,,,,2026-07-21 09:45 CT open (PrevClose=FMP previousClose fallback; no finalized 7/20 close in CSV)
-2026-07-21,SNDK,1390.95,,,,,,,,,2026-07-21 09:45 CT open (PrevClose=FMP previousClose fallback; no finalized 7/20 close in CSV); stale-open suspected - left blank (FMP open matched Jul-20 stored Open on 2 retries)
-2026-07-21,MU,865.46,,,,,,,,,2026-07-21 09:45 CT open (PrevClose=FMP previousClose fallback; no finalized 7/20 close in CSV); stale-open suspected - left blank (FMP open matched Jul-20 stored Open on 2 retries)
-2026-07-21,MSFT,402.29,,,398.805,,,,,,2026-07-21 09:45 CT open (PrevClose=FMP previousClose fallback; no finalized 7/20 close in CSV)
-2026-07-21,NVDA,203.28,,,206.038,,,,,,2026-07-21 09:45 CT open (PrevClose=FMP previousClose fallback; no finalized 7/20 close in CSV)
-2026-07-21,AVGO,378.16,,,390.21,,,,,,2026-07-21 09:45 CT open (PrevClose=FMP previousClose fallback; no finalized 7/20 close in CSV)
-2026-07-21,MRVL,194.94,,,205.555,,,,,,2026-07-21 09:45 CT open (PrevClose=FMP previousClose fallback; no finalized 7/20 close in CSV)
-2026-07-21,LLY,1146.9,,,1143,,,,,,2026-07-21 09:45 CT open (PrevClose=FMP previousClose fallback; no finalized 7/20 close in CSV)
+2026-07-21,VOO,682.2,684.68,,,,,,,,2026-07-21 08:53 CT premarket
+2026-07-21,SOXQ,92.42,95.74,,,,,,,,2026-07-21 08:53 CT premarket
+2026-07-21,BRK-B,491.43,488.53,,,,,,,,2026-07-21 08:53 CT premarket
+2026-07-21,SNDK,1390.95,1534.70,,,,,,,,2026-07-21 08:53 CT premarket
+2026-07-21,MU,865.46,932.56,,,,,,,,2026-07-21 08:53 CT premarket
+2026-07-21,MSFT,402.29,399.87,,,,,,,,2026-07-21 08:53 CT premarket
+2026-07-21,NVDA,203.28,206.91,,,,,,,,2026-07-21 08:53 CT premarket
+2026-07-21,AVGO,378.16,382.79,,,,,,,,2026-07-21 08:53 CT premarket
+2026-07-21,MRVL,194.94,205.20,,,,,,,,2026-07-21 08:53 CT premarket
+2026-07-21,LLY,1146.85,1149.60,,,,,,,,2026-07-21 08:53 CT premarket

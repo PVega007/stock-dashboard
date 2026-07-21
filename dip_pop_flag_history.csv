@@ -26,3 +26,6 @@ Date,Run,Ticker,Flag,Category,Reason,VIX,VIX_Change_Pct
 2026-07-20,premarket,MU,Caution,sector-contagion,"MU +4.8% premarket rebounding off bear-market lows after SK Hynix memory-price warning sparked broad buy-the-dip in memory names (Barrons/Invezz, Jul 20); still ~30% below June ATH.",18.0,-4.10
 2026-07-20,premarket,SNDK,Caution,sector-contagion,"SNDK +4.2% premarket tracking MU's memory-sector rebound after SK Hynix price warning (Invezz, Jul 20); up ~580% YTD, extreme-volatility name.",18.0,-4.10
 2026-07-20,premarket,MSFT,Normal,other,No MSFT-specific catalyst found premarket; -0.8% in line with broad pre-open tone.,18.0,-4.10
+2026-07-21,premarket,MU,Normal,other,Memory-sector rebound (MU +7.75%) on Morgan Stanley/BofA bullish notes after last week's selloff; no negative catalyst,17.81,-4.5
+2026-07-21,premarket,SNDK,Normal,other,SNDK +10.33% leading the AI-trade rebound (UBS positive note); genuine broad rally not a data anomaly,17.81,-4.5
+2026-07-21,premarket,MSFT,Normal,other,"MSFT roughly flat -0.60%; no company-specific catalyst, tariff headline is broad not MSFT-specific",17.81,-4.5
