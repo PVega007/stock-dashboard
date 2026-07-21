@@ -4,28 +4,28 @@
     "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) \u2014 always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it.",
     "category_note": "category = the primary driver behind the flag: macro-scheduled | sector-contagion | single-name | geopolitical | other. See dip_pop_flag_history.csv for the append-only burn-in log."
   },
-  "date": "2026-07-21",
-  "generatedAt": "2026-07-21T13:53:00Z",
-  "vix": 17.81,
-  "vix_change_pct": -4.5,
+  "date": "2026-07-20",
+  "generatedAt": "2026-07-21T14:01:31Z",
+  "vix": 17.73,
+  "vix_change_pct": -4.93,
   "flags": [
     {
       "ticker": "MU",
       "flag": "Normal",
       "category": "other",
-      "reason": "Memory-sector rebound (MU +7.75%) on Morgan Stanley/BofA bullish notes after last week's selloff; no negative catalyst \u2014 Barrons/247WallSt/Motley Fool corroborate, Jul 21."
+      "reason": "MU +1.94% close, continued memory-sector rebound after last week's SK Hynix-driven selloff; no negative catalyst today."
     },
     {
       "ticker": "SNDK",
       "flag": "Normal",
       "category": "other",
-      "reason": "SNDK +10.33% leading the AI-trade rebound (UBS positive note); a >10% divergence would normally require manual review but this is a genuine broad rally, not a data anomaly \u2014 confirmed by multiple Jul 21 sources."
+      "reason": "SNDK +2.67% close, tracking MU/memory-sector rebound; extreme-volatility name (beta 4.74) but move is broad-based, not anomalous."
     },
     {
       "ticker": "MSFT",
       "flag": "Normal",
       "category": "other",
-      "reason": "MSFT roughly flat (-0.60%); no company-specific catalyst today, broad market modestly mixed amid new US-Canada tariff headline."
+      "reason": "MSFT +2.15% close on broad tech/AI rally; no company-specific catalyst."
     }
   ]
 }

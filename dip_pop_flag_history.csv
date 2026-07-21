@@ -29,3 +29,6 @@ Date,Run,Ticker,Flag,Category,Reason,VIX,VIX_Change_Pct
 2026-07-21,premarket,MU,Normal,other,Memory-sector rebound (MU +7.75%) on Morgan Stanley/BofA bullish notes after last week's selloff; no negative catalyst,17.81,-4.5
 2026-07-21,premarket,SNDK,Normal,other,SNDK +10.33% leading the AI-trade rebound (UBS positive note); genuine broad rally not a data anomaly,17.81,-4.5
 2026-07-21,premarket,MSFT,Normal,other,"MSFT roughly flat -0.60%; no company-specific catalyst, tariff headline is broad not MSFT-specific",17.81,-4.5
+2026-07-20,market-close,MU,Normal,other,"MU +1.94% close, continued memory-sector rebound after last week's SK Hynix-driven selloff; no negative catalyst today.",17.73,-4.93
+2026-07-20,market-close,SNDK,Normal,other,"SNDK +2.67% close, tracking MU/memory-sector rebound; extreme-volatility name but move is broad-based, not anomalous.",17.73,-4.93
+2026-07-20,market-close,MSFT,Normal,other,"MSFT +2.15% close on broad tech/AI rally; no company-specific catalyst.",17.73,-4.93
