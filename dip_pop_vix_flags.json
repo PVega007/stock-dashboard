@@ -4,28 +4,28 @@
     "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) \u2014 always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it.",
     "category_note": "category = the primary driver behind the flag: macro-scheduled | sector-contagion | single-name | geopolitical | other. See dip_pop_flag_history.csv for the append-only burn-in log."
   },
-  "date": "2026-07-20",
-  "generatedAt": "2026-07-21T14:01:31Z",
-  "vix": 17.73,
-  "vix_change_pct": -4.93,
+  "date": "2026-07-22",
+  "generatedAt": "2026-07-22T09:42:04",
+  "vix": 17.2,
+  "vix_change_pct": 0.88,
   "flags": [
     {
       "ticker": "MU",
-      "flag": "Normal",
-      "category": "other",
-      "reason": "MU +1.94% close, continued memory-sector rebound after last week's SK Hynix-driven selloff; no negative catalyst today."
+      "flag": "Caution",
+      "category": "sector-contagion",
+      "reason": "Chip-sector-wide softness (SOXQ gauge cited down ~1.7%); Cramer public profit-taking call on AI/tech names; no MU-specific negative catalyst today."
     },
     {
       "ticker": "SNDK",
-      "flag": "Normal",
-      "category": "other",
-      "reason": "SNDK +2.67% close, tracking MU/memory-sector rebound; extreme-volatility name (beta 4.74) but move is broad-based, not anomalous."
+      "flag": "Caution",
+      "category": "sector-contagion",
+      "reason": "Same sector softness as MU; no SNDK-specific catalyst; extreme-volatility name warrants added care regardless."
     },
     {
       "ticker": "MSFT",
-      "flag": "Normal",
-      "category": "other",
-      "reason": "MSFT +2.15% close on broad tech/AI rally; no company-specific catalyst."
+      "flag": "Caution",
+      "category": "sector-contagion",
+      "reason": "MSFT -1.96% intraday with no company-specific news found; broad pre-earnings-season de-risking (GOOGL/TSLA report after today's close) likely driver."
     }
   ]
 }

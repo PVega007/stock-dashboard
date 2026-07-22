@@ -32,3 +32,6 @@ Date,Run,Ticker,Flag,Category,Reason,VIX,VIX_Change_Pct
 2026-07-20,market-close,MU,Normal,other,"MU +1.94% close, continued memory-sector rebound after last week's SK Hynix-driven selloff; no negative catalyst today.",17.73,-4.93
 2026-07-20,market-close,SNDK,Normal,other,"SNDK +2.67% close, tracking MU/memory-sector rebound; extreme-volatility name but move is broad-based, not anomalous.",17.73,-4.93
 2026-07-20,market-close,MSFT,Normal,other,"MSFT +2.15% close on broad tech/AI rally; no company-specific catalyst.",17.73,-4.93
+2026-07-22,premarket,MU,Caution,sector-contagion,"Chip-sector-wide softness (SOXQ gauge cited down ~1.7%); Cramer public profit-taking call on AI/tech names; no MU-specific negative catalyst today.",17.2,0.88
+2026-07-22,premarket,SNDK,Caution,sector-contagion,"Same sector softness as MU; no SNDK-specific catalyst; extreme-volatility name warrants added care regardless.",17.2,0.88
+2026-07-22,premarket,MSFT,Caution,sector-contagion,"MSFT -1.96% intraday with no company-specific news found; broad pre-earnings-season de-risking (GOOGL/TSLA report after today's close) likely driver.",17.2,0.88
