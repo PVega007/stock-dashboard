@@ -35,3 +35,6 @@ Date,Run,Ticker,Flag,Category,Reason,VIX,VIX_Change_Pct
 2026-07-22,premarket,MU,Caution,sector-contagion,"Chip-sector-wide softness (SOXQ gauge cited down ~1.7%); Cramer public profit-taking call on AI/tech names; no MU-specific negative catalyst today.",17.2,0.88
 2026-07-22,premarket,SNDK,Caution,sector-contagion,"Same sector softness as MU; no SNDK-specific catalyst; extreme-volatility name warrants added care regardless.",17.2,0.88
 2026-07-22,premarket,MSFT,Caution,sector-contagion,"MSFT -1.96% intraday with no company-specific news found; broad pre-earnings-season de-risking (GOOGL/TSLA report after today's close) likely driver.",17.2,0.88
+2026-07-21,market-close,MU,Normal,sector-contagion,"MU +12.2% on broad semiconductor-sector rally (Motley Fool); no company-specific catalyst, positive direction.",17.05,0.0
+2026-07-21,market-close,SNDK,Normal,sector-contagion,"SNDK +14.25% tracking MU/memory-sector strength; no SNDK-specific catalyst.",17.05,0.0
+2026-07-21,market-close,MSFT,Normal,other,"MSFT +1.48% intraday dip recovered by close; Microsoft-Mistral partnership news and general software commentary, nothing negative.",17.05,0.0
