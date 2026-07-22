@@ -2688,6 +2688,25 @@ const BRIEFINGS = [
     actionItems: ["\ud83d\udd34 Oil-trigger reassessment warranted (Brent +3.5%) \u2014 consider running macro-reassessment given the Middle East supply-threat angle stacked on top of an already-heavy earnings day.", "Investigate why yesterday's (Jul 21) market-close run appears to have skipped the dip/pop feed append (PART 1E/1E.5/1E.6) \u2014 three feed files and the daily monitor close-out are all affected.", "Watch IBM's 5 PM ET call and GOOGL/TSLA after-close prints \u2014 all three are portfolio/sentiment-tracker names with same-day read-through."],
     sources: ["Yahoo Finance / Bloomberg / TheStreet \u2014 stock market today July 22, 2026 \u2014 Date: verified \u2713", "Investing.com \u2014 EIA crude oil inventories calendar \u2014 Date: verified \u2713", "247 Wall St \u2014 Morgan Stanley slashes Salesforce price target \u2014 2026-07-22 \u2014 Date: verified \u2713", "Seeking Alpha / GuruFocus / Benzinga \u2014 IBM Q2 2026 earnings preview, preliminary revenue/EPS miss \u2014 2026-07-22 \u2014 Date: verified \u2713", "Gartner press release \u2014 enterprise application spend at risk from agentic AI \u2014 2026-07-01 \u2014 Date: verified \u2713", "FMP MCP connector \u2014 live quotes, RSI/SMA/EMA technicals \u2014 2026-07-22 \u2014 Date: verified \u2713 (timestamps cross-checked against shell date)"]
   }
+,
+  {
+    date: "2026-07-21",
+    displayDate: "July 21, 2026",
+    type: "MARKET-CLOSE",
+    runTime: "Manual catch-up, run 2026-07-22 ~09:10 CT (Mac asleep all of Jul 21 evening; scheduled 4:00 PM CT run never fired)",
+    alert: "",
+    headline: "Genuine July 21 close backfilled after a full missed evening run: broad semiconductor rally (Nasdaq +1.29%, Micron +12%) snapped a three-session losing streak; no adverse single-stock events found.",
+    bullets: ["This is a backfill built entirely from FMP historical daily OHLC + 30-min bars fetched July 22 morning \u2014 not a same-day live capture. All prices are genuine July 21 closes, not estimates.", "S&P 500 +0.89% to 7,509, Nasdaq +1.29% to 25,837, Dow +0.74% to 52,225 \u2014 broad market snapped a three-session losing streak on semiconductor strength.", "Micron (MU) +12.2% on the day per Motley Fool coverage \u2014 broad semiconductor-strength move, not company-specific news; SNDK and MSFT (the other two dip/pop-tracked tickers) had no negative catalysts either."],
+    macro: "Nasdaq +1.29%, S&P 500 +0.89%, Dow +0.74% \u2014 broad rally led by semiconductor strength, overcoming lingering trade/geopolitical tension. VIX closed 17.05.",
+    geopolitical: "No major escalation specific to July 21 identified in this backfill; general Middle East/trade tension referenced as a headwind the rally overcame.",
+    earnings: "None flagged for this backfill.",
+    movers: [{ticker:"MU", change:"+12.2% (per Fool.com; dashboard shows +9.13% $865.46\u2192$970.82 on stored-price basis)", status:"WATCH", note:"Broad semiconductor-sector rally, no company-specific catalyst \u2014 Motley Fool, Jul 21."}, {ticker:"SNDK", change:"+14.25% ($1,390.95\u2192$1,589.40)", status:"WATCH", note:"Tracking MU/memory-sector strength."}, {ticker:"AVGO", change:"+2.20% ($378.16\u2192$386.50)", status:"BUY ZONE", note:"Semiconductor-sector tailwind."}, {ticker:"MRVL", change:"+6.68% ($194.94\u2192$207.96)", status:"WATCH", note:"Semiconductor-sector tailwind."}],
+    statusChanges: [],
+    dataFlags: ["This entire entry is a manual catch-up backfill (built July 22 morning) \u2014 Low/PostDipHigh/Close for all 10 Daily Monitor tickers and the MU/SNDK/MSFT dip_pop_ohlcv.csv, vix_history.csv, and dip_pop_intraday_30min.csv rows were all missing until this backfill because the Mac was asleep through July 21 evening and the scheduled market-close-price-check never fired.", "PostDipHigh values computed from 30-min bars using the standard methodology (max high strictly after the first 30-min bar touching the session low) for all 10 monitor tickers, not just the usual MU/SNDK/MSFT three.", "No Position_Tracker.md exit-target check performed for this backfill \u2014 recommend a manual check given MU/SNDK's large moves (both are open Position_Tracker tranches per the July 16 log)."],
+    stableStocks: [],
+    actionItems: ["Review Position_Tracker.md MU and SNDK open tranches given yesterday's large moves (MU +12%, SNDK +14%) \u2014 both were deep underwater per the July 16 log.", "Confirm tonight's genuine 4:00 PM CT market-close run fires now that the Mac is back on, to avoid a second consecutive gap."],
+    sources: ["Motley Fool \u2014 Stock Market Today, July 21: Micron Surges 12% \u2014 2026-07-21 \u2014 Date: verified \u2713", "FMP MCP connector \u2014 historical daily OHLC + 30-min bars, fetched 2026-07-22 \u2014 Date: verified \u2713 (backfill, not live capture)"]
+  }
 ];
 
 const FRAMEWORK_STEPS = [
