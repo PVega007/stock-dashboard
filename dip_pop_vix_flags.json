@@ -1,31 +1,21 @@
 {
-  "_meta": {
-    "source": "FMP MCP connector (quote endpoint for VIX; premarket/news scan for flags)",
-    "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) \u2014 always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it.",
-    "category_note": "category = the primary driver behind the flag: macro-scheduled | sector-contagion | single-name | geopolitical | other. See dip_pop_flag_history.csv for the append-only burn-in log."
-  },
   "date": "2026-07-22",
-  "generatedAt": "2026-07-22T09:42:04",
-  "vix": 17.2,
-  "vix_change_pct": 0.88,
-  "flags": [
-    {
-      "ticker": "MU",
-      "flag": "Caution",
-      "category": "sector-contagion",
-      "reason": "Chip-sector-wide softness (SOXQ gauge cited down ~1.7%); Cramer public profit-taking call on AI/tech names; no MU-specific negative catalyst today."
+  "generatedAt": "2026-07-22T15:14:31.312479",
+  "run": "market-close",
+  "vix": 16.64,
+  "category": "Normal",
+  "tickers": {
+    "MU": {
+      "flag": "Normal",
+      "reason": "VIX 16.64 normal; MU +? see briefing, choppy AI/semi tape amid Mideast escalation"
     },
-    {
-      "ticker": "SNDK",
-      "flag": "Caution",
-      "category": "sector-contagion",
-      "reason": "Same sector softness as MU; no SNDK-specific catalyst; extreme-volatility name warrants added care regardless."
+    "SNDK": {
+      "flag": "Normal",
+      "reason": "VIX 16.64 normal; SNDK session volatile, memory sector correlated"
     },
-    {
-      "ticker": "MSFT",
-      "flag": "Caution",
-      "category": "sector-contagion",
-      "reason": "MSFT -1.96% intraday with no company-specific news found; broad pre-earnings-season de-risking (GOOGL/TSLA report after today's close) likely driver."
+    "MSFT": {
+      "flag": "Normal",
+      "reason": "VIX 16.64 normal; MSFT pulled back on enterprise software weakness (IBM/PLTR/NOW selloff)"
     }
-  ]
+  }
 }

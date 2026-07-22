@@ -921,6 +921,51 @@ verdict:"OVERVALUED — at $670, VOO is above T2 ceiling $640. VOO is the founda
 // ──────────────────────────────────────────────
 const BRIEFINGS = [
     {
+      date: "2026-07-22",
+      displayDate: "July 22, 2026",
+      type: "MARKET-CLOSE",
+      runTime: "4:00 PM CT / 4:15 PM CT manual-verified run",
+      alert: "🔴 REASSESS NOW — Oil (Brent) spiked +4%+ on deepening Iran/Hormuz/Red Sea escalation; Strait of Hormuz effectively closed to commercial traffic",
+      headline: "Broad AI/semi rally (NASDAQ +1.3%) on strong Korean/Taiwan chip export data even as oil spikes on Mideast escalation; software sentiment trackers (NOW, PLTR, CRM) sell off hard on IBM's earnings-day miss and cautious enterprise spending; no dashboard status changes",
+      bullets: [
+        "AVGO +2.9% and NVDA +2.5% on the Asia semiconductor rally (Korean chip exports nearly tripled early July, Taiwan export orders beat forecasts).",
+        "Oil (Brent) up over 4% to ~$94.83 as the US-Iran conflict entered its 11th day; Strait of Hormuz effectively halted to commercial traffic, Houthis blockading Saudi ports.",
+        "Software sentiment trackers diverged sharply from the broader rally: NOW -6.5%, PLTR -6.1%, CRM -4.2%, IBM -2.2% — IBM held its Q2 call this evening after pre-announcing a revenue miss ($17.2B vs $17.86B consensus).",
+        "No dashboard status changes today — all 36 tickers stayed within existing BUY ZONE/WATCH/OVERVALUED bands."
+      ],
+      macro: "S&P 500 7,509.20 (+0.9%), NASDAQ 25,837.21 (+1.3%), VIX 16.64 (-2.4%). No major scheduled US macro print; Asia chip export strength (Korea, Taiwan) was the dominant catalyst.",
+      geopolitical: "US-Iran conflict now in its 11th consecutive day of military exchanges, strikes reportedly expanding toward energy infrastructure; Strait of Hormuz effectively closed to most commercial traffic; Houthis blockading Saudi Red Sea ports. IEA calls the oil crunch \"surprisingly tame\" so far but warns of no room for complacency.",
+      earnings: "IBM held its Q2 2026 earnings call this evening (5:00 PM ET) after pre-announcing a revenue miss; ServiceNow (NOW) also reported Q2 today, guiding ~22.5% subscription growth. Tomorrow: GOOGL, TSLA.",
+      aiSemiLandscape: "Korean chip exports nearly tripled and Taiwan export orders beat forecasts, driving today's NASDAQ/semiconductor rally (AVGO, NVDA). China's chipmakers continue their 'Triple Output' push to triple domestic AI chip production by end-2026, reducing Nvidia dependence — an ongoing structural theme, not a single-day catalyst.",
+      movers: [
+        { ticker: "AVGO", change: "+2.91%", status: "BUY ZONE", note: "Asia semiconductor rally tailwind" },
+        { ticker: "NVDA", change: "+2.49%", status: "BUY ZONE", note: "Asia semiconductor rally tailwind" },
+        { ticker: "NOW", change: "-6.47%", status: "BUY ZONE", note: "Enterprise software weakness on earnings day — SENTIMENT TRACKER" },
+        { ticker: "PLTR", change: "-6.10%", status: "WATCH", note: "Enterprise software weakness — SENTIMENT TRACKER" },
+        { ticker: "CRM", change: "-4.15%", status: "BUY ZONE", note: "Enterprise software weakness — SENTIMENT TRACKER" },
+        { ticker: "IBM", change: "-2.25%", status: "WATCH", note: "Q2 earnings call this evening after pre-announced revenue miss — SENTIMENT TRACKER" }
+      ],
+      statusChanges: [],
+      dataFlags: [
+        "MU intraday 30-min fetch hit a transient FMP outage on first call; succeeded on retry.",
+        "PART 1E.6 MAE/tail rerun trigger check done qualitatively this run (no full 90-day percentile pull) — no obvious trigger observed.",
+        "FRVO's Execution Confirmation Layer is data-limited (recent IPO, insufficient SMA50 history)."
+      ],
+      stableStocks: [],
+      actionItems: [
+        "Run macro-reassessment given the oil >3% trigger and ongoing Hormuz/Red Sea escalation.",
+        "MSFT standing GTC limit BUY $388.00 — today's session low ($386.97) traded through it; confirm actual fill at your broker.",
+        "MU tranche approaching breakeven GTC ($963.05 vs close $959.48, 0.4% away)."
+      ],
+      sources: [
+        "Stock Market News for July 22, 2026 — Yahoo Finance — Jul 22 verified",
+        "Key Oil Chokepoints in Mideast Face Disruption — Bloomberg — Jul 22 verified",
+        "Brent crude hits 6-week high on Middle East tensions — Xinhua — Jul 22 verified",
+        "IBM Preliminary Q2 Results Miss Expectations — Yahoo Finance — Jul 14/22 verified",
+        "ServiceNow earnings preview — Yahoo Finance — Jul 2026 verified"
+      ]
+    },
+    {
       date: "2026-07-20",
       displayDate: "July 20, 2026",
       type: "PRE-MARKET",

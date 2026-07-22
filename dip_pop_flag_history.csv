@@ -38,3 +38,6 @@ Date,Run,Ticker,Flag,Category,Reason,VIX,VIX_Change_Pct
 2026-07-21,market-close,MU,Normal,sector-contagion,"MU +12.2% on broad semiconductor-sector rally (Motley Fool); no company-specific catalyst, positive direction.",17.05,0.0
 2026-07-21,market-close,SNDK,Normal,sector-contagion,"SNDK +14.25% tracking MU/memory-sector strength; no SNDK-specific catalyst.",17.05,0.0
 2026-07-21,market-close,MSFT,Normal,other,"MSFT +1.48% intraday dip recovered by close; Microsoft-Mistral partnership news and general software commentary, nothing negative.",17.05,0.0
+2026-07-22,market-close,MU,16.64,Normal,"VIX 16.64 normal; MU +? see briefing, choppy AI/semi tape amid Mideast escalation"
+2026-07-22,market-close,SNDK,16.64,Normal,"VIX 16.64 normal; SNDK session volatile, memory sector correlated"
+2026-07-22,market-close,MSFT,16.64,Normal,VIX 16.64 normal; MSFT pulled back on enterprise software weakness (IBM/PLTR/NOW selloff)
