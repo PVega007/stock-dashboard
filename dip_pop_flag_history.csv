@@ -41,3 +41,6 @@ Date,Run,Ticker,Flag,Category,Reason,VIX,VIX_Change_Pct
 2026-07-22,market-close,MU,16.64,Normal,"VIX 16.64 normal; MU +? see briefing, choppy AI/semi tape amid Mideast escalation"
 2026-07-22,market-close,SNDK,16.64,Normal,"VIX 16.64 normal; SNDK session volatile, memory sector correlated"
 2026-07-22,market-close,MSFT,16.64,Normal,VIX 16.64 normal; MSFT pulled back on enterprise software weakness (IBM/PLTR/NOW selloff)
+2026-07-23,premarket,MU,Caution,geopolitical,"VIX up 13.6% to 18.90 on Iran/Hormuz escalation; MU -1.25% premarket, no company-specific catalyst.",18.9,13.58
+2026-07-23,premarket,SNDK,Caution,geopolitical,"VIX up 13.6% on Iran/Hormuz escalation; SNDK -1.49% premarket, no SNDK-specific catalyst.",18.9,13.58
+2026-07-23,premarket,MSFT,Caution,geopolitical,"VIX up 13.6% on Iran/Hormuz escalation; MSFT -0.66% premarket, no MSFT-specific catalyst.",18.9,13.58
