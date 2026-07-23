@@ -1,21 +1,31 @@
 {
+  "_meta": {
+    "source": "FMP MCP connector (quote endpoint for VIX; premarket/news scan for flags)",
+    "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) \u2014 always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it.",
+    "category_note": "category = the primary driver behind the flag: macro-scheduled | sector-contagion | single-name | geopolitical | other. See dip_pop_flag_history.csv for the append-only burn-in log."
+  },
   "date": "2026-07-22",
-  "generatedAt": "2026-07-22T15:14:31.312479",
-  "run": "market-close",
+  "generatedAt": "2026-07-22T20:33:22.153806",
   "vix": 16.64,
-  "category": "Normal",
-  "tickers": {
-    "MU": {
+  "vix_change_pct": -2.4,
+  "flags": [
+    {
+      "ticker": "MU",
       "flag": "Normal",
-      "reason": "VIX 16.64 normal; MU +? see briefing, choppy AI/semi tape amid Mideast escalation"
+      "category": "other",
+      "reason": "VIX down 2.4% to 16.64, calm session despite Hormuz-driven oil spike; MU -1.17% on no company-specific catalyst, part of a broad but modest AI/semi pullback."
     },
-    "SNDK": {
+    {
+      "ticker": "SNDK",
       "flag": "Normal",
-      "reason": "VIX 16.64 normal; SNDK session volatile, memory sector correlated"
+      "category": "other",
+      "reason": "VIX calm; SNDK +0.62%, no company-specific catalyst, ordinary session for an extreme-volatility name."
     },
-    "MSFT": {
-      "flag": "Normal",
-      "reason": "VIX 16.64 normal; MSFT pulled back on enterprise software weakness (IBM/PLTR/NOW selloff)"
+    {
+      "ticker": "MSFT",
+      "flag": "Caution",
+      "category": "single-name",
+      "reason": "MSFT -1.86% while VIX fell and AI/semi peers (NVDA/AVGO) rallied on Asia chip-export data; divergence tied to enterprise-software sentiment weakness (IBM earnings miss, NOW/PLTR/CRM selloff), not broad risk-off \u2014 worth a caution flag pending confirmation it's contained to software names."
     }
-  }
+  ]
 }
