@@ -836,6 +836,8 @@ Patricia flagged that the day's briefings had missed relevant news despite a ful
 
 ---
 
+| **Jul 22 evening re-fire burst — verified benign, guards added.** Mac offline at scheduled slots (travel); manual catch-ups ran during the day; on app wake at ~8:51 PM the scheduler re-fired 6 missed crons (incl. an off-schedule weekly review). Verification: ZERO duplicate rows in any feed (all dedup/upsert rules held), flags JSON schema+date correct, Jul 21 properly backfilled. Two defects found+fixed: BRK-B's Jul 22 monitor row missed close-finalization (repaired from FMP: Low 487.81 / PostDipHigh 489.45 / Close 489.39; suspected cause: long free-text LastUpdated note in the row — 1E.3 now mandates short notes + all-10 verification) and the evening "premarket" re-fire overwrote the day's premarket briefing .md (cosmetic). **New STEP 0B guards in both price-check tasks:** late-fire duplicate guard (>2h late + today's outputs exist → one-line skip, no writes) and close-run too-early refusal (<3:05 PM CT → refuse, preventing the mislabeled morning-"close" pattern); premarket late catch-ups never fill premarket-labeled columns after the open (blank beats mislabeled). Note: while traveling, the Mac's local timezone shifts cron fire times relative to the market — guards convert to CT. Task prompts were re-read from disk before updating (they contained same-day Jul-22 schema fixes from another session — resending from context would have wiped them; close task's "flags: []" line also aligned to the canonical always-3-records rule). | July 22, 2026 |
+
 ## 11. How to Update This File
 
 Update CLAUDE.md whenever:

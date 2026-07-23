@@ -51,7 +51,7 @@ Date,Ticker,PrevClose,Premarket_0705ET,Premarket_0925ET,Open,Low,PostDipHigh,Clo
 2026-07-21,VOO,682.21,684.68,684.35,686.67,684.03,688.48,687.87,-0.00267,0.00919,"2026-07-22 09:05 CT manual catch-up close-out for 2026-07-21 (Mac was asleep, scheduled market-close-price-check never fired 7/21 evening) — Low/PostDipHigh/Close backfilled from FMP daily OHLC + 30min bars; PostDipHigh = max high strictly after first 30-min bar touching session low."
 2026-07-22,VOO,687.87,,686.95,685.69,686.02,,687.01,0.00269,,2026-07-22 16:15 CT close-final
 2026-07-22,SOXQ,97.23,,97.27,94.945,94.88,,97.66,0.02417,,2026-07-22 16:15 CT close-final
-2026-07-22,BRK-B,489.65,,490.72,490.25,,,,,,"2026-07-22 09:40 CT premarket-final captured LATE (task fired ~80 min after scheduled ~8:12 CT / market already open ~70 min at capture) - values are live regular-session quotes via aftermarket-quote, not true premarket"
+2026-07-22,BRK-B,489.65,,490.72,490.25,487.81,489.45,489.39,0.00376,-0.00041,2026-07-22 21:10 CT manual-repair close-final (evening burst/close run skipped BRK-B; FMP daily+30min bars; low in final bar -> PostDipHigh = that bar close)
 2026-07-22,SNDK,1589.40,,1591.29,1527.90,1516.12,1628.0,1599.27,0.04611,0.02429,2026-07-22 16:15 CT close-final
 2026-07-22,MU,970.82,,964.29,938.435,936.06,982.4346,959.48,0.0358,0.01196,2026-07-22 16:15 CT close-final
 2026-07-22,MSFT,397.75,,389.27,399.58,386.96,390.81,390.34,0.02713,-0.01745,2026-07-22 16:15 CT close-final
