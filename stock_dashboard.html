@@ -2771,6 +2771,25 @@ const BRIEFINGS = [
     actionItems: ["Treat this as a supplementary snapshot only \u2014 rely on the next scheduled 7:01 AM CT run for the authoritative pre-market read, full macro scan, and ECL.", "Re-check AVDE with a fresh quote next run given the 14.4% spread.", "MSFT: $388 GTC filled today (long-term hold per Patricia's Jul 22 decision); $380 GTC remains open, ~2.1% below current price."],
     sources: ["FMP MCP connector \u2014 quote/aftermarket-quote endpoint \u2014 Jul 22, 2026, ~10:52 PM CT (all tickers, individual calls)"]
   }
+,
+  {
+    date: "2026-07-22",
+    displayDate: "July 22, 2026",
+    type: "WEEKLY-REVIEW",
+    runTime: "10:05 AM CT \u00b7 Auto (executed later same day)",
+    alert: "\ud83d\udfe1 Earnings-heavy week: GOOGL/TSM beat, IBM in-line/rev-miss again \u2014 0 status changes",
+    headline: "Q2 earnings season kicks in \u2014 GOOGL and TSM beat, dashboard already at today's live prices from the daily pipeline; no BUY/WATCH/OVERVALUED boundary crossings this week",
+    bullets: ["All 31 core holdings' priceResearch already matched today's live FMP quotes exactly/near-exactly \u2014 the daily pipeline is current, no material staleness found", "GOOGL (Jul 22) and TSM (Jul 16) both beat on EPS; GOOGL fell ~1.5% on the print anyway on a raised 2026 capex guide despite a $9.11 EPS beat and 24% revenue growth", "Sentiment tracker IBM reported in-line adjusted EPS ($2.93) but missed revenue again ($17.16B vs $17.48B est) and cut FY2026 growth guidance to 4-5% from >5% \u2014 second straight soft quarter", "Middle East escalation continues to push oil higher (Brent ~$91, +2.3%) and Fed-funds rate-hike odds this month reportedly jumped from ~10% to ~34% week-over-week per CNBC \u2014 monitor into Jul 29 FOMC"],
+    macro: "No Tier-1 macro releases fell inside the past 7 days per MACRO_CALENDAR (last was Jul 14 CPI, next is Jul 28 Consumer Confidence) \u2014 a quiet data week ahead of the Jul 29 FOMC. Retail sales/industrial production/business inventories were on secondary calendars this week but not confirmed released at run time. Fed-funds-futures rate-hike odds reportedly rose sharply week-over-week per CNBC (Jul 22) \u2014 [single-source odds figure, treat with caution]. Section 122 tariffs (Feb) expire Fri Jul 24.",
+    geopolitical: "Middle East tensions continue driving Brent crude higher (~$91.24, +2.26%, TradingEconomics/Riotimesonline Jul 22) \u2014 supportive for BP/SHEL, headwind for broad equities via inflation/rate-hike-odds channel.",
+    earnings: "This week: TSM (Jul 16, beat, EPS $4.31 vs $3.87 est). GOOGL (Jul 22, beat, EPS $9.11 vs ~$2.87-2.89 est, stock -1.5% on capex guide). NOW (Jul 22, beat). IBM (Jul 22, in-line adj EPS, rev miss, guidance cut). Next week: MSFT and WDC report Jul 29 \u2014 flag for next cycle.",
+    movers: [],
+    statusChanges: [],
+    dataFlags: ["Verdict/status check: 0 mismatches (GOOGL, TSM)", "MACRO_CALENDAR: 1 new entry added (FOMC Minutes, Aug 19)"],
+    stableStocks: ["NVDA", "MRVL", "AVGO", "MSFT", "HPQ", "MU", "WDC", "SNDK", "FSLR", "LEU", "LLY", "NVO", "BRK-B", "FRVO", "HESM", "BP", "SHEL", "CEG", "NEE", "EWY", "EWL", "AVDE", "FENI", "SCHF", "VOO", "XLU", "IAU", "REMX", "SOXQ"],
+    actionItems: ["Watch MSFT and WDC earnings Jul 29 (next week)", "Monitor Fed rate-hike odds into Jul 29 FOMC", "Section 122 tariffs expire Fri Jul 24 \u2014 watch for reaction"],
+    sources: ["CNBC \u2014 Stock market today \u2014 Jul 21-22, 2026", "CNBC \u2014 Alphabet earnings takeaways \u2014 Jul 22, 2026", "IBM Newsroom \u2014 Q2 2026 results \u2014 Jul 22, 2026", "StockTitan \u2014 IBM Q2 2026 \u2014 Jul 22, 2026", "FMP MCP connector \u2014 quote/calendar/earnings-calendar \u2014 Jul 22, 2026", "TradingEconomics \u2014 Economic calendar \u2014 Jul 22, 2026", "Distill Intelligence \u2014 Semiconductor weekly briefing \u2014 Jul 17, 2026", "Seoul Economic Daily \u2014 China chip self-reliance \u2014 Jul 21, 2026"]
+  }
 ];
 
 const FRAMEWORK_STEPS = [
