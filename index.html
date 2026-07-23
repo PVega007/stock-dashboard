@@ -2752,6 +2752,25 @@ const BRIEFINGS = [
     actionItems: ["Review Position_Tracker.md MU and SNDK open tranches given yesterday's large moves (MU +12%, SNDK +14%) \u2014 both were deep underwater per the July 16 log.", "Confirm tonight's genuine 4:00 PM CT market-close run fires now that the Mac is back on, to avoid a second consecutive gap."],
     sources: ["Motley Fool \u2014 Stock Market Today, July 21: Micron Surges 12% \u2014 2026-07-21 \u2014 Date: verified \u2713", "FMP MCP connector \u2014 historical daily OHLC + 30-min bars, fetched 2026-07-22 \u2014 Date: verified \u2713 (backfill, not live capture)"]
   }
+,
+  {
+    date: "2026-07-22",
+    displayDate: "July 22, 2026",
+    type: "PRE-MARKET",
+    runTime: "10:52 PM CT (Jul 22) \u00b7 Manual/off-schedule catch-up run",
+    alert: "",
+    headline: "Off-hours snapshot run \u2014 no >1.5%/5% triggers; data reflects Jul 22 after-hours trading, not tomorrow's true pre-market",
+    bullets: ["This run fired at ~10:52 PM CT (Jul 22), well outside both the 7:01 AM CT pre-market window and market hours \u2014 quotes are Jul 22 after-hours prints, not Jul 23 pre-market. Labeled explicitly rather than presented as a normal pre-market read.", "No stock moved >5%, no status changes triggered. MU +2.5%, NOW +4.7%, AVDE +4.9% (flagged as unreliable, see Data Flags), GOOGL -3.3%.", "MSFT: the standing $388 GTC BUY filled today (session low $386.97) \u2014 see Position Tracker. Full macro/news scan and ECL technical-indicator fetches were skipped this run given the off-hours timing; recommend the next scheduled 7:01 AM CT run treat tomorrow as the authoritative pre-market read."],
+    macro: "Not run this cycle \u2014 off-hours manual invocation; deferred to next scheduled run.",
+    geopolitical: "Not run this cycle \u2014 deferred to next scheduled run.",
+    earnings: "IBM reports today (Jul 22) post-close/after this snapshot \u2014 FY2026 EPS consensus ($12.47) flagged for revision per CLAUDE.md.",
+    movers: [{ticker:"NOW", change:"+4.65%", status:"BUY ZONE", note:"After-hours print $99.90 vs stored $95.46 \u2014 clean spread (0.3%), no quality flag"}, {ticker:"AVDE", change:"+4.92%", status:"WATCH", note:"Spread 14.4% on this quote \u2014 low confidence, price NOT updated on dashboard, stored price retained"}, {ticker:"MU", change:"+2.48%", status:"WATCH", note:"$983.30 vs stored $959.48 \u2014 clean data"}, {ticker:"FENI", change:"-2.39%", status:"WATCH", note:"Spread 7.9% \u2014 international ETF, wide spread common after-hours"}, {ticker:"GOOGL", change:"-3.34%", status:"WATCH", note:"$330.68 vs stored $342.09 \u2014 clean spread (0.05%)"}, {ticker:"SNDK", change:"+1.33%", status:"OVERVALUED", note:"$1,620.50 vs stored $1,599.27 \u2014 clean data, still ~10% above T2 ceiling $1,581"}, {ticker:"EWY", change:"+1.13%", status:"WATCH", note:"clean data"}, {ticker:"SCHF", change:"+1.06%", status:"WATCH", note:"clean data"}, {ticker:"MRVL", change:"+1.91%", status:"WATCH", note:"clean data"}],
+    statusChanges: [],
+    dataFlags: ["Run timing: ~10:52 PM CT Jul 22 \u2014 after-hours snapshot, NOT tomorrow's pre-market. Labeled per STEP 0.", "AVDE: 14.4% bid/ask spread \u2014 quote NOT applied to dashboard, stored price $90.39 retained pending a cleaner read.", "FENI (7.9%), EWL (4.0%), LEU (7.3%), HESM (7.4%), BP (2.5%) spreads wider than usual but within tolerance \u2014 applied, flagged for awareness.", "Full macro/geopolitical WebSearch scan, ECL technical-indicator fetches, and Software Sentiment Pulse narrative were skipped this run due to off-hours timing \u2014 not a substitute for the scheduled 7:01 AM CT run.", "IBM earnings today (Jul 22) \u2014 EPS consensus may be stale by market open tomorrow."],
+    stableStocks: ["NVDA", "AVGO", "MSFT", "HPQ", "WDC", "FSLR", "TSM", "LEU", "LLY", "NVO", "BRK-B", "FRVO", "HESM", "BP", "SHEL", "CEG", "NEE", "EWL", "VOO", "XLU", "IAU", "REMX", "SOXQ", "ORCL", "CRM", "PLTR", "IBM"],
+    actionItems: ["Treat this as a supplementary snapshot only \u2014 rely on the next scheduled 7:01 AM CT run for the authoritative pre-market read, full macro scan, and ECL.", "Re-check AVDE with a fresh quote next run given the 14.4% spread.", "MSFT: $388 GTC filled today (long-term hold per Patricia's Jul 22 decision); $380 GTC remains open, ~2.1% below current price."],
+    sources: ["FMP MCP connector \u2014 quote/aftermarket-quote endpoint \u2014 Jul 22, 2026, ~10:52 PM CT (all tickers, individual calls)"]
+  }
 ];
 
 const FRAMEWORK_STEPS = [
