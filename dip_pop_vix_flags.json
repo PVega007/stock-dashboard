@@ -1,31 +1,31 @@
 {
   "_meta": {
     "source": "FMP MCP connector (quote endpoint for VIX; premarket/news scan for flags)",
-    "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) — always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it.",
+    "note": "Companion file for the dip/pop OHLCV feed (dip_pop_ohlcv.csv). Overwritten each run (not appended) \u2014 always reflects the latest snapshot, refreshed at premarket and market-close task runs. Flag values: Normal | Caution | Avoid. Avoid should gate a green technical verdict; Caution should annotate it.",
     "category_note": "category = the primary driver behind the flag: macro-scheduled | sector-contagion | single-name | geopolitical | other. See dip_pop_flag_history.csv for the append-only burn-in log."
   },
   "date": "2026-07-23",
-  "generatedAt": "2026-07-23T07:20:00.000000",
-  "vix": 18.9,
-  "vix_change_pct": 13.58,
+  "generatedAt": "2026-07-23T22:22:31.132329",
+  "vix": 18.7,
+  "vix_change_pct": 12.38,
   "flags": [
     {
       "ticker": "MU",
       "flag": "Caution",
       "category": "geopolitical",
-      "reason": "VIX up 13.6% to 18.90 on renewed Iran/Hormuz escalation (Trump threatens more strikes, WTI +3.8-4.6%); MU -1.25% premarket, no company-specific catalyst, part of a broad risk-off move."
+      "reason": "VIX +12.38% to 18.7 on Iran/Hormuz escalation persisting into the close; MU +3.20% on the day (HBM demand strength offsetting broad risk-off), no company-specific negative catalyst."
     },
     {
       "ticker": "SNDK",
       "flag": "Caution",
       "category": "geopolitical",
-      "reason": "VIX up 13.6% on Iran/Hormuz escalation; SNDK -1.49% premarket, no SNDK-specific catalyst, consistent with broad risk-off tone."
+      "reason": "VIX +12.38% to 18.7 on Iran/Hormuz escalation; SNDK +0.69% on the day, holding up despite broad risk-off tone, no SNDK-specific catalyst."
     },
     {
       "ticker": "MSFT",
       "flag": "Caution",
       "category": "geopolitical",
-      "reason": "VIX up 13.6% on Iran/Hormuz escalation (oil +3.8-4.6%); MSFT -0.66% premarket, in line with broad market tone, no MSFT-specific catalyst today."
+      "reason": "VIX +12.38% to 18.7 on Iran/Hormuz escalation; MSFT -2.24% on the day, broad market and enterprise-software weakness (ORCL/CRM/NOW selloff) more than geopolitics alone."
     }
   ]
 }

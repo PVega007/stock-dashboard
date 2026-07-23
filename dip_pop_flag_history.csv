@@ -44,3 +44,6 @@ Date,Run,Ticker,Flag,Category,Reason,VIX,VIX_Change_Pct
 2026-07-23,premarket,MU,Caution,geopolitical,"VIX up 13.6% to 18.90 on Iran/Hormuz escalation; MU -1.25% premarket, no company-specific catalyst.",18.9,13.58
 2026-07-23,premarket,SNDK,Caution,geopolitical,"VIX up 13.6% on Iran/Hormuz escalation; SNDK -1.49% premarket, no SNDK-specific catalyst.",18.9,13.58
 2026-07-23,premarket,MSFT,Caution,geopolitical,"VIX up 13.6% on Iran/Hormuz escalation; MSFT -0.66% premarket, no MSFT-specific catalyst.",18.9,13.58
+2026-07-23,market-close,MU,Caution,geopolitical,"VIX +12.38% to 18.7 on Iran/Hormuz escalation persisting into the close; MU +3.20% on the day (HBM demand strength offsetting broad risk-off), no company-specific negative catalyst.",18.7,12.38
+2026-07-23,market-close,SNDK,Caution,geopolitical,"VIX +12.38% to 18.7 on Iran/Hormuz escalation; SNDK +0.69% on the day, holding up despite broad risk-off tone, no SNDK-specific catalyst.",18.7,12.38
+2026-07-23,market-close,MSFT,Caution,geopolitical,"VIX +12.38% to 18.7 on Iran/Hormuz escalation; MSFT -2.24% on the day, broad market and enterprise-software weakness (ORCL/CRM/NOW selloff) more than geopolitics alone.",18.7,12.38
